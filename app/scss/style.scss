@@ -3,6 +3,251 @@
 @import 'reset';
 @import 'global';
 
+/*::::::::::::::::::::::::::header:::::::::::::::::::::::::::::::::::::::::::::::*/
+.header {
+  color: $white;
+
+  &__top {
+    padding: 19px 0;
+    background-color: $dark-800;
+    @extend %lato-bold-13;
+    text-transform: uppercase;
+  }
+
+  &__bottom {
+    padding: 29px 0;
+    background-color: $green-900;
+  }
+
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hot-line {
+  max-width: 465px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .hot__item {
+    position: relative;
+    padding-left: 44px;
+  }
+
+  .hot__link {
+    transition: opasity 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .hot__img {
+    position: absolute;
+    top: -4px;
+    left: 0;
+  }
+
+  .hot__item:not(:last-child) {
+    margin-right: 48px;
+  }
+
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news {
+  max-width: 235px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .news__link {
+    transition: opasity 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .news__item:not(:last-child) {
+    margin-right: 28px;
+  }
+}
+
+.logo {
+  position: relative;
+  max-width: 195px;
+  padding-left: 69px;
+  font-family: 'Signika-SemiBold', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.2;
+
+  &__big {
+    font-size: 28px;
+  }
+
+  &__litle {
+    padding-left: 12px;
+    font-size: 12px;
+  }
+
+  &__img {
+    position: absolute;
+    top: -4px;
+    left: 0;
+  }
+}
+
+.header__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+
+  .header__list {
+    width: 100%;
+    position: relative;
+    margin-right: 30px;
+    display: block;
+    max-width: 240px;
+    padding: 15px 45px 15px 61px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    @extend %lato-semi-bold-14;
+    color: #63a60e;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 7px;
+      height: 4px;
+      top: 50%;
+      right: 17px;
+      transform: translateY(-50%);
+      background-image: url(../images/header-icons/shevron-down.svg);
+      @extend %bg;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 17px;
+      top: 50%;
+      left: 17px;
+      transform: translateY(-50%);
+      background-image: url(../images/header-icons/nav_icon.svg);
+      @extend %bg;
+    }
+  }
+
+  .header__input {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 15px 200px 15px 51px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.2);
+  }
+
+  .header__search-icon {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    content: '';
+    width: 34px;
+    height: 20px;
+    top: 50%;
+    left: 276px;
+    transform: translateY(-50%);
+  }
+
+  .header__search {
+    display: inline-block;
+    padding: 15px 52px;
+    background-color: $dark-800;
+    color: $white;
+    border: transparent;
+    text-transform: uppercase;
+    border-radius: 0px 6px 6px 0px;
+    letter-spacing: 0.03em;
+    transition: background-color 0.3s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover {
+      background-color: $dark-500;
+    }
+
+    &:active {
+      color: $silver-600;
+    }
+  }
+}
+
+.header__roster {
+  max-width: 190px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__num {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  display: block;
+  padding: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: $white;
+  font-family: 'Lato-Semibold', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: $red-900;
+}
+
+.header__link {
+  display: inline-block;
+  text-align: center;
+  padding: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+
+}
+
+/*::::::::::::::::::::::::::header-finish::::::::::::::::::::::::::::::::::::::::*/
+
+
 
 
 
