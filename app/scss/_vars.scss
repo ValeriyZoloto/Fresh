@@ -1,0 +1,78 @@
+/*::::::::::::::::::::::::::цвета:::::::::::::::::::::::::::::::::::::::::::::::*/
+$green-900:#63a60f;
+$green-200:#e0edcf;
+$green-100:#eff6e7;
+$dark-900:#121212;
+$dark-800:#31352B;
+$dark-500:#505050;
+$red-900:#cf3e3b;
+$orange-900:#ff7a00;
+$yellow-900:#ffb800;
+$silver-600:#c1c1c1;
+$silver-100:#f6f6f6;
+$white:#ffffff;
+
+/*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::шрифты::::::::::::::::::::::::::::::::::::::::::::::*/
+%signika-700-60 {
+  font-family: 'Signika-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+%signika-600-32 {
+  font-family: 'Signika-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+%signika-600-30 {
+  font-family: 'Signika-SemiBold', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+%lato-Regular-14 {
+  font-family: 'Lato-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+%lato-Regular-16 {
+  font-family: 'Lato-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+%lato-bold-18 {
+  font-family: 'Lato-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+%lato-semi-bold-14 {
+  font-family: 'Lato-Semibold', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+%lato-bold-13 {
+  font-family: 'Lato-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+/*::::::::::::::::::::::::::шрифты-finish:::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::обои::::::::::::::::::::::::::::::::::::::::::::::::*/
+%bg {
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*::::::::::::::::::::::::::обои-finish:::::::::::::::::::::::::::::::::::::::::*/
