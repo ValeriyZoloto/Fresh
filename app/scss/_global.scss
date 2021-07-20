@@ -82,3 +82,60 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.title {
+  @extend %signika-600-32;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $dark-900;
+}
+
+.btn-green {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: $green-900;
+  color: $white;
+  border-radius: 6px;
+  @extend %lato-regular-18;
+  transition: background-color 0.3s;
+
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px $green-200;
+    border-radius: 6px;
+  }
+
+  &:hover {
+    background-color: #4d810c;
+  }
+
+  &:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.white-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid $green-900;
+  border-radius: 6px;
+  background-color: $white;
+  @extend %lato-regular-18;
+  color: $green-900;
+  transition: background-color 0.3s;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px $green-200;
+    border-radius: 6px;
+  }
+
+  &:hover {
+    background-color: $green-100;
+  }
+
+  &:active {
+    box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+  }
+}
