@@ -13,10 +13,6 @@ $(function () {
 	let mixer = mixitup(".top-products__content", {
 		load: {
 			filter: ".category-all",
-			filter: ".category-a",
-			filter: ".category-b",
-			filter: ".category-c",
-			filter: ".category-d",
 		},
 	});
 });
