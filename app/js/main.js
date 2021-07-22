@@ -3,7 +3,7 @@ $(function () {
 		dots: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-
+		fade: true,
 		prevArrow:
 			'<button type="button" class="slick-prev"><img src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"></button>',
 		nextArrow:
