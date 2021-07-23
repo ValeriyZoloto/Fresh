@@ -83,31 +83,6 @@ body {
   overflow: hidden;
 }
 
-.logo {
-  position: relative;
-  max-width: 195px;
-  padding-left: 69px;
-  font-family: 'Signika-SemiBold', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  line-height: 1.2;
-
-  &__big {
-    font-size: 28px;
-  }
-
-  &__litle {
-    padding-left: 12px;
-    font-size: 12px;
-  }
-
-  &__img {
-    position: absolute;
-    top: -4px;
-    left: 0;
-  }
-}
-
 .title {
   @extend %signika-600-32;
   line-height: 1.4;
@@ -132,12 +107,12 @@ body {
   }
 
   &:hover {
-    background-color: #4d810c;
+    background-color: $hover;
   }
 
   &:active {
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0px 4px 4px $box-shadov-active;
+    color: $active;
   }
 }
 
@@ -162,6 +137,6 @@ body {
   }
 
   &:active {
-    box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 10px 4px $blends;
   }
 }

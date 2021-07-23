@@ -11,11 +11,23 @@ $yellow-900:#ffb800;
 $silver-600:#c1c1c1;
 $silver-100:#f6f6f6;
 $white:#ffffff;
+$blends:rgba(0, 0, 0, 0.1);
+$active: rgba(255, 255, 255, 0.5);
+$hover:#4d810c;
+$hover-2:rgba(255, 255, 255, 0.1);
+$box-shadov-active: rgba(0, 0, 0, 0.25);
+$bg-content: rgba(255, 255, 255, 0.8);
 
 /*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::шрифты::::::::::::::::::::::::::::::::::::::::::::::*/
 %signika-700-60 {
   font-family: 'Signika-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+%open-sans-700-60 {
+  font-family: 'Open Sans';
   font-weight: 700;
   font-size: 60px;
 }
