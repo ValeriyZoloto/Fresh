@@ -91,11 +91,10 @@ body {
   color: $dark-900;
 }
 
-.btn-green {
+.btn {
   display: inline-block;
-  padding: 12px 29px;
-  background-color: $green-900;
-  color: $white;
+  padding: 12px 24px;
+
   border-radius: 6px;
   @extend %lato-regular-18;
   transition: background-color 0.3s;
@@ -116,27 +115,33 @@ body {
   }
 }
 
-.white-button {
-  display: inline-block;
-  padding: 11px 26px;
-  margin-bottom: 70px;
-  border: 1px solid $green-900;
-  border-radius: 6px;
-  background-color: $white;
-  @extend %lato-regular-18;
-  color: $green-900;
-  transition: background-color 0.3s;
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 49px;
 
-  &:focus {
-    box-shadow: 0px 0px 0px 4px $green-200;
-    border-radius: 6px;
+  &__button:not(:last-child) {
+    margin-right: 26px;
   }
 
-  &:hover {
-    background-color: $green-100;
+  &__btn {
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 21px 0 0 0;
+    background-color: inherit;
+    @extend %lato-semi-bold-15;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: border-bottom 0.3s;
+
+    &:active,
+    &:hover {
+      border-bottom: 3px solid #e0edcf;
+    }
   }
 
-  &:active {
-    box-shadow: inset 0px 10px 4px $blends;
+  .mixitup-control-active {
+    border-bottom: 3px solid #e0edcf;
   }
 }
