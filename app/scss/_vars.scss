@@ -2,176 +2,57 @@
 $green-900:#63a60e;
 $green-200:#e0edcf;
 $green-100:#eff6e7;
+$hover-green:#4d810c;
+
 $dark-900:#121212;
 $dark-800:#31352B;
 $dark-500:#505050;
+$dark-blends:rgba(0, 0, 0, 0.1);
+$dark-active: rgba(255, 255, 255, 0.5);
+$dark-hover:rgba(255, 255, 255, 0.1);
+$box-shadov-active: rgba(0, 0, 0, 0.25);
+
 $red-900:#cf3e3b;
+
 $orange-900:#ff7a00;
 $yellow-900:#ffb800;
+
 $silver-600:#c1c1c1;
 $silver-100:#f6f6f6;
 $silver-200:#f5f5f5;
+
 $white:#ffffff;
-$blends:rgba(0, 0, 0, 0.1);
-$active: rgba(255, 255, 255, 0.5);
-$hover:#4d810c;
-$hover-2:rgba(255, 255, 255, 0.1);
-$box-shadov-active: rgba(0, 0, 0, 0.25);
-$bg-content: rgba(255, 255, 255, 0.8);
 
 /*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
-/*::::::::::::::::::::::::::шрифты::::::::::::::::::::::::::::::::::::::::::::::*/
-%signika-700-60 {
-  font-family: 'Signika-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 60px;
+/*::::::::::::::::::::::::::переменные::::::::::::::::::::::::::::::::::::::::::*/
+$line-clamp: 2;
+
+
+/*::::::::::::::::::::::::::переменные-finish:::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::mixins::::::::::::::::::::::::::::::::::::::::::::::*/
+@mixin overflow-1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
 }
 
-%open-sans-700-60 {
-  font-family: 'Open Sans';
-  font-weight: 700;
-  font-size: 60px;
+@mixin overflow-2 {
+  white-space: nowrap;
+  overflow: auto;
+  padding: 1px;
+  text-overflow: ellipsis;
+  line-clamp: 2;
 }
 
-%signika-600-32 {
-  font-family: 'Signika-SemiBold', sans-serif;
-  font-weight: 600;
-  font-size: 32px;
+@mixin overflow-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 3;
+  box-orient: vertical
 }
 
-%signika-600-30 {
-  font-family: 'Signika-SemiBold', sans-serif;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 1.4;
-  text-transform: uppercase;
-}
-
-%lato-Regular-14 {
-  font-family: 'Lato-Regular', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-%lato-Regular-14-1 {
-  font-family: 'Lato-Regular', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1;
-}
-
-%lato-Regular-14-2 {
-  font-family: 'Lato-Regular', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-%lato-Regular-16 {
-  font-family: 'Lato-Regular', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-%lato-bold-16 {
-  font-family: 'Lato-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-%lato-bold-18 {
-  font-family: 'Lato-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.4;
-}
-
-%lato-regular-18 {
-  font-family: 'Lato-Regular', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.3;
-}
-
-%lato-regular-12 {
-  font-family: 'Lato-Regular', sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: 0.03em;
-}
-
-%lato-semi-bold-15 {
-  font-family: 'Lato-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 1.4;
-}
-
-%lato-semi-bold-14 {
-  font-family: 'Lato-Semibold', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-%lato-bold-14 {
-  font-family: 'Lato-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-%lato-bold-13 {
-  font-family: 'Lato-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 1.2;
-}
-
-%lato-bold-12 {
-  font-family: 'Lato-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.1;
-}
-
-%lato-bold-12-1 {
-  font-family: 'Lato-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1;
-}
-
-%lato-bold-10 {
-  font-family: 'Lato-Bold', sans-serif;
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 1;
-  letter-spacing: 0.03em;
-}
-
-%lato-semi-bold-10 {
-  font-family: 'Lato-Semibold', sans-serif;
-  font-weight: 600;
-  font-size: 10px;
-  line-height: 1;
-  letter-spacing: 0.03em;
-}
-
-%lato-semi-bold-20 {
-  font-family: 'Lato-Semibold', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: 0.03em;
-}
-
-/*::::::::::::::::::::::::::шрифты-finish:::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::mixins-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::обои::::::::::::::::::::::::::::::::::::::::::::::::*/
 %bg {
   background-position: left center;

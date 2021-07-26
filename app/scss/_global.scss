@@ -1,58 +1,13 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-button {
-  cursor: pointer;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 html,
 body {
   height: 100%;
 }
 
 body {
-  @extend %lato-Regular-14;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
   background-color: $white;
   color: $dark-500;
   display: flex;
@@ -60,12 +15,16 @@ body {
   justify-content: space-between;
 }
 
+img {
+  object-fit: contain;
+}
+
 .main {
   flex-grow: 1;
 }
 
 .container {
-  width: 1320px;
+  max-width: 1320px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -84,34 +43,67 @@ body {
 }
 
 .title {
-  @extend %signika-600-32;
+  font-family: 'Signika', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
   line-height: 1.4;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $dark-900;
+  @include overflow-2;
 }
 
 .btn {
   display: inline-block;
   padding: 12px 24px;
-
   border-radius: 6px;
-  @extend %lato-regular-18;
+  font-size: 18px;
+  line-height: 1.3;
   transition: background-color 0.3s;
 
 
   &:focus {
     box-shadow: 0px 0px 0px 4px $green-200;
-    border-radius: 6px;
   }
 
   &:hover {
-    background-color: $hover;
+    background-color: $hover-green;
   }
 
   &:active {
     box-shadow: inset 0px 4px 4px $box-shadov-active;
-    color: $active;
+    color: $dark-active;
+  }
+
+}
+
+.white--button {
+  margin-bottom: 70px;
+  border: 1px solid $green-900;
+  background-color: $white;
+  color: $green-900;
+  transition: background-color 0.3s;
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px $green-200;
+  }
+
+  &:hover {
+    background-color: $green-100;
+  }
+
+  &:active {
+    box-shadow: inset 0px 10px 4px $dark-blends;
+  }
+}
+
+.btn--green {
+  background-color: $green-900;
+  color: $white;
+
+  &:hover {
+    background-color: $hover-green;
+
   }
 }
 
@@ -122,22 +114,29 @@ body {
   margin-bottom: 49px;
 
   &__button:not(:last-child) {
-    margin-right: 26px;
+    margin-right: 24px;
   }
 
   &__btn {
+    max-width: 105px;
     border: none;
     border-bottom: 3px solid transparent;
     padding: 21px 0 0 0;
     background-color: inherit;
-    @extend %lato-semi-bold-15;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.4;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     transition: border-bottom 0.3s;
+    @include overflow-1;
 
-    &:active,
+    &:active {
+      border-bottom: $hover-green;
+    }
+
     &:hover {
-      border-bottom: 3px solid #e0edcf;
+      border-bottom: 3px solid $green-900;
     }
   }
 
