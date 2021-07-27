@@ -10,10 +10,15 @@ $(function () {
 			' <button type="button" class="slick-next"><img src="./images/slider/arrows/arrow-right.svg" alt="стрелка вправо" /></button>',
 	});
 
-	// let containerEl1 = document.querySelector('[data-ref="container-1"]');
-	let mixer = mixitup(".top-products__content", {
-		load: {
-			filter: ".category-all",
+	var containerEl1 = document.querySelector('[data-ref="container-1"]');
+	const containerEl2 = document.querySelector('[data-ref="container-2"]');
+
+	const config = {
+		controls: {
+			scope: "local",
 		},
-	});
+	};
+
+	const mixer1 = mixitup(containerEl1, config);
+	const mixer2 = mixitup(containerEl2, config);
 });

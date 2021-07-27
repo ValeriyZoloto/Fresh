@@ -235,11 +235,9 @@
       </div>
     </section>
 
-
-
     <section class="top-products">
-      <h2 class="title top-products__title">Топовые товары</h2>
-      <div class="container">
+      <div class="container" data-ref="container-1">
+        <h2 class="title title--top-products">Топовые товары</h2>
         <ul class="filter-buttons">
           <li class="filter-buttons__button">
             <button class="filter-buttons__btn" type="button" data-filter="all">
@@ -729,8 +727,8 @@
     </section>
 
     <section class="actions">
-      <h2 class="title">Акции</h2>
-      <div class="container">
+      <h2 class="title title--actions">Акции</h2>
+      <div class="container" data-ref="container-2">
         <ul class="filter-buttons">
           <li class="filter-buttons__button">
             <button class="filter-buttons__btn" type="button" data-filter="all">
@@ -753,30 +751,310 @@
 
         <ul class="actions__content">
           <li class="actions__item mix category-a category-all">
-            <a class="actions__link" href="#">
-              <div class="actions__picture">
-                <span class="actions__novelty">новинка</span>
-                <img class="actions__img" src="./images/actions/pineapple.png"
-                  alt="Продукция ананас" width="100" height="100">
-              </div>
-              <div class="actions__text">
-                <h4 class="actions__name">Ананас, 1 кг</h4>
-                <span class="actions__status actions__status--avilible">в наличии</span>
-                <div class="actions__prices">
-                  <div class="actions__price">
-                    <span class="actions__new-price">999 <sub class="actions__">₽</sub>
-                    </span>
-                    <span class="actions__old-price">1999 ₽ </span>
-                  </div>
-                  <span class="actions__raiting">4.5 </span>
+            <article class="card card--action">
+              <div class="card__wrapper">
+                <div class="card__picture"
+                  style="background-image: url(../images/actions/pineapple.jpg);">
+                  <span class="card__span  card__span--actions">новинка</span>
                 </div>
+                <div class="card__texts">
+                  <h4 class="card__name">Ананас, 1 кг</h4>
+                  <span class="card__status card__status--avilible">в наличии</span>
+                  <div class="card__holder">
+                    <div class="card__price-holder">
+                      <span class="card__new-price">999 <sub class="card__ruble">₽</sub>
+                      </span>
+                      <span class="card__old-price">1999 ₽ </span>
+                    </div>
+                    <span class="actions__raiting">4.5 </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="actions__item mix category-a category-all">
+            <article class="card card--action">
+              <div class="card__wrapper">
+                <div class="card__picture"
+                  style="background-image: url(../images/actions/coffee.jpg);">
+                  <span class="card__span  card__span--actions">новинка</span>
+                </div>
+                <div class="card__texts">
+                  <h4 class="card__name">
+                    Кофе с коноплей органический Caffé Salomoni 250г
+                  </h4>
+                  <span class="card__status card__status--ends">заканчивается</span>
+                  <div class="card__holder">
+                    <div class="card__price-holder">
+                      <span class="card__new-price">777 <sub class="card__ruble">₽</sub>
+                      </span>
+                      <span class="card__old-price">877 ₽</span>
+                    </div>
+                    <span class="actions__raiting">4.9</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="actions__item mix category-a category-all">
+            <article class="card card--action">
+              <div class="card__wrapper">
+                <div class="card__picture"
+                  style="background-image: url(../images/actions/strawberry.png);">
+                  <span class="card__span card__span--actions">новинка</span>
+                </div>
+                <div class="card__texts">
+                  <h4 class="card__name">
+                    Клубника, 1 кг
+                  </h4>
+                  <span class="card__status card__status--not-avilible">нет в
+                    наличии</span>
+                  <div class="card__holder">
+                    <div class="card__price-holder">
+                      <span class="card__new-price">440 <sub class="card__ruble">₽</sub>
+                      </span>
+                      <span class="card__old-price">600 ₽</span>
+                    </div>
+                    <span class="actions__raiting">5.0</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="actions__item mix category-a category-all">
+            <article class="card card--action">
+              <div class="card__wrapper">
+                <div class="card__picture"
+                  style="background-image: url(../images/actions/mango.jpg);">
+                  <span class="card__span  card__span--actions">новинка</span>
+                </div>
+                <div class="card__texts">
+                  <h4 class="card__name">Манго, 1 шт</h4>
+                  <span class="card__status card__status--avilible">в наличии</span>
+                  <div class="card__holder">
+                    <div class="card__price-holder">
+                      <span class="card__new-price">660 <sub class="card__ruble">₽</sub>
+                      </span>
+                      <span class="card__old-price">960 ₽ </span>
+                    </div>
+                    <span class="actions__raiting">5.0 </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="actions__item mix category-a category-all">
+            <article class="card card--action">
+              <div class="card__wrapper">
+                <div class="card__picture"
+                  style="background-image: url(../images/actions/salmon.jpg);">
+                  <span class="card__span  card__span--actions">новинка</span>
+                </div>
+                <div class="card__texts">
+                  <h4 class="card__name">Лосось, 1 кг</h4>
+                  <span class="card__status card__status--avilible">в наличии</span>
+                  <div class="card__holder">
+                    <div class="card__price-holder">
+                      <span class="card__new-price">999 <sub class="card__ruble">₽</sub>
+                      </span>
+                      <span class="card__old-price">1999 ₽ </span>
+                    </div>
+                    <span class="actions__raiting">5.0 </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="actions__item mix category-b category-all">
+            <article class="card card--action">
+              <div class="card__wrapper">
+                <div class="card__picture"
+                  style="background-image: url(../images/actions/veg_juice.jpg);">
+                  <span class="card__span  card__span--hit">хит</span>
+                </div>
+                <div class="card__texts">
+                  <h4 class="card__name">
+                    Сок Granini овощной 100%, 0.5л
+                  </h4>
+                  <span class="card__status card__status--ends">заканчивается</span>
+                  <div class="card__holder">
+                    <div class="card__price-holder">
+                      <span class="card__new-price">180 <sub class="card__ruble">₽</sub>
+                      </span>
+                      <span class="card__old-price">230 ₽</span>
+                    </div>
+                    <span class="actions__raiting">4.9</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="actions__item mix category-b category-all">
+            <article class="card card--action">
+              <div class="card__wrapper">
+                <div class="card__picture"
+                  style="background-image: url(../images/actions/basket.jpg);">
+                  <span class="card__span  card__span--hit">хит</span>
+                </div>
+                <div class="card__texts">
+                  <h4 class="card__name">
+                    Фруктовая корзина, 1 шт
+                  </h4>
+                  <span class="card__status card__status--avilible">в наличии</span>
+                  <div class="card__holder">
+                    <div class="card__price-holder">
+                      <span class="card__new-price">3990 <sub class="card__ruble">₽</sub>
+                      </span>
+                      <span class="card__old-price">5990 ₽</span>
+                    </div>
+                    <span class="actions__raiting">4.8</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="actions__item mix category-b category-all">
+            <article class="card card--action">
+              <div class="card__wrapper">
+                <div class="card__picture"
+                  style="background-image: url(../images/actions/pig-meat.jpg);">
+                  <span class="card__span  card__span--hit">хит</span>
+                </div>
+                <div class="card__texts">
+                  <h4 class="card__name">
+                    Свинина мякоть, 1 кг
+                  </h4>
+                  <span class="card__status card__status--avilible">в наличии</span>
+                  <div class="card__holder">
+                    <div class="card__price-holder">
+                      <span class="card__new-price">499 <sub class="card__ruble">₽</sub>
+                      </span>
+                      <span class="card__old-price">599 ₽</span>
+                    </div>
+                    <span class="actions__raiting">4.6</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <a class="btn btn--green" href="#">Показать еще</a>
+
+      </div>
+    </section>
+
+    <section class="blogs">
+      <div class="container">
+        <ul class="partners partners--blogs">
+          <li class="partners__item">
+            <a class="partners__link" href="#">
+              <img class="partners__img" src="images/blogs/partners/sprite.svg"
+                alt="Логотип партнера Sprite" width="80" height="33">
+            </a>
+          </li>
+
+          <li class="partners__item">
+            <a class="partners__link" href="#">
+              <img class="partners__img" src="images/blogs/partners/dr-pepper.svg"
+                alt="Логотип партнера DrPepper" width="80" height="57">
+            </a>
+          </li>
+
+          <li class="partners__item">
+            <a class="partners__link" href="#">
+              <img class="partners__img" src="images/blogs/partners/coca-cola.svg"
+                alt="Логотип партнера CocaCola" width="80" height="26">
+            </a>
+          </li>
+
+          <li class="partners__item">
+            <a class="partners__link" href="#">
+              <img class="partners__img" src="images/blogs/partners/pepsi.svg"
+                alt="Логотип партнера pepsi" width="80" height="31">
+            </a>
+          </li>
+
+          <li class="partners__item">
+            <a class="partners__link" href="#">
+              <img class="partners__img" src="images/blogs/partners/redbull.svg"
+                alt="Логотип партнера Red Bull" width="80" height="49">
+            </a>
+          </li>
+
+          <li class="partners__item">
+            <a class="partners__link" href="#">
+              <img class="partners__img" src="images/blogs/partners/fanta.svg"
+                alt="Логотип партнера Fanta" width="80" height="59">
+            </a>
+          </li>
+        </ul>
+        <div class="blogs__top-wrapper">
+          <h2 class="title title--blog">наши новости</h2>
+          <a class="blogs__link" href="#">все новости</a>
+        </div>
+        <ul class="blogs__list">
+          <li class="blogs__item">
+            <a class="blogs__card" href="#">
+              <div class="blogs__picture"
+                style="background-image: url(../images/blogs/content/images.jpg);">
+                <div class="blogs__date">
+                  <span class="blogs__month"> июль</span>
+                  <span class="blogs__num">15</span>
+                </div>
+              </div>
+              <div class="blogs__text">
+                <p>
+                  Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК.
+                  Торопись, пока всё не разобрали!
+                </p>
               </div>
             </a>
           </li>
 
+          <li class="blogs__item">
+            <a class="blogs__card" href="#">
+              <div class="blogs__picture"
+                style="background-image: url(../images/blogs/content/images1.jpg);">
+                <div class="blogs__date">
+                  <span class="blogs__month"> май</span>
+                  <span class="blogs__num">07</span>
+                </div>
+              </div>
+              <div class="blogs__text">
+                <p>
+                  Шикарнейший выбор манго в нашем онлайн-маркете
+                </p>
+              </div>
+            </a>
+          </li>
+
+          <li class="blogs__item">
+            <a class="blogs__card" href="#">
+              <div class="blogs__picture"
+                style="background-image: url(../images/blogs/content/images2.jpg);">
+                <div class="blogs__date">
+                  <span class="blogs__month"> февраль</span>
+                  <span class="blogs__num">20</span>
+                </div>
+              </div>
+              <div class="blogs__text">
+                <p>
+                  Всё, что вы хотели знать о папайя
+                </p>
+              </div>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">

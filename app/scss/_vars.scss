@@ -39,7 +39,7 @@ $line-clamp: 2;
 
 @mixin overflow-2 {
   white-space: nowrap;
-  overflow: auto;
+  overflow: hidden;
   padding: 1px;
   text-overflow: ellipsis;
   line-clamp: 2;
