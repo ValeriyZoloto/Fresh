@@ -5,9 +5,16 @@ $(function () {
 		slidesToScroll: 1,
 		fade: true,
 		prevArrow:
-			'<button type="button" class="slick-prev"><img src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"></button>',
+			'<button type="button" class="slick-prev"><span class="sr-only">Стрелка слайдера влево</span><img src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"></button>',
 		nextArrow:
-			' <button type="button" class="slick-next"><img src="./images/slider/arrows/arrow-right.svg" alt="стрелка вправо" /></button>',
+			' <button type="button" class="slick-next"><span class="sr-only">Стрелка слайдера вправо</span><img src="./images/slider/arrows/arrow-right.svg" alt="стрелка вправо" /></button>',
+	});
+
+	$(".partners-slider").slick({
+		dots: false,
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		arrows: false,
 	});
 
 	var containerEl1 = document.querySelector('[data-ref="container-1"]');

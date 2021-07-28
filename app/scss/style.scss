@@ -240,12 +240,7 @@
   }
 }
 
-
-
-
-
 /*::::::::::::::::::::::::::header-finish::::::::::::::::::::::::::::::::::::::::*/
-
 /*::::::::::::::::::::::::::top-slider:::::::::::::::::::::::::::::::::::::::::::*/
 .top-slider {
   background-color: $white;
@@ -327,8 +322,6 @@
 
 }
 
-
-
 /*::::::::::::::::::::::::::top-slider-finish::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::support::::::::::::::::::::::::::::::::::::::::::::::*/
 .support {
@@ -397,7 +390,7 @@
 /*::::::::::::::::::::::::::support-finish:::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::top-products:::::::::::::::::::::::::::::::::::::::::*/
 .top-products {
-  padding: 67px 0 65px;
+  padding: 67px 0 69px;
   text-align: center;
 
   &__content {
@@ -406,7 +399,6 @@
     grid-gap: 30px;
     margin-bottom: 48px;
   }
-
 }
 
 .info {
@@ -470,10 +462,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    margin-bottom: 48px;
+    margin-bottom: 53px;
   }
-
-
 
   &__img {
     margin-right: 0;
@@ -497,7 +487,6 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
   }
-
 
   &__old-price {
     position: relative;
@@ -538,7 +527,7 @@
 /*::::::::::::::::::::::::::actions-finish:::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::blogs::::::::::::::::::::::::::::::::::::::::::::::::*/
 .blogs {
-  padding: 74px 0;
+  padding: 79px 0 73px;
   background-color: $white;
 
   &__top-wrapper {
@@ -637,10 +626,11 @@
   }
 }
 
-.partners {
+.partners-slider {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 44px;
 
   &__link {
     display: block;
@@ -650,11 +640,6 @@
     &:hover {
       opacity: 0.5;
     }
-  }
-
-
-  &--blogs {
-    margin-bottom: 54px;
   }
 }
 
@@ -697,7 +682,7 @@
       margin-bottom: -7px;
 
       &:last-child {
-        margin-bottom: 0;
+        margin-bottom: -3px;
       }
     }
 
@@ -776,7 +761,6 @@
           width: 118px;
           height: 45px;
         }
-
       }
     }
   }
@@ -805,13 +789,9 @@
       text-transform: uppercase;
     }
   }
-
 }
 
-
-
 .social {
-  margin-top: -3px;
   display: flex;
 
   &__item:not(:last-child) {
@@ -827,7 +807,5 @@
     }
   }
 }
-
-
 
 /*::::::::::::::::::::::::::footer-finish::::::::::::::::::::::::::::::::::::::::*/
