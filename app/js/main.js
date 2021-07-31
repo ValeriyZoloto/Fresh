@@ -10,13 +10,16 @@ $(function () {
 			' <button type="button" class="slick-next"><span class="sr-only">Стрелка слайдера вправо</span><img src="./images/slider/arrows/arrow-right.svg" alt="стрелка вправо" /></button>',
 	});
 
-	$(".partners-slider").slick({
-		dots: false,
-		slidesToShow: 6,
-		slidesToScroll: 1,
-		arrows: false,
+	//----------------------------------------------
+
+	const swiper = new Swiper(".partners-slider", {
+		slidesPerView: 6,
+		spaceBetween: 170,
+		slidesPerGroup: 6,
+		loop: true,
 	});
 
+	//----------------------------------
 	var containerEl1 = document.querySelector('[data-ref="container-1"]');
 	const containerEl2 = document.querySelector('[data-ref="container-2"]');
 

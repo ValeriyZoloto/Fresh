@@ -50,7 +50,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $dark-900;
-  @include overflow-2;
+  @include overflow($row-2);
 
   &--top-products {
     margin-bottom: 8px;
@@ -86,7 +86,7 @@ img {
 
 }
 
-.white--button {
+.btn--white {
   margin-bottom: 70px;
   border: 1px solid $green-900;
   background-color: $white;
@@ -138,7 +138,7 @@ img {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     transition: border-bottom 0.3s;
-    @include overflow-1;
+    @include overflow($row);
 
     &:active {
       border-bottom: $hover-green;
@@ -293,7 +293,7 @@ img {
     color: $dark-900;
     height: 60px;
     margin: 6px 18px;
-    @include overflow-3;
+    @include overflow($row-3);
   }
 
   &__text {
@@ -389,7 +389,7 @@ img {
     font-size: 14px;
     line-height: 1.4;
     margin-bottom: auto;
-    @include overflow-3;
+    @include overflow($row-3);
   }
 
   &__status {

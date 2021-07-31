@@ -4,10 +4,12 @@ $green-200:#e0edcf;
 $green-100:#eff6e7;
 $hover-green:#4d810c;
 
+$dark-1000: #000000;
 $dark-900:#121212;
 $dark-800:#31352B;
 $dark-500:#505050;
 $dark-blends:rgba(0, 0, 0, 0.1);
+$dark-basket: rgba(99, 166, 14, 0.1);
 $dark-active: rgba(255, 255, 255, 0.5);
 $dark-hover:rgba(255, 255, 255, 0.1);
 $box-shadov-active: rgba(0, 0, 0, 0.25);
@@ -20,34 +22,37 @@ $yellow-900:#ffb800;
 $silver-600:#c1c1c1;
 $silver-100:#f6f6f6;
 $silver-200:#f5f5f5;
-
+$silver-hover:rgba(193, 193, 193, 0.3);
 $white:#ffffff;
 /*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::переменные::::::::::::::::::::::::::::::::::::::::::*/
 $line-clamp: 2;
+$row: 1;
+$row-2:2;
+$row-3:3;
 
 /*::::::::::::::::::::::::::переменные-finish:::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::mixins::::::::::::::::::::::::::::::::::::::::::::::*/
-@mixin overflow-1 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-clamp: 2;
-}
 
-@mixin overflow-2 {
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 1px;
-  text-overflow: ellipsis;
-  line-clamp: 2;
-}
-
-@mixin overflow-3 {
-  overflow: hidden;
+@mixin overflow($row) {
+  -webkit-line-clamp: $row;
   display: -webkit-box;
-  line-clamp: 3;
-  box-orient: vertical
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin overflow($row-2) {
+  -webkit-line-clamp: $row-2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin overflow($row-3) {
+  -webkit-line-clamp: $row-3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /*::::::::::::::::::::::::::mixins-finish::::::::::::::::::::::::::::::::::::::::*/
@@ -71,3 +76,30 @@ $line-clamp: 2;
 }
 
 /*::::::::::::::::::::::::::обои-finish:::::::::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::брекпоинты::::::::::::::::::::::::::::::::::::::::::*/
+$breakpoints: ('xs': ('(max-width: 576px)'),
+  'sm': ('(max-width: 768px)'),
+  'md': ('(max-width: 992px)'),
+  'lg': ('(max-width: 1200px)'),
+);
+
+/*::::::::::::::::::::::::::брекпоинты-finish:::::::::::::::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::миксин для брейкпоинтов:::::::::::::::::::::::::::::*/
+// @mixin respond-to($breakpoint) {
+//   @if map-has-key($breakpoints, $breakpoint) {
+//     @media #{inspect(map-get($breakpoints, $breakpoint))} {
+//       @content;
+//     }
+//   }
+
+//   @else {
+//     @error 'Не указано значение для `#{$breakpoint}`';
+//   }
+// }
+@mixin media-w($lg) {
+  @media only screen and (max-width: $lg) {
+    @content;
+  }
+}
+
+/*::::::::::::::::::::::::::миксин для брейкпоинтов-finish::::::::::::::::::::::*/

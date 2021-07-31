@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Фрешок Главная страница магазин продуктов онлайн-маркет</title>
+  <title>Фрешок магазин продуктов онлайн-маркет | Главная страница</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -46,7 +47,6 @@
             <address class="hot-line__address">
               <div class="hot-line__item">
                 <a class="hot-line__link" href="#">
-                  <span class="sr-only">иконка телефона горячей линии</span>
                   <svg class="hot-line__img" width="23" height="23" viewBox="0 0 23 23"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -99,8 +99,8 @@
           <form class="search-form">
             <label class="search-form__label">
               <span class="sr-only">введите наименование товара для поиска</span>
-              <input class="search-form__input" type="search" maxlength="25"
-                name="search-text" required placeholder="Найти в магазине ...">
+              <input class="search-form__input" type="search" name="search-text" required
+                placeholder="Найти в магазине ...">
             </label>
 
             <span class="search-form__search-icon">
@@ -212,28 +212,30 @@
           </div>
         </li>
       </ul>
-      <div class="support">
-        <div class="container">
-          <ul class="support__list">
-            <li class="support__item support__item--scooter">
-              <span class="support__title">Бесплатная доставка</span>
-              <span class="support__text">Для заказов на сумму от 500 ₽</span>
-            </li>
 
-            <li class="support__item support__item--return">
-              <span class="support__title">Возврат товара</span>
-              <span class="support__text">Если товары были испорчены</span>
-            </li>
-
-            <li class="support__item  support__item--24">
-              <span class="support__title">Поддержка 24/7</span>
-              <span class="support__text">Лучшие операторы </span>
-            </li>
-          </ul>
-
-        </div>
-      </div>
     </section>
+
+    <div class="support">
+      <div class="container">
+        <ul class="support__list">
+          <li class="support__item support__item--scooter">
+            <span class="support__title">Бесплатная доставка</span>
+            <span class="support__text">Для заказов на сумму от 500 ₽</span>
+          </li>
+
+          <li class="support__item support__item--return">
+            <span class="support__title">Возврат товара</span>
+            <span class="support__text">Если товары были испорчены</span>
+          </li>
+
+          <li class="support__item  support__item--24">
+            <span class="support__title">Поддержка 24/7</span>
+            <span class="support__text">Лучшие операторы </span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
 
     <section class="top-products">
       <div class="container" data-ref="container-1">
@@ -296,7 +298,7 @@
               <a class="card__link" href="#">
                 <img class="card__image" src="images/products/pineapple.jpg" alt="ананасы"
                   width="298" height="215">
-                <span class="card__commodity">Ананас, 1кг</span>
+                <h3 class="card__commodity">Ананас, 1кг</h3>
               </a>
               <div class="card__text">
                 <div class="card__price-area">
@@ -347,7 +349,7 @@
               <a class="card__link" href="#">
                 <img class="card__image" src="images/products/lemon.jpg" alt="Лимон"
                   width="298" height="215">
-                <span class="card__commodity">Лимон, 1кг</span>
+                <h3 class="card__commodity">Лимон, 1кг</h3>
               </a>
               <div class="card__text">
                 <div class="card__price-area">
@@ -398,9 +400,9 @@
               <a class="card__link" href="#">
                 <img class="card__image" src="images/products/dragon-fruit.jpg"
                   alt="Питахайя" width="298" height="215">
-                <span class="card__commodity">
+                <h3 class="card__commodity">
                   Питахайя красная с белой мякотью, 1шт
-                </span>
+                </h3>
               </a>
               <div class="card__text">
                 <div class="card__price-area">
@@ -452,7 +454,7 @@
               <a class="card__link" href="#">
                 <img class="card__image" src="images/products/paprik-1.jpg" alt="Перец"
                   width="298" height="215">
-                <span class="card__commodity">Перец оранжевый, 1кг</span>
+                <h3 class="card__commodity">Перец оранжевый, 1кг</h3>
               </a>
               <div class="card__text">
                 <div class="card__price-area">
@@ -504,9 +506,9 @@
               <a class="card__link" href="#">
                 <img class="card__image" src="images/products/carrot-1.jpg" alt="Морковь"
                   width="298" height="215">
-                <span class="card__commodity">
+                <h3 class="card__commodity">
                   Морковь молодая с бабушкиной грядки,1кг
-                </span>
+                </h3>
               </a>
               <div class="card__text">
                 <div class="card__price-area">
@@ -558,10 +560,10 @@
               <a class="card__link" href="#">
                 <img class="card__image" src="images/products/juice-1.jpg"
                   alt="Напиток сокосодержащий" width="298" height="215">
-                <span class="card__commodity">
+                <h3 class="card__commodity">
                   Напиток сокосодержащий Sanpellegrino
                   Aranciata Orange Красный апельсин безалкогольный...
-                </span>
+                </h3>
               </a>
               <div class="card__text">
                 <div class="card__price-area">
@@ -619,9 +621,9 @@
               <a class="card__link" href="#">
                 <img class="card__image" src="images/products/coffee-1.jpg"
                   alt="Кофе с коноплей" width="298" height="215">
-                <span class="card__commodity">
+                <h3 class="card__commodity">
                   Кофе с коноплей органический Caffé Salomoni 250г
-                </span>
+                </h3>
               </a>
               <div class="card__text">
                 <div class="card__price-area">
@@ -668,9 +670,9 @@
               <a class="card__link" href="#">
                 <img class="card__image" src="images/products/ketchup-1.jpg" alt="кетчуп"
                   width="298" height="215">
-                <span class="card__commodity">
+                <h3 class="card__commodity">
                   Кетчуп томатный детский органический Bio-Zentrale 500мл
-                </span>
+                </h3>
               </a>
               <div class="card__text">
                 <div class="card__price-area">
@@ -700,7 +702,7 @@
             </article>
           </li>
         </ul>
-        <a class="btn white--button" href="#">Показать еще</a>
+        <a class="btn btn--white" href="#">Показать еще</a>
 
         <ul class="info">
           <li class="info__item info__item--long"
@@ -983,93 +985,69 @@
 
     <section class="blogs">
       <div class="container">
-        <ul class="partners-slider">
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
+        <div class="partners-slider swiper-container">
+          <ul class="partners-slider__wrapper swiper-wrapper">
+            <li class="partners-slider__slide swiper-slide">
               <img class="partners-slider__img" src="images/blogs/partners/sprite.svg"
                 alt="Логотип партнера Sprite" width="80" height="33">
-            </a>
-          </li>
+            </li>
 
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
+            <li class="partners-slider__slide swiper-slide">
               <img class="partners-slider__img" src="images/blogs/partners/dr-pepper.svg"
                 alt="Логотип партнера DrPepper" width="80" height="57">
-            </a>
-          </li>
+            </li>
 
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
+            <li class="partners-slider__slide swiper-slide">
               <img class="partners-slider__img" src="images/blogs/partners/coca-cola.svg"
                 alt="Логотип партнера CocaCola" width="80" height="26">
-            </a>
-          </li>
+            </li>
 
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
+            <li class="partners-slider__slide swiper-slide">
               <img class="partners-slider__img" src="images/blogs/partners/pepsi.svg"
                 alt="Логотип партнера pepsi" width="80" height="31">
-            </a>
-          </li>
+            </li>
 
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
-              <img class="partners-slider-slider__img"
-                src="images/blogs/partners/redbull.svg" alt="Логотип партнера Red Bull"
-                width="80" height="49">
-            </a>
-          </li>
-
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
-              <img class="partners-slider__img" src="images/blogs/partners/fanta.svg"
-                alt="Логотип партнера Fanta" width="80" height="59">
-            </a>
-          </li>
-
-          <li class="partners-slider__item">
-            <a class="partners-slider-slider__link" href="#">
-              <img class="partners-slider-slider__img"
-                src="images/blogs/partners/sprite.svg" alt="Логотип партнера Sprite"
-                width="80" height="33">
-            </a>
-          </li>
-
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
-              <img class="partners-slider__img" src="images/blogs/partners/dr-pepper.svg"
-                alt="Логотип партнера DrPepper" width="80" height="57">
-            </a>
-          </li>
-
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
-              <img class="partners-slider__img" src="images/blogs/partners/coca-cola.svg"
-                alt="Логотип партнера CocaCola" width="80" height="26">
-            </a>
-          </li>
-
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
-              <img class="partners-slider__img" src="images/blogs/partners/pepsi.svg"
-                alt="Логотип партнера pepsi" width="80" height="31">
-            </a>
-          </li>
-
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
+            <li class="partners-slider__slide swiper-slide">
               <img class="partners-slider__img" src="images/blogs/partners/redbull.svg"
                 alt="Логотип партнера Red Bull" width="80" height="49">
-            </a>
-          </li>
+            </li>
 
-          <li class="partners-slider__item">
-            <a class="partners-slider__link" href="#">
+            <li class="partners-slider__slide swiper-slide">
               <img class="partners-slider__img" src="images/blogs/partners/fanta.svg"
                 alt="Логотип партнера Fanta" width="80" height="59">
-            </a>
-          </li>
-        </ul>
+            </li>
+
+            <li class="partners-slider__slide swiper-slide">
+              <img class="partners-slider__img" src="images/blogs/partners/sprite.svg"
+                alt="Логотип партнера Sprite" width="80" height="33">
+            </li>
+
+            <li class="partners-slider__slide swiper-slide">
+              <img class="partners-slider__img" src="images/blogs/partners/dr-pepper.svg"
+                alt="Логотип партнера DrPepper" width="80" height="57">
+            </li>
+
+            <li class="partners-slider__slide swiper-slide">
+              <img class="partners-slider__img" src="images/blogs/partners/coca-cola.svg"
+                alt="Логотип партнера CocaCola" width="80" height="26">
+            </li>
+
+            <li class="partners-slider__slide swiper-slide">
+              <img class="partners-slider__img" src="images/blogs/partners/pepsi.svg"
+                alt="Логотип партнера pepsi" width="80" height="31">
+            </li>
+
+            <li class="partners-slider__slide swiper-slide">
+              <img class="partners-slider__img" src="images/blogs/partners/redbull.svg"
+                alt="Логотип партнера Red Bull" width="80" height="49">
+            </li>
+
+            <li class="partners-slider__slide swiper-slide">
+              <img class="partners-slider__img" src="images/blogs/partners/fanta.svg"
+                alt="Логотип партнера Fanta" width="80" height="59">
+            </li>
+          </ul>
+        </div>
         <div class="blogs__top-wrapper">
           <h2 class="title title--blog">наши новости</h2>
           <a class="blogs__link" href="#">все новости</a>
@@ -1148,8 +1126,8 @@
           <form class="subscribe-form">
             <label class="subscribe-form__label">
               Следите за нашими акциями
-              <input class="subscribe-form__input" type="email" maxlength="20"
-                name="email" required placeholder="email@email.com">
+              <input class="subscribe-form__input" type="email" name="email" required
+                placeholder="email@email.com">
             </label>
             <button class="subscribe-form__btn" type="submit">подписаться</button>
           </form>
@@ -1323,7 +1301,7 @@
     </div>
   </footer>
 
-
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
