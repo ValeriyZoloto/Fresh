@@ -51,16 +51,6 @@ img {
   text-transform: uppercase;
   color: $dark-900;
   @include overflow($row-2);
-
-  &--top-products {
-    margin-bottom: 8px;
-  }
-
-  &--actions {
-    margin-bottom: 10px;
-  }
-
-  &--blog {}
 }
 
 .btn {
@@ -122,7 +112,7 @@ img {
   align-items: center;
   margin-bottom: 49px;
 
-  &__button:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 25px;
   }
 
@@ -228,6 +218,10 @@ img {
     min-height: 60px;
   }
 
+  &__wrapper {
+    position: relative;
+  }
+
   &__span {
     display: block;
     padding: 3px 6px;
@@ -237,6 +231,7 @@ img {
     font-size: 10px;
     line-height: 1;
     letter-spacing: 0.03em;
+    z-index: 8;
 
     &--novelty {
       background-color: $green-900;
@@ -280,6 +275,7 @@ img {
   }
 
   &__image {
+    padding: 2px;
     object-fit: cover;
   }
 

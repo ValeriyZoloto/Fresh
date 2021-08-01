@@ -28,11 +28,14 @@ body {
 
 }
 /*---------------------------@media(max-width: 1030px)-finish-----------------*/
-https://github.com/ValeriyZoloto/Glee.-My-glee
+/*-----------Миксины переполнения--------------------------------------------*/
+overflow($row);
+@include overflow($row-2);
+@include overflow($row-3);
+/*----------------------------------------------------------------------------*/
 
-WhatTheFont
+35 минута
 
-<a class="card__link" href="#"> 
 
 
 
