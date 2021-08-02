@@ -15,10 +15,6 @@ body {
   justify-content: space-between;
 }
 
-img {
-  object-fit: contain;
-}
-
 .main {
   flex-grow: 1;
 }
@@ -42,6 +38,10 @@ img {
   overflow: hidden;
 }
 
+.logo__img {
+  object-fit: contain;
+}
+
 .title {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -59,14 +59,16 @@ img {
   border-radius: 6px;
   font-size: 18px;
   line-height: 1.3;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s,
+    box-shadow 0.3s,
+    color 0.3s;
 
   &:focus {
     box-shadow: 0px 0px 0px 4px $green-200;
   }
 
   &:hover {
-    background-color: $hover-green;
+    background-color: $hover-1000;
   }
 
   &:active {
@@ -81,7 +83,8 @@ img {
   border: 1px solid $green-900;
   background-color: $white;
   color: $green-900;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s,
+    box-shadow 0.3s;
 
   &:focus {
     box-shadow: 0px 0px 0px 4px $green-200;
@@ -99,9 +102,10 @@ img {
 .btn--green {
   background-color: $green-900;
   color: $white;
+  transition: background-color 0.3s;
 
   &:hover {
-    background-color: $hover-green;
+    background-color: $hover-1000;
 
   }
 }
@@ -129,9 +133,10 @@ img {
     text-transform: uppercase;
     transition: border-bottom 0.3s;
     @include overflow($row);
+    transition: border-bottom 0.3s;
 
     &:active {
-      border-bottom: $hover-green;
+      border-bottom: $hover-1000;
     }
 
     &:hover {
@@ -144,7 +149,8 @@ img {
   }
 }
 
-.card {
+.products-card,
+.mini-card {
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -220,44 +226,6 @@ img {
 
   &__wrapper {
     position: relative;
-  }
-
-  &__span {
-    display: block;
-    padding: 3px 6px;
-    border-radius: 6px;
-    color: $white;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    z-index: 8;
-
-    &--novelty {
-      background-color: $green-900;
-      margin-bottom: 5px;
-    }
-
-    &--discounts {
-      max-width: 37px;
-      background-color: $red-900;
-    }
-
-    &--actions {
-      padding: 3px 6px 3px 6px;
-      display: inline-block;
-      background-color: $green-900;
-      text-transform: uppercase;
-    }
-
-    &--hit {
-      display: inline-block;
-      padding: 3px 6px;
-      max-width: 37px;
-      background-color: $orange-900;
-      color: $white;
-      text-transform: uppercase;
-    }
   }
 
   &__heart-btn {
@@ -355,7 +323,7 @@ img {
     }
 
     &:hover {
-      background-color: $hover-green;
+      background-color: $hover-1000;
     }
 
     &:active {
@@ -425,8 +393,9 @@ img {
     letter-spacing: 0.03em;
   }
 
-  &__ruble {
-    margin-left: -4px;
+  &__symbol {
+    margin-left: -6px;
+    font-size: 14px;
     height: 10px;
   }
 
@@ -454,10 +423,43 @@ img {
     position: relative;
     min-width: 110px;
     background-repeat: no-repeat;
+    object-fit: cover;
+  }
+}
+
+.badge {
+  display: block;
+  padding: 3px 6px;
+  border-radius: 6px;
+  color: $white;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  max-height: 16px;
+  z-index: 8;
+
+  &--margin {
+    margin-bottom: 5px;
   }
 
-  &__img {
-    margin-top: -19px;
-    z-index: -1;
+  &--green {
+    background-color: $green-900;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--discounts {
+    max-width: 37px;
+    background-color: $red-900;
+  }
+
+  &--hit {
+    position: absolute;
+    max-width: 37px;
+    background-color: $orange-900;
   }
 }

@@ -2,7 +2,7 @@
 $green-900:#63a60e;
 $green-200:#e0edcf;
 $green-100:#eff6e7;
-$hover-green:#4d810c;
+$hover-1000:#4d810c;
 
 $dark-1000: #000000;
 $dark-900:#121212;
@@ -26,11 +26,9 @@ $silver-hover:rgba(193, 193, 193, 0.3);
 $white:#ffffff;
 /*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::переменные::::::::::::::::::::::::::::::::::::::::::*/
-$line-clamp: 2;
 $row: 1;
 $row-2:2;
 $row-3:3;
-
 /*::::::::::::::::::::::::::переменные-finish:::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::mixins::::::::::::::::::::::::::::::::::::::::::::::*/
 
@@ -57,19 +55,19 @@ $row-3:3;
 
 /*::::::::::::::::::::::::::mixins-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::обои::::::::::::::::::::::::::::::::::::::::::::::::*/
-%bg {
+%bg-left {
   background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-%bg1 {
+%bg-center-cover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-%bg2 {
+%bg-center-contain {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
