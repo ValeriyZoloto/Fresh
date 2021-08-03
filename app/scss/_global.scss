@@ -1,58 +1,13 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-button {
-  cursor: pointer;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 html,
 body {
   height: 100%;
 }
 
 body {
-  @extend %lato-Regular-14;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
   background-color: $white;
   color: $dark-500;
   display: flex;
@@ -65,7 +20,7 @@ body {
 }
 
 .container {
-  width: 1320px;
+  max-width: 1320px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -83,52 +38,56 @@ body {
   overflow: hidden;
 }
 
+.logo__img {
+  object-fit: contain;
+}
+
 .title {
-  @extend %signika-600-32;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
   line-height: 1.4;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $dark-900;
+  @include overflow($row-2);
 }
 
-.btn-green {
+.btn {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: $green-900;
-  color: $white;
+  padding: 12px 26px;
   border-radius: 6px;
-  @extend %lato-regular-18;
-  transition: background-color 0.3s;
-
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  transition: background-color 0.3s,
+    box-shadow 0.3s,
+    color 0.3s;
 
   &:focus {
     box-shadow: 0px 0px 0px 4px $green-200;
-    border-radius: 6px;
   }
 
   &:hover {
-    background-color: #4d810c;
+    background-color: $hover-1000;
   }
 
   &:active {
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0px 4px 4px $dark-925;
+    color: $dark-400;
   }
 }
 
-.white-button {
-  display: inline-block;
-  padding: 12px 24px;
+.btn--white {
+  margin-bottom: 70px;
   border: 1px solid $green-900;
-  border-radius: 6px;
   background-color: $white;
-  @extend %lato-regular-18;
   color: $green-900;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s,
+    box-shadow 0.3s;
 
   &:focus {
     box-shadow: 0px 0px 0px 4px $green-200;
-    border-radius: 6px;
   }
 
   &:hover {
@@ -136,6 +95,375 @@ body {
   }
 
   &:active {
-    box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 10px 4px $dark-910;
+  }
+}
+
+.btn--green {
+  background-color: $green-900;
+  color: $white;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $hover-1000;
+  }
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 49px;
+  font-weight: 700;
+  font-size: 15px;
+
+  &__item {
+    max-width: 101px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 28px;
+  }
+
+  &__btn {
+    max-width: 120px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 21px 0 0 0;
+    background-color: inherit;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    transition: border-bottom 0.3s;
+    @include overflow($row);
+    transition: border-bottom 0.3s;
+
+    &:active {
+      border-bottom: $hover-1000;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $green-900;
+    }
+  }
+
+  .mixitup-control-active {
+    border-bottom: 3px solid #e0edcf;
+  }
+}
+
+.products-card,
+.mini-card {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 10px 0 10px;
+  display: block;
+  max-width: 300px;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+  transition: border 0.3s;
+
+  &--action {
+    padding: 0;
+    background-color: $white;
+  }
+
+  &__inner {
+    max-width: 66px;
+    margin-right: auto;
+  }
+
+  &:hover {
+    border: 1px solid $green-900;
+  }
+
+  &__link {
+    &::before {
+      position: absolute;
+      content: '';
+      width: 298px;
+      height: 215px;
+      top: 65px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $dark-910;
+      z-index: 99;
+      background-image: url(../images/products/icon-search.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 0.3s;
+      transform: translateX(-100%);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 48px;
+      height: 48px;
+      top: 147px;
+      right: 125px;
+      border-radius: 50%;
+      background-color: $white;
+      transition: 0.3s;
+      transform: translateX(-500%);
+    }
+
+    &:hover::before {
+      transform: translateX(0%);
+    }
+
+    &:hover::after {
+      transform: translateX(0%);
+    }
+  }
+
+  &__heart {
+    position: relative;
+    padding: 0px 11px 0px 11px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 60px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__heart-btn {
+    border: none;
+    background-color: transparent;
+    padding: 7px;
+    position: absolute;
+    top: -3px;
+    right: 3px;
+    transition: fill 0.3s;
+
+    &:hover path {
+      fill: $yellow-900;
+    }
+  }
+
+  &__image {
+    padding: 2px;
+    object-fit: cover;
+  }
+
+  &__commodity {
+    text-align: left;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    color: $dark-900;
+    height: 60px;
+    margin: 6px 18px;
+    @include overflow($row-3);
+  }
+
+  &__text {
+    margin: 5px 18px;
+    width: 264px;
+    text-align: left;
+  }
+
+  &__price-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__price {
+    position: relative;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+
+    &--old-price {
+      display: block;
+      line-height: 1;
+      letter-spacing: 0.03em;
+      color: $silver-600;
+      position: relative;
+      margin-bottom: 3px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 45px;
+        height: 1px;
+        background-color: $silver-600;
+        bottom: 6px;
+        left: 0;
+        transform: rotate(-14.99deg);
+      }
+    }
+  }
+
+  &__cart {
+    position: relative;
+    border: none;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 3px;
+    background-color: $green-900;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 45px;
+      height: 45px;
+      left: -7px;
+      top: -7px;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 4px #E0EDCF;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      background-color: $hover-1000;
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px $dark-925;
+      color: $dark-400;
+    }
+  }
+
+  &__wrapper {
+    min-height: 120px;
+    padding: 13px 14px 6px 11px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__texts {
+    display: flex;
+    padding: 1px 0px 1px 3px;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 164px;
+    text-align: left;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: auto;
+    @include overflow($row-3);
+  }
+
+  &__status {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__status--avilible {
+    color: $green-900;
+  }
+
+  &__status--not-avilible {
+    color: $silver-600;
+  }
+
+  &__status--ends {
+    color: $red-900;
+  }
+
+  &__holder {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-holder {
+    max-width: 119px;
+  }
+
+  &__new-price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+  }
+
+  &__symbol {
+    margin-left: -6px;
+    font-size: 14px;
+    height: 10px;
+  }
+
+  &__old-price {
+    position: relative;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $silver-600;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 45px;
+      height: 1px;
+      background-color: #c1c1c1;
+      bottom: 6px;
+      left: 0;
+      transform: rotate(-14.99deg);
+    }
+  }
+
+  &__picture {
+    text-align: left;
+    position: relative;
+    min-width: 110px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+}
+
+.badge {
+  display: block;
+  padding: 3px 6px;
+  border-radius: 6px;
+  color: $white;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  max-height: 16px;
+  z-index: 8;
+
+  &--margin {
+    margin-bottom: 5px;
+  }
+
+  &--green {
+    background-color: $green-900;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--discounts {
+    max-width: 37px;
+    background-color: $red-900;
+  }
+
+  &--hit {
+    position: absolute;
+    max-width: 37px;
+    background-color: $orange-900;
   }
 }
