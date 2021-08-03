@@ -33,8 +33,25 @@ overflow($row);
 @include overflow($row-2);
 @include overflow($row-3);
 /*----------------------------------------------------------------------------*/
+@include respond-to($md) {
+  // ...
+}
 
-35 минута
+@include media-w($xl) {
+  // ...
+}
+
+@include media-w($lg) {
+  // ...
+}
+
+@include respond-to($sm) {
+  // ...
+}
+
+@include respond-to($xs) {
+  // ...
+}
 
 
 

@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 
 .main {
@@ -40,6 +41,18 @@ body {
 
 .logo__img {
   object-fit: contain;
+
+  @include media-w($md) {
+    display: none;
+  }
+}
+
+.logo__short {
+  display: none;
+
+  @include media-w($md) {
+    display: block;
+  }
 }
 
 .title {
