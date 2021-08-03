@@ -78,7 +78,7 @@
             </form>
             <ul class="header-roster">
               <li class="header-roster__item">
-                <button class="header-roster__btn" href="#" type="button">
+                <button class="header-roster__btn" type="button">
                   <img class="header-roster__icon" src="images/header-icons/user-link.svg"
                     alt="ссылка меню пользователя" width="25" height="32">
                 </button>
@@ -86,7 +86,7 @@
 
               <li class="header-roster__item">
                 <span class="header-roster__num">12</span>
-                <button class="header-roster__btn" href="#" type="button">
+                <button class="header-roster__btn" type="button">
                   <img class="header-roster__icon"
                     src="images/header-icons/icon-heart.svg" alt="ссылка любимых товаров"
                     width="38" height="36">
@@ -95,7 +95,7 @@
 
               <li class="header-roster__item">
                 <span class="header-roster__num">12</span>
-                <button class="header-roster__btn" href="#" type="button">
+                <button class="header-roster__btn" type="button">
                   <img class="header-roster__icon" src="images/header-icons/icon-cart.svg"
                     alt="ссылка перейдти в корзину" width="32" height="31">
                 </button>
@@ -181,7 +181,6 @@
             <span class="support__text">Лучшие операторы </span>
           </li>
         </ul>
-
       </div>
     </div>
 
@@ -511,7 +510,6 @@
               <div class="products-card__text">
                 <div class="products-card__price-area">
                   <div class="products-card__prices">
-
                     <span class="products-card__price products-card__price--old-price">
                       299
                       <span class="products-card__symbol">₽</span>
@@ -520,7 +518,6 @@
                       199
                       <span class="products-card__symbol">₽</span>
                     </span>
-
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -643,6 +640,7 @@
             </article>
           </li>
         </ul>
+
         <a class="btn btn--white" href="#">Показать еще</a>
 
         <ul class="banner">
@@ -908,7 +906,6 @@
                   <span class="badge  badge--hit">хит</span>
                   <img class="mini-card__picture" src="images/actions/pig-meat.jpg"
                     alt="Перейти на страницу Свинина мякоть" width="100" height="100">
-                  </img>
                   <div class="mini-card__texts">
                     <h3 class="mini-card__name">
                       Свинина мякоть, 1 кг
@@ -934,6 +931,7 @@
       </div>
     </section>
 
+    <!-- slider -->
     <div class="container">
       <div class="partners-slider swiper-container">
         <ul class="partners-slider__wrapper swiper-wrapper">
@@ -999,6 +997,7 @@
         </ul>
       </div>
     </div>
+    <!-- slider //-->
 
     <section class="our-news">
       <div class="container">
@@ -1008,63 +1007,69 @@
         </div>
         <ul class="our-news__list">
           <li class="our-news__item">
-            <a class="our-news__card" href="#">
-              <div class="our-news__picture">
-                <img class="our-news__img" src="images/blogs/content/images.jpg"
-                  alt="распродажа фруктов онлайн" width="410" height="240">
-                <time class="our-news__date" datetime="2021-07-15T23:31:05+07:00">
-                  <span class="our-news__month"> июль</span>
-                  <span class="our-news__num">15</span>
-                </time>
-              </div>
-              <div class="our-news__text">
-                <h3 class="our-news__name">
-                  Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК.
-                  Торопись, пока всё не разобрали!
-                </h3>
-              </div>
-            </a>
+            <article class="our-news__particle">
+              <a class="our-news__card" href="#">
+                <div class="our-news__picture">
+                  <img class="our-news__img" src="images/blogs/content/images.jpg"
+                    alt="распродажа фруктов онлайн" width="410" height="240">
+                  <time class="our-news__date" datetime="2021-07-15T23:31:05+07:00">
+                    <span class="our-news__month"> июль</span>
+                    <span class="our-news__num">15</span>
+                  </time>
+                </div>
+                <div class="our-news__text">
+                  <h3 class="our-news__name">
+                    Событие этого лета: распродажа сезонных фруктов в онлайн-маркете
+                    ФрешОК.
+                    Торопись, пока всё не разобрали!
+                  </h3>
+                </div>
+              </a>
+            </article>
           </li>
 
           <li class="our-news__item">
-            <a class="our-news__card" href="#">
-              <div class="our-news__picture">
-                <img class="our-news__img" src="images/blogs/content/images1.jpg"
-                  alt="распродажа фруктов онлайн" width="410" height="240">
-                <time class="our-news__date" datetime="2021-05-07T23:31:05+07:00">
-                  <span class="our-news__month"> май</span>
-                  <span class="our-news__num">07</span>
-                </time>
-              </div>
-              <div class="our-news__text">
-                <h3 class="our-news__name">
-                  Шикарнейший выбор манго в нашем онлайн-маркете
-                </h3>
-              </div>
-            </a>
+            <article class="our-news__particle">
+              <a class="our-news__card" href="#">
+                <div class="our-news__picture">
+                  <img class="our-news__img" src="images/blogs/content/images1.jpg"
+                    alt="распродажа фруктов онлайн" width="410" height="240">
+                  <time class="our-news__date" datetime="2021-05-07T23:31:05+07:00">
+                    <span class="our-news__month"> май</span>
+                    <span class="our-news__num">07</span>
+                  </time>
+                </div>
+                <div class="our-news__text">
+                  <h3 class="our-news__name">
+                    Шикарнейший выбор манго в нашем онлайн-маркете
+                  </h3>
+                </div>
+              </a>
+            </article>
           </li>
 
           <li class="our-news__item">
-            <a class="our-news__card" href="#">
-              <div class="our-news__picture">
-                <img class="our-news__img" src="images/blogs/content/images2.jpg"
-                  alt="распродажа фруктов онлайн" width="410" height="240">
-                <time class="our-news__date" datetime="2021-02-20T23:31:05+07:00">
-                  <span class="our-news__month"> февраль</span>
-                  <span class="our-news__num">20</span>
-                </time>
-              </div>
-              <div class="our-news__text">
-                <h3 class="our-news__name">
-                  Всё, что вы хотели знать о папайя
-                </h3>
-              </div>
-            </a>
+            <article class="our-news__particle">
+              <a class="our-news__card" href="#">
+                <div class="our-news__picture">
+                  <img class="our-news__img" src="images/blogs/content/images2.jpg"
+                    alt="распродажа фруктов онлайн" width="410" height="240">
+                  <time class="our-news__date" datetime="2021-02-20T23:31:05+07:00">
+                    <span class="our-news__month"> февраль</span>
+                    <span class="our-news__num">20</span>
+                  </time>
+                </div>
+                <div class="our-news__text">
+                  <h3 class="our-news__name">
+                    Всё, что вы хотели знать о папайя
+                  </h3>
+                </div>
+              </a>
+            </article>
           </li>
         </ul>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
