@@ -103,7 +103,7 @@
                 <a class="header__link" href="#">
                   <img class="header__img" src="images/header-icons/icon-lorry.svg"
                     alt="Ссылка на адрес и время доставки" width="32" height="21">
-                  адрес и время доставки
+                  <span class="header__text"> адрес и время доставки</span>
                 </a>
               </div>
 
@@ -112,12 +112,15 @@
                   <a class="header__link" href="#">
                     <img class="header__img" src="images/header-icons/icon-tel.svg"
                       alt="Ссылка на телефон горячей линии" width="22" height="22">
-                    горячая линия 24/7
+                    <span class="header__text"> горячая линия 24/7</span>
                   </a>
                 </div>
               </address>
             </div>
-
+            <button class="burger" type="button">
+              <span class="burger__span"></span>
+              <span class="sr-only">Для открытия навигационного меню </span>
+            </button>
             <ul class="news">
               <li class="news__item">
                 <a class="news__link" href="#">доставка</a>
@@ -147,44 +150,44 @@
 
             <div class="header__holder">
               <button class="header__list" type="button">
-                Каталог продуктов
+                Каталог <span class="header__products">продуктов</span>
               </button>
-              <div class="select">
-                <a class="select__link" href="#">
+              <div class="dropdown">
+                <a class="dropdown__link" href="#">
                   Овощи и фрукты
                 </a>
-                <a class="select__link" href="#">
+                <a class="dropdown__link" href="#">
                   Бакалея
                 </a>
-                <a class="select__link" href="#">
+                <a class="dropdown__link" href="#">
                   Молочные продукты
                 </a>
-                <a class="select__link select__link--active" href="#">
+                <a class="dropdown__link select__link--active" href="#">
                   Хлеб
                 </a>
-                <a class="select__link" href="#">
+                <a class="dropdown__link" href="#">
                   Мясо
                 </a>
-                <a class="select__link" href="#">
+                <a class="dropdown__link" href="#">
                   Колбаса
                 </a>
 
-                <a class="select__link" href="#">
+                <a class="dropdown__link" href="#">
                   Рыба
                 </a>
-                <a class="select__link" href="#">
+                <a class="dropdown__link" href="#">
                   Алкоголь
                 </a>
-                <a class="select__link" href="#">
+                <a class="dropdown__link" href="#">
                   Напитки
                 </a>
-                <a class="select__link" href="#">
+                <a class="dropdown__link" href="#">
                   Торты
                 </a>
-                <a class="select__link" href="#">
+                <a class="dropdown__link" href="#">
                   Мясо
                 </a>
-                <a class="select__link" href="#">
+                <a class="dropdown__link" href="#">
                   Чай, кофе
                 </a>
               </div>
@@ -198,7 +201,27 @@
               </label>
               <button class="search-form__search" type="submit">поиск</button>
             </form>
+
+            <form class="search-form search-form--mobile">
+              <label class="search-form__label">
+                <span class="sr-only">введите наименование товара для поиска</span>
+                <input class="search-form__input" type="search" name="search-text"
+                  required placeholder="Я ищу...">
+              </label>
+              <button class="search-form__search" type="submit">поиск</button>
+            </form>
+
+
             <ul class="header-roster">
+              <li class="header-roster__item">
+                <button class="header-roster__btn header-roster__btn--search "
+                  type="button">
+                  <img class="header-roster__icon"
+                    src="images/header-icons/big-search.svg"
+                    alt="ссылка меню пользователя" width="24" height="24">
+                </button>
+              </li>
+
               <li class="header-roster__item">
                 <button class="header-roster__btn header-roster__btn--user" type="button">
                   <img class="header-roster__icon" src="images/header-icons/user-link.svg"
@@ -218,7 +241,7 @@
 
               <li class="header-roster__item">
                 <span class="header-roster__num">12</span>
-                <button class="header-roster__btn" type="button">
+                <button class="header-roster__btn header-roster__btn--cart" type="button">
                   <img class="header-roster__icon" src="images/header-icons/icon-cart.svg"
                     alt="ссылка перейдти в корзину" width="32" height="31">
                 </button>

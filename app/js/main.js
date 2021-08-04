@@ -35,7 +35,7 @@ $(function () {
 	//-mixitap-finish--//
 	//--basket---------//
 	//ОТКРЫТИЕ КОРЗИНЫ
-	$(".header-roster__btn").on("click", function () {
+	$(".header-roster__btn--cart").on("click", function () {
 		$(".basket").addClass("basket--active");
 	});
 
@@ -50,7 +50,7 @@ $(function () {
 	});
 	//--basket-Finish--------//
 	//ВЫПАДАЮЩИЙ СПИСОК
-	var select = $(".select"),
+	var select = $(".dropdown"),
 		timeoutId;
 	$(".header__list").hover(
 		function () {
@@ -68,4 +68,11 @@ $(function () {
 		.mouseleave(function () {
 			select.hide(500);
 		});
+
+	let btn = document.querySelector(".header-roster__btn--search");
+	let mobileForm = document.querySelector(".search-form--mobile");
+
+	btn.addEventListener("click", function () {
+		mobileForm.classList.toggle("sesrch-form--active");
+	});
 });

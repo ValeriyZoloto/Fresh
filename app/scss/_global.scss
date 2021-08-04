@@ -53,6 +53,84 @@ body {
   @include media-w($md) {
     display: block;
   }
+
+  @include media-w($sm) {
+    display: none;
+  }
+
+  @include media-w($xs) {
+    display: block;
+  }
+}
+
+.burger {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 15;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  display: none;
+
+  @include media-w($sm) {
+    display: block;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 45px;
+    top: 0;
+    left: 0;
+  }
+
+  &__span {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: $white;
+    display: block;
+    position: relative;
+    transition: transform 0.5s;
+
+    &--active {
+      background-color: transparent;
+    }
+  }
+
+  &__span::before,
+  &__span::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    transition: transform 0.5s;
+  }
+
+  &__span::before {
+    top: 10px;
+
+    &--active {
+      transform: rotate(45deg);
+      top: 0;
+    }
+  }
+
+  &__span::after {
+    bottom: 10px;
+
+    &--active {
+      transform: rotate(-45deg);
+      bottom: 0;
+    }
+  }
 }
 
 .title {
