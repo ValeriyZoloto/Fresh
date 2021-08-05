@@ -221,9 +221,10 @@
   right: 0;
   height: 100vh;
   max-width: 476px;
+  width: 100%;
   background-color: $silver-100;
   color: $dark-1000;
-  z-index: 10;
+  z-index: 99;
   transform: translateY(0%);
 }
 
@@ -296,6 +297,13 @@
     position: relative;
     padding: 15px 1px 15px 44px;
     transition: opasity 0.5s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
     &:hover {
       opacity: 0.7;
@@ -619,6 +627,7 @@
   }
 
   &__btn {
+    position: relative;
     display: inline-block;
     background-color: transparent;
     border: none;
@@ -629,14 +638,51 @@
     border-radius: 3px;
     transition: background-color 0.3s;
 
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 10px;
+      @extend %bg-center-cover;
+    }
+
+    &--user::before {
+      width: 25px;
+      height: 32px;
+      background-image: url(../images/header-icons/user-link.svg);
+    }
+
+    &--favorite::before {
+      width: 34px;
+      height: 31px;
+      background-image: url(../images/header-icons/icon-heart.svg);
+    }
+
+    &--cart::before {
+      width: 33px;
+      height: 34px;
+      background-image: url(../images/header-icons/icon-cart.svg);
+    }
+
+    &:focus {
+      outline-color: transparent;
+      box-shadow: 0px 0px 0px 4px $dark-400;
+    }
+
     &:hover {
       background-color: $dark-911;
+    }
+
+    &:active {
+      color: $silver-600;
     }
 
     &--user {
       @include media-w($md) {
         display: none;
       }
+
+      @include media-w($sm) {}
     }
 
     &--favorite {
@@ -662,8 +708,8 @@
   &__num {
     overflow: hidden;
     position: absolute;
-    top: 4px;
-    right: 31px;
+    top: 5px;
+    right: 38px;
     display: block;
     padding: 3px;
     border-radius: 9px;
@@ -671,6 +717,7 @@
     font-weight: 600;
     font-size: 10px;
     color: $red-900;
+    z-index: 2;
 
     &--favorite {
       @include media-w($sm) {
