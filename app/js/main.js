@@ -33,22 +33,49 @@ $(function () {
 	const mixer1 = mixitup(containerEl1, config);
 	const mixer2 = mixitup(containerEl2, config);
 	//-mixitap-finish--//
-	//--basket---------//
-	//ОТКРЫТИЕ КОРЗИНЫ
-	$(".header-roster__btn--cart").on("click", function () {
-		$(".basket").addClass("basket--active");
+
+	//--Fade-block---------//
+
+	const button = document.querySelector(".header-roster__btn--cart");
+	const modal = document.querySelector(".fade-block");
+	const basket = document.querySelector(".basket");
+	const buttonClose = document.querySelector("[data-modal-close]");
+
+	button.addEventListener("click", function () {
+		console.log("клик по кнопке открыть корзину");
+		modal.classList.add("fade-block--active");
+		basket.classList.add("basket--active");
 	});
 
-	//ОТМЕНА СТАНДАРТНОГО ПОВЕДЕНИЯ ССЫЛОК
+	buttonClose.addEventListener("click", function () {
+		console.log("клик по кнопке закрыть  корзину");
+		modal.classList.remove("fade-block--active");
+		basket.classList.remove("basket--active");
+	});
+
+	modal.addEventListener("click", function () {
+		console.log("клик по фейду");
+		modal.classList.remove("fade-block--active");
+		basket.classList.remove("basket--active");
+	});
+
 	$(".basket__link").on("click", function (event) {
 		event.preventDefault();
 	});
 
-	// ЗАКРЫТИЕ КОРЗИНЫ
-	$(".basket__close").on("click", function () {
-		$(".basket").removeClass("basket--active");
+	$(".basket__order").on("click", function (event) {
+		event.preventDefault();
 	});
-	//--basket-Finish--------//
+
+	$(document).keyup(function (e) {
+		if (e.keyCode == 27) {
+			console.log("click escape");
+			modal.classList.remove("fade-block--active");
+			basket.classList.remove("basket--active");
+		}
+	});
+	//--fade-block-Finish--------//
+
 	//ВЫПАДАЮЩИЙ СПИСОК
 	var select = $(".dropdown"),
 		timeoutId;
