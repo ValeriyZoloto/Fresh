@@ -39,27 +39,34 @@ body {
   overflow: hidden;
 }
 
-.logo__img {
-  object-fit: contain;
+.logo {
+  &__img {
+    object-fit: contain;
 
-  @include media-w($md) {
-    display: none;
+    @include media-w($md) {
+      display: none;
+    }
   }
-}
 
-.logo__short {
-  display: none;
-
-  @include media-w($md) {
+  &__footer {
     display: block;
+    margin-bottom: 23px;
   }
 
-  @include media-w($sm) {
+  &__short {
     display: none;
-  }
 
-  @include media-w($xs) {
-    display: block;
+    @include media-w($md) {
+      display: block;
+    }
+
+    @include media-w($sm) {
+      display: none;
+    }
+
+    @include media-w($xs) {
+      display: block;
+    }
   }
 }
 
@@ -89,7 +96,7 @@ body {
     left: 0;
   }
 
-  &__span {
+  &__part {
     position: relative;
     width: 30px;
     height: 2px;
@@ -103,8 +110,8 @@ body {
     }
   }
 
-  &__span::before,
-  &__span::after {
+  &__part::before,
+  &__part::after {
     content: "";
     position: absolute;
     width: 30px;
@@ -114,7 +121,7 @@ body {
     transition: transform 0.5s;
   }
 
-  &__span::before {
+  &__part::before {
     top: 10px;
 
     &--active {
@@ -123,7 +130,7 @@ body {
     }
   }
 
-  &__span::after {
+  &__part::after {
     bottom: 10px;
 
     &--active {
@@ -132,6 +139,7 @@ body {
     }
   }
 }
+
 
 .mobile {
   position: fixed;
@@ -316,8 +324,27 @@ body {
   }
 }
 
-.products-card,
 .mini-card {
+  padding: 0;
+  background-color: $white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: block;
+  max-width: 300px;
+  border: 1px solid rgba(17, 17, 17, .2);
+  border-radius: 6px;
+  transition: border .3s;
+
+  &__wrapper {
+    min-height: 120px;
+    padding: 13px 14px 6px 11px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.products-card {
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -327,11 +354,6 @@ body {
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 6px;
   transition: border 0.3s;
-
-  &--action {
-    padding: 0;
-    background-color: $white;
-  }
 
   &__inner {
     max-width: 66px;
@@ -454,7 +476,7 @@ body {
     line-height: 1;
     letter-spacing: 0.03em;
 
-    &--old-price {
+    &--old {
       display: block;
       line-height: 1;
       letter-spacing: 0.03em;
@@ -570,12 +592,11 @@ body {
   }
 
   &__symbol {
-    margin-left: -6px;
-    font-size: 14px;
+    font-size: 13px;
     height: 10px;
   }
 
-  &__old-price {
+  &__old {
     position: relative;
     font-size: 12px;
     line-height: 1;

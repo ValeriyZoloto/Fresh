@@ -69,7 +69,7 @@
               </address>
             </div>
             <button class="burger" type="button">
-              <span class="burger__span"></span>
+              <span class="burger__part"></span>
               <span class="sr-only">Для открытия навигационного меню </span>
             </button>
             <ul class="news">
@@ -164,31 +164,29 @@
             </form>
 
 
-            <ul class="header-roster">
-              <li class="header-roster__item">
-                <button class="header-roster__btn header-roster__btn--search "
-                  type="button">
+            <ul class="roster">
+              <li class="roster__item">
+                <button class="roster__btn roster__btn--search " type="button">
                   <span class="sr-only">форма поиска товаров</span>
                 </button>
               </li>
 
-              <li class="header-roster__item">
-                <button class="header-roster__btn header-roster__btn--user" type="button">
+              <li class="roster__item">
+                <button class="roster__btn roster__btn--user" type="button">
                   <span class="sr-only">кнопка личный кабинет</span>
                 </button>
               </li>
 
-              <li class="header-roster__item">
-                <span class="header-roster__num header-roster__num--favorite">12</span>
-                <button class="header-roster__btn header-roster__btn--favorite"
-                  type="button">
+              <li class="roster__item">
+                <span class="roster__num roster__num--favorite">12</span>
+                <button class="roster__btn roster__btn--favorite" type="button">
                   <span class="sr-only">кнопка добавить в избранное</span>
                 </button>
               </li>
 
-              <li class="header-roster__item">
-                <span class="header-roster__num">12</span>
-                <button class="header-roster__btn header-roster__btn--cart" type="button">
+              <li class="roster__item">
+                <span class="roster__num">12</span>
+                <button class="roster__btn roster__btn--cart" type="button">
                 </button>
                 <span class="sr-only">кнопка открыть корзину</span>
               </li>
@@ -439,7 +437,7 @@
               <div class="products-card__text">
                 <div class="products-card__price-area">
                   <div class="products-card__pricis">
-                    <span class="products-card__price products-card__price--old-price">
+                    <span class="products-card__price products-card__price--old">
                       1999
                       <span class="products-card__symbol">₽</span>
                     </span>
@@ -742,7 +740,7 @@
               <div class="products-card__text">
                 <div class="products-card__price-area">
                   <div class="products-card__prices">
-                    <span class="products-card__price products-card__price--old-price">
+                    <span class="products-card__price products-card__price--old">
                       299
                       <span class="products-card__symbol">₽</span>
                     </span>
@@ -901,7 +899,7 @@
 
         <ul class="banner">
           <li class="banner__item banner__item--long">
-            <article class="banner-card"
+            <article class="banner-card banner-card--long"
               style="background-image: url(../images/products/info/item-bg1.jpg);">
               <span class="banner-card__text">свежайшие фрукты</span>
               <h3 class="banner-card__title">начни фруктовое лето <br> всего от 99 ₽ </h3>
@@ -1255,69 +1253,63 @@
 
     <section class="our-news">
       <div class="container">
-        <div class="our-news__top-wrapper">
-          <h2 class="title title--our-news">наши новости</h2>
+        <div class="our-news__top">
+          <h2 class="title ">наши новости</h2>
           <a class="our-news__link" href="#">все новости</a>
         </div>
         <ul class="our-news__list">
           <li class="our-news__item">
-            <article class="our-news__particle">
-              <a class="our-news__card" href="#">
-                <div class="our-news__picture">
-                  <img class="our-news__img" src="images/blogs/content/images.jpg"
+            <article class="news-card">
+              <a class="news-card__link" href="#">
+                <div class="news-card__picture">
+                  <img class="news-card__img" src="images/blogs/content/images.jpg"
                     alt="распродажа фруктов онлайн" width="410" height="240">
-                  <time class="our-news__date" datetime="2021-07-15T23:31:05+07:00">
-                    <span class="our-news__month"> июль</span>
-                    <span class="our-news__num">15</span>
+                  <time class="news-card__date" datetime="2021-07-15T23:31:05+07:00">
+                    <span class="news-card__month"> июль</span>
+                    <span class="news-card__num">15</span>
                   </time>
                 </div>
-                <div class="our-news__text">
-                  <h3 class="our-news__name">
-                    Событие этого лета: распродажа сезонных фруктов в онлайн-маркете
-                    ФрешОК.
-                    Торопись, пока всё не разобрали!
-                  </h3>
-                </div>
+                <h3 class="news-card__name">
+                  Событие этого лета: распродажа сезонных фруктов в онлайн-маркете
+                  ФрешОК.
+                  Торопись, пока всё не разобрали!
+                </h3>
               </a>
             </article>
           </li>
 
           <li class="our-news__item">
-            <article class="our-news__particle">
-              <a class="our-news__card" href="#">
-                <div class="our-news__picture">
-                  <img class="our-news__img" src="images/blogs/content/images1.jpg"
+            <article class="news-card">
+              <a class="news-card__link" href="#">
+                <div class="news-card__picture">
+                  <img class="news-card__img" src="images/blogs/content/images1.jpg"
                     alt="распродажа фруктов онлайн" width="410" height="240">
-                  <time class="our-news__date" datetime="2021-05-07T23:31:05+07:00">
-                    <span class="our-news__month"> май</span>
-                    <span class="our-news__num">07</span>
+                  <time class="news-card__date" datetime="2021-05-07T23:31:05+07:00">
+                    <span class="news-card__month"> май</span>
+                    <span class="news-card__num">07</span>
                   </time>
                 </div>
-                <div class="our-news__text">
-                  <h3 class="our-news__name">
-                    Шикарнейший выбор манго в нашем онлайн-маркете
-                  </h3>
-                </div>
+                <h3 class="news-card__name">
+                  Шикарнейший выбор манго в нашем онлайн-маркете
+                </h3>
               </a>
             </article>
           </li>
 
           <li class="our-news__item">
-            <article class="our-news__particle">
-              <a class="our-news__card" href="#">
-                <div class="our-news__picture">
-                  <img class="our-news__img" src="images/blogs/content/images2.jpg"
+            <article class="news-card">
+              <a class="news-card__link" href="#">
+                <div class="news-card__picture">
+                  <img class="news-card__img" src="images/blogs/content/images2.jpg"
                     alt="распродажа фруктов онлайн" width="410" height="240">
-                  <time class="our-news__date" datetime="2021-02-20T23:31:05+07:00">
-                    <span class="our-news__month"> февраль</span>
-                    <span class="our-news__num">20</span>
+                  <time class="news-card__date" datetime="2021-02-20T23:31:05+07:00">
+                    <span class="news-card__month"> февраль</span>
+                    <span class="news-card__num">20</span>
                   </time>
                 </div>
-                <div class="our-news__text">
-                  <h3 class="our-news__name">
-                    Всё, что вы хотели знать о папайя
-                  </h3>
-                </div>
+                <h3 class="news-card__name">
+                  Всё, что вы хотели знать о папайя
+                </h3>
               </a>
             </article>
           </li>
@@ -1328,7 +1320,7 @@
 
   <footer class="footer">
     <div class="container">
-      <a class="logo logo--footer" href="#">
+      <a class="logo footer__logo" href="#">
         <img class="logo__img" src="./images/logo/logo.png"
           alt="Логотип онлайн-магазина ФрешОк" width="200" height="60">
       </a>

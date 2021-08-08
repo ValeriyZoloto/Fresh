@@ -36,7 +36,7 @@ $(function () {
 
 	//--Fade-block---------//
 
-	const button = document.querySelector(".header-roster__btn--cart");
+	const button = document.querySelector(".roster__btn--cart");
 	const modal = document.querySelector(".fade-block");
 	const basket = document.querySelector(".basket");
 	const buttonClose = document.querySelector("[data-modal-close]");
@@ -44,19 +44,19 @@ $(function () {
 	button.addEventListener("click", function () {
 		console.log("клик по кнопке открыть корзину");
 		modal.classList.add("fade-block--active");
-		basket.classList.add("basket--active");
+		basket.classList.add("basket__active");
 	});
 
 	buttonClose.addEventListener("click", function () {
 		console.log("клик по кнопке закрыть  корзину");
 		modal.classList.remove("fade-block--active");
-		basket.classList.remove("basket--active");
+		basket.classList.remove("basket__active");
 	});
 
 	modal.addEventListener("click", function () {
 		console.log("клик по фейду");
 		modal.classList.remove("fade-block--active");
-		basket.classList.remove("basket--active");
+		basket.classList.remove("basket__active");
 	});
 
 	$(".basket__link").on("click", function (event) {
@@ -71,7 +71,7 @@ $(function () {
 		if (e.keyCode == 27) {
 			console.log("click escape");
 			modal.classList.remove("fade-block--active");
-			basket.classList.remove("basket--active");
+			basket.classList.remove("basket__active");
 		}
 	});
 	//--fade-block-Finish--------//
