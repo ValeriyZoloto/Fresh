@@ -34,6 +34,8 @@ $(function () {
 	const mixer2 = mixitup(containerEl2, config);
 	//-mixitap-finish--//
 
+	$(".counter__current").styler();
+
 	//--Fade-block---------//
 
 	const button = document.querySelector(".roster__btn--cart");
@@ -96,10 +98,10 @@ $(function () {
 			select.hide(500);
 		});
 
-	let btn = document.querySelector(".header-roster__btn--search");
+	let btn = document.querySelector(".roster__btn--search");
 	let mobileForm = document.querySelector(".search-form--mobile");
 
 	btn.addEventListener("click", function () {
-		mobileForm.classList.toggle("sesrch-form--active");
+		mobileForm.classList.toggle("search-form--active");
 	});
 });

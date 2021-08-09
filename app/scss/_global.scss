@@ -48,11 +48,6 @@ body {
     }
   }
 
-  &__footer {
-    display: block;
-    margin-bottom: 23px;
-  }
-
   &__short {
     display: none;
 
@@ -336,12 +331,94 @@ body {
   border-radius: 6px;
   transition: border .3s;
 
+  &:hover {
+    border: 1px solid $green-900;
+  }
+
   &__wrapper {
     min-height: 120px;
     padding: 13px 14px 6px 11px;
     display: flex;
     justify-content: space-between;
   }
+
+  &__status--avilible {
+    color: $green-900;
+  }
+
+  &__status--not-avilible {
+    color: $silver-600;
+  }
+
+  &__status--ends {
+    color: $red-900;
+  }
+
+  &__holder {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price-holder {
+    max-width: 119px;
+  }
+
+  &__new-price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+  }
+
+  &__symbol {
+    font-size: 13px;
+    height: 10px;
+  }
+
+  &__old {
+    position: relative;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $silver-600;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 45px;
+      height: 1px;
+      background-color: #c1c1c1;
+      bottom: 6px;
+      left: 0;
+      transform: rotate(-14.99deg);
+    }
+  }
+
+  &__picture {
+    text-align: left;
+    position: relative;
+    min-width: 110px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+
+  &__texts {
+    display: flex;
+    padding: 1px 0px 1px 3px;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 164px;
+    text-align: left;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: auto;
+    @include overflow($row-3);
+  }
+
 }
 
 .products-card {

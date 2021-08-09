@@ -96,6 +96,7 @@
     min-width: 452px;
     padding: 13px 12px 13px 12px;
     height: 75vh;
+    overflow: scroll;
   }
 
   &__list {
@@ -157,6 +158,10 @@
   border: 1px solid $silver-600;
   border-radius: 3px;
   background-color: $white;
+
+  &:hover {
+    border: 1px solid $green-900;
+  }
 
   &__btn {
     content: "";
@@ -220,7 +225,8 @@
   }
 
   &__count {
-    padding-top: 5px;
+    margin-left: 61px;
+    padding-top: 7px;
     font-weight: 600;
     font-size: 20px;
     line-height: 1;
@@ -235,7 +241,88 @@
 
 }
 
+.jq-number__spin {
+  position: relative;
+  margin-top: -12px;
+  width: 24px;
+  height: 24px;
+  background-color: $green-900;
+  cursor: pointer;
+}
+
+.jq-number__spin.plus {
+  position: relative;
+  top: -25px;
+  right: -58px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 4px;
+    color: $white;
+    background-color: $white;
+    width: 16px;
+    height: 1px;
+    transform: rotate(90deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 4px;
+    color: $white;
+    background-color: $white;
+    width: 16px;
+    height: 1px;
+  }
+}
+
+.jq-number__spin.minus {
+  top: -12px;
+  left: 0;
+}
+
+.jq-number__spin:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 3px;
+  color: $white;
+  background-color: $white;
+  width: 16px;
+  height: 1px;
+}
+
+.jq-number__spin.minus:after {
+  top: 12px;
+}
+
+.jq-number__field {
+  position: relative;
+  text-align: center;
+  width: 86px;
+  border: 1px solid transparent;
+  border-bottom-color: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.jq-number__field input {
+  width: 100%;
+  height: 24px;
+  border: none;
+  outline: none;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 16px;
+  background-color: $dark-810;
+  color: $dark-500;
+}
+
 .counter {
+  margin-right: 0px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -260,7 +347,6 @@
     width: 36px;
     height: 24px;
     text-align: center;
-    background-color: $dark-810;
     font-size: 16px;
     border: none;
 
@@ -526,6 +612,11 @@
     padding: 15px 24px 15px 24px;
     display: block;
     border-bottom: 1px solid $silver-300;
+
+    &:hover {
+      border-left: 3px solid $green-900;
+      color: $green-900;
+    }
 
     &--active {
       border-left: 3px solid $green-900;
@@ -1304,7 +1395,7 @@
     display: flex;
     align-items: flex-start;
     padding-bottom: 30px;
-    border-bottom: 1px solid rgba(133, 98, 98, 0.1);
+    border-bottom: 1px solid $dark-920;
   }
 
   &__bottom {
