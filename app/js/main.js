@@ -99,9 +99,55 @@ $(function () {
 		});
 
 	let btn = document.querySelector(".roster__btn--search");
-	let mobileForm = document.querySelector(".search-form--mobile");
+	let mobileForm = document.querySelector(".search-form");
 
 	btn.addEventListener("click", function () {
 		mobileForm.classList.toggle("search-form--active");
 	});
+
+	//Форма
+	$(document).ready(function ($) {
+		var $window = $(window),
+			$element = $(".search-form");
+
+		function resize() {
+			if ($window.width() < 480) {
+				return $element.addClass("search-form--mobile");
+			}
+			$element.removeClass("search-form--mobile");
+		}
+
+		$window.resize(resize).trigger("resize");
+	});
+	//Форма-finish
+
+	//Инпут
+	var inp = document.querySelector(".search-form__input");
+	window.addEventListener("resize", function () {
+		inp.setAttribute(
+			"placeholder",
+			this.innerWidth >= 480 ? "Найти в магазине ..." : "Я ищу ..."
+		);
+	});
+	window.dispatchEvent(new Event("resize"));
+	//Инпут-финш
+
+	//Logo
+	$(function () {
+		if ($(window).width() <= 992) {
+			$(".logo__img").each(function () {
+				$(this).attr(
+					"src",
+					$(this)
+						.attr("src")
+						.replace(
+							"./images/logo/logo.png",
+							"images/logo/logo-short.png"
+						)
+				);
+			});
+		}
+		$window.resize(resize).trigger("resize");
+	});
+	//Logo - finish;
 });
