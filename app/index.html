@@ -15,40 +15,6 @@
 
 <body>
   <header class="header">
-    <nav class="mobile-menu">
-      <ul class="mobile">
-        <li class="mobile__item">
-          <div class="mobile__head">
-            <a class="logo-mobile" href="#">
-              <img class="logo-mobile__img" src="images/mobile-menu/logo/mobile-logo.png"
-                alt="Логотип онлайн-маркета ФрешОк" width="200" height="60">
-            </a>
-            <button class="mobile__close" href="#" type="button">
-              <img class="mobile__closed" src="images/mobile-menu/icons/close btn.svg"
-                alt="Кнопка закрытия мобильного меню">
-            </button>
-          </div>
-        </li>
-
-        <li class="mobile__item">
-          <div class="mobile__entrance">
-            <button class="mobile__user" type="button">
-              <img class="mobile__client" src="images/header-icons/user-link.svg"
-                alt="Ссылка вход регистрация" width="24" height="32">
-            </button>
-            <span class="mobile__registry">Вход | Регистрация</span>
-          </div>
-        </li>
-
-        <li class="mobile__item">
-          <div class="mobile__catalog">
-            <span class="mobile__goods">
-              Каталог товаров
-            </span>
-          </div>
-        </li>
-      </ul>
-    </nav>
     <nav class="menu">
       <div class="header__top">
         <div class="container">
@@ -190,6 +156,137 @@
     <div class="fade-wrapper">
       <div class="fade-block" data-modal>
       </div>
+      <nav class="mobile">
+        <ul class="mobile__list">
+          <li class="mobile__item">
+            <div class="mobile__head">
+              <a class="logo-mobile" href="#">
+                <img class="logo-mobile__img"
+                  src="images/mobile-menu/logo/mobile-logo.png"
+                  alt="Логотип онлайн-маркета ФрешОк" width="200" height="60">
+              </a>
+              <button class="mobile__close" href="#" type="button">
+                <img class="mobile__closed" src="images/mobile-menu/icons/close btn.svg"
+                  alt="Кнопка закрытия мобильного меню">
+              </button>
+            </div>
+          </li>
+
+          <li class="mobile__item">
+            <div class="mobile__entrance">
+              <button class="mobile__user" type="button">
+                <img class="mobile__client" src="images/header-icons/user-link.svg"
+                  alt="Ссылка вход регистрация" width="24" height="32">
+              </button>
+              <div class="mobile__registry"><a class="mobile__link" href="#"> Вход </a> |
+                <a class="mobile__link" href="#">Регистрация</a> </div>
+            </div>
+          </li>
+
+          <li class="mobile__item">
+            <div class="mobile__catalog">
+              <span class="mobile__goods">
+                Каталог товаров
+              </span>
+            </div>
+          </li>
+
+          <li class="mobile__item">
+            <div class="mobile__catalog">
+              <address class="mobile__address">
+                <ul class="mobile__points">
+                  <li class="mobile__point">
+                    <a class="mobile__ref mobile__ref--tel" href="tel:+79072881365">
+                      +7 907 288 365
+                    </a>
+                  </li>
+
+                  <li class="mobile__point">
+                    <a class="mobile__ref mobile__ref--address"
+                      href="https://goo.gl/maps/qysi3TBnuAJMLx1G8" target="_blank">
+                      Санкт-Петербург, ул. Ленина, 1
+                    </a>
+                  </li>
+                </ul>
+              </address>
+              <ul class="social mobile__social">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <span class="sr-only">facebook</span>
+                    <svg class="social__svg" fill="white">
+                      <use xlink:href="./images/socials/sprite-black.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <span class="sr-only">youtube</span>
+                    <svg class="social__svg" fill="white">
+                      <use xlink:href="./images/socials/sprite-black.svg#youtube"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <span class="sr-only">telegram</span>
+                    <svg class="social__svg" fill="white">
+                      <use xlink:href="./images/socials/sprite-black.svg#telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <span class="sr-only">instagram</span>
+                    <svg class="social__svg" fill="white">
+                      <use xlink:href="./images/socials/sprite-black.svg#instagram">
+                      </use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="mobile__item">
+            <ul class="mobile__menu">
+              <li class="mobile__row">
+                <a class="mobile__link" href="#">Доставка</a>
+              </li>
+
+              <li class="mobile__row">
+                <a class="mobile__link" href="#">О Нас</a>
+              </li>
+
+              <li class="mobile__row">
+                <a class="mobile__link" href="#">Новости</a>
+              </li>
+
+              <li class="mobile__row">
+                <a class="mobile__link" href="#">Контакты</a>
+              </li>
+
+              <li class="mobile__row">
+                <a class="mobile__link" href="#">Акции</a>
+              </li>
+
+              <li class="mobile__row">
+                <a class="mobile__link" href="#">Вакансии</a>
+              </li>
+
+              <li class="mobile__row">
+                <a class="mobile__link" href="#">Отзывы</a>
+              </li>
+
+              <li class="mobile__row">
+                <a class="mobile__link" href="#">Публичная оферта</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
       <div class="basket" data-modal>
         <div class="basket__head">
           <h3 class="basket__title">Корзина </h3>
@@ -1332,17 +1429,17 @@
           </div>
         </div>
         <div class="footer__item footer__item--address">
-          <address class="footer__address">
-            <ul class="footer__list">
-              <li class="footer__point">
-                <a class="footer__link" href="tel:+79072881365">
+          <address class="address">
+            <ul class="address__list">
+              <li class="address__item">
+                <a class="address__link" href="tel:+79072881365">
                   Горячая линия <span class="footer__top-address-span">+7 907 288
                     365</span>
                 </a>
               </li>
 
-              <li class="footer__point">
-                <a class="footer__link" href="https://goo.gl/maps/qysi3TBnuAJMLx1G8"
+              <li class="address__item">
+                <a class="address__link" href="https://goo.gl/maps/qysi3TBnuAJMLx1G8"
                   target="_blank">
                   Санкт-Петербург, ул. Ленина, 1
                 </a>

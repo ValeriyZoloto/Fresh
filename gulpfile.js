@@ -73,8 +73,8 @@ function cleanDist() {
 	return del("dist");
 }
 
-const htmlInclude = () => {
-	return src(["./app/index.html"])
+const fileInclude = () => {
+	return src(["./app/*.html", "!./src/parts/*html"])
 		.pipe(
 			fileinclude({
 				prefix: "@",
@@ -87,11 +87,12 @@ const htmlInclude = () => {
 
 function watching() {
 	watch(["app/scss/**/*.scss"], styles);
-	// watch("app/**/*index.html", htmlInclude);
+	// watch(["app/**/*.html"], fileInclude);
 	watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
 	watch(["app/**/*.html"]).on("change", browserSync.reload);
 }
 
+exports.fileInclude = fileInclude;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
@@ -100,4 +101,4 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(htmlInclude, styles, scripts, browsersync, watching);
+exports.default = parallel(fileInclude, styles, scripts, browsersync, watching);
