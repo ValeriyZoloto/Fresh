@@ -1,4 +1,9 @@
 .logo {
+  &__picture {
+    display: block;
+    min-height: 60px;
+  }
+
   &__img {
     object-fit: contain;
 
@@ -98,6 +103,10 @@
   transition: background-color 0.3s,
     box-shadow 0.3s,
     color 0.3s;
+
+  @include media-w($xs) {
+    font-size: 14px;
+  }
 
   &:focus {
     box-shadow: 0px 0px 0px 4px $green-200;
@@ -221,11 +230,12 @@
   width: 100%;
   z-index: 99;
   color: $dark-800;
-  transform: translateY(-200%);
+  transform: translateY(-250%);
   transition: 0.5s;
 
   &--active {
     position: absolute;
+    height: 717px;
     top: 0;
     bottom: 0;
     left: 0;
@@ -256,7 +266,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 9px 56px 7px 30px;
+    padding: 21px 56px 7px 30px;
     height: 48px;
     width: 100%;
     background-color: $green-900;
@@ -264,18 +274,37 @@
   }
 
   &__link {
+    position: relative;
+    display: inline-block;
+    padding: 0px 0 14px 0;
+    border: solid 1px transparent;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -7px;
+      left: 0;
+      width: 239px;
+      height: 45px;
+      border: solid 1px transparent;
+    }
 
     &:focus {
-      box-shadow: 4px 4px 4px 4px $dark-400;
+      border: solid 1px $green-900;
     }
 
     &:hover {
-      color: $green-200;
+      color: $green-900;
+    }
+
+    &:active {
+      box-shadow: 0px 0px 0px 3px rgba($green-900, 0.5);
     }
   }
 
   &__user {
     padding: 7px 0;
+    margin-bottom: 11px;
     border: none;
     background-color: transparent;
   }
@@ -288,7 +317,7 @@
   }
 
   &__catalog {
-    padding: 16px 31px 14px 30px;
+    padding: 17px 31px 14px 30px;
     border-bottom: 1px solid $silver-300;
   }
 
@@ -370,6 +399,7 @@
   }
 
   &__menu {
+    height: 329px;
     padding: 26px 31px 24px 30px;
     font-size: 18px;
     line-height: 1.2;
@@ -378,9 +408,7 @@
     color: $dark-800;
   }
 
-  &__row:not(:last-child) {
-    margin-bottom: 15px;
-  }
+
 }
 
 .address {
@@ -738,13 +766,14 @@
 
   &--active {
     @include media-w($xs) {
-      top: 54px;
+      top: 61px;
       left: -15px;
       width: 110%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       transform: translateY(0%);
+      z-index: 9;
     }
   }
 
@@ -785,6 +814,7 @@
     border-radius: 6px 0px 0px 6px;
     box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.2);
     width: 420px;
+    z-index: 99;
 
     @include media-w($xl) {
       width: 320px;
@@ -800,12 +830,13 @@
     }
 
     @include media-w($sm) {
-      width: 175px;
+      padding: 13px 15px 13px 10px;
+      width: 150px;
       letter-spacing: -0.8px;
     }
 
     @include media-w($xs) {
-      min-width: 250px;
+      min-width: 259px;
       width: 100%;
       height: 48px;
       border-radius: 0;

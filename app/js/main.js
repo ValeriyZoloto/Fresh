@@ -21,10 +21,24 @@ $(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
+
 		prevArrow:
 			'<button type="button" class="slick-prev"><span class="sr-only">Стрелка слайдера влево</span><img class="slick-img" src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"> <img class="slick-img-green" src="./images/slider/arrows/arrow-left-green.svg" alt="стрелка влево"></button>',
 		nextArrow:
 			' <button type="button" class="slick-next"><span class="sr-only">Стрелка слайдера вправо</span><img class="slick-img" src="./images/slider/arrows/arrow-right.svg" alt="стрелка вправо" /><img class="slick-img-green" src="./images/slider/arrows/arrow-right-green.svg" alt="стрелка вправо" /></button>',
+
+		responsive: [
+			{
+				breakpoint: 1578,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+					fade: true,
+				},
+			},
+		],
 	});
 	/*:::::::::::::::::::::::top-slider-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::swiper-slider::::::::::::::::::::::::::::::::::::::::::::*/
@@ -163,9 +177,29 @@ $(function () {
 							"images/logo/logo-short.png"
 						)
 				);
+				$window.resize(resize).trigger("resize");
 			});
 		}
 		$window.resize(resize).trigger("resize");
 	});
+
+	$(function () {
+		var logo = document.querySelector(".logo__img");
+		if ($(window).width() <= 345) {
+			$(".logo__img").each(function () {
+				logo.classList.add("sr-only");
+				$window.resize(resize).trigger("resize");
+			});
+		}
+
+		if ($(window).width() > 345) {
+			$(".logo__img").each(function () {
+				logo.classList.remove("sr-only");
+				$window.resize(resize).trigger("resize");
+			});
+		}
+		$window.resize(resize).trigger("resize");
+	});
+
 	/*:::::::::::::::::::::::Logo отслеживание размера-finish::::::::::::::::::::*/
 });
