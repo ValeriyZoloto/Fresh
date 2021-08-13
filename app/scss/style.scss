@@ -377,6 +377,11 @@
   padding: 48px 0;
   background-color: $silver-100;
 
+  @include media-w($md) {
+    padding: 30px 0;
+    min-height: 270px;
+  }
+
   &__list {
     max-height: 50px;
     max-width: 924px;
@@ -384,6 +389,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include media-w($md) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -401,6 +410,7 @@
       z-index: 5;
     }
 
+
     &--scooter::before {
       background-image: url(../images/support/scooter.svg);
       @extend %bg-center-contain;
@@ -415,6 +425,10 @@
       background-image: url(../images/support/24-hours.svg);
       @extend %bg-center-contain;
     }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 
   &__title {
@@ -447,17 +461,64 @@
     margin-bottom: 12px;
   }
 
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+
   &__content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin-bottom: 45px;
+
+    @include media-w($xl) {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: auto;
+    }
+
+    @include media-w($md) {
+      grid-template-columns: repeat(2, 1fr);
+      align-self: auto;
+      grid-auto-rows: 409px;
+
+    }
   }
 }
 
 .banner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
+  @include media-w($xl) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &__item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  @include media-w($sm) {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 345px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+
+    @include media-w($sm) {
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+
+    @include media-w($xs) {
+      margin-right: 0px;
+    }
+  }
+
 
   &__item {
     @extend %bg-center-cover;
@@ -467,6 +528,10 @@
   &__item--long {
     max-width: 630px;
     width: 100%;
+
+    @include media-w($sm) {
+      // max-width: 100%;
+    }
   }
 }
 

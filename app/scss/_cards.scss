@@ -95,13 +95,25 @@
   border-radius: 4px;
   min-width: 300px;
   min-height: 300px;
-  @extend %bg-center-contain;
+  @extend %bg-center-cover;
+
+  @include media-w($sm) {
+    width: 100%;
+  }
 
   &--long {
     max-width: 630px;
     width: 100%;
     text-shadow: 1px 1px 0px $dark-925;
     color: $white;
+
+    @include media-w($sm) {
+      max-width: 100%;
+    }
+
+    @include media-w($xs) {
+      min-width: 300px;
+    }
   }
 
   &__text {
@@ -115,12 +127,18 @@
   }
 
   &__title {
-    font-family: 'Signika', sans-serif;
+    font-family: 'Signika',
+      'Open Sans',
+      sans-serif;
     font-weight: 600;
     font-size: 30px;
     line-height: 1.4;
     text-transform: uppercase;
     margin-bottom: 9px;
+
+    @include media-w($sm) {
+      font-size: 24px;
+    }
   }
 
   &__link {
@@ -195,7 +213,9 @@
     text-align: center;
     max-width: 33px;
     margin: 0 auto;
-    font-family: 'Signika', sans-serif;
+    font-family: 'Signika',
+      'Open Sans',
+      sans-serif;
     font-weight: 600;
     font-size: 30px;
     line-height: 1;
