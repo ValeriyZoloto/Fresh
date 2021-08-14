@@ -382,7 +382,7 @@
       left: 0;
       right: 0;
       background-color: $dark-910;
-      z-index: 99;
+      z-index: 9;
       background-image: url(../images/products/icon-search.svg);
       background-repeat: no-repeat;
       background-position: center;
@@ -401,6 +401,7 @@
       background-color: $white;
       transition: 0.3s;
       transform: translateX(-500%);
+      z-index: 8;
     }
 
     &:hover::before {
@@ -440,7 +441,7 @@
 
   &__image {
     padding: 15px;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   &__commodity {

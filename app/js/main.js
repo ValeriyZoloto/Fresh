@@ -164,42 +164,4 @@ $(function () {
 	});
 	window.dispatchEvent(new Event("resize"));
 	/*:::::::::::::::::::::::Замена текста в инпуте-finish:::::::::::::::::::::::*/
-	/*:::::::::::::::::::::::Logo отслеживание размера:::::::::::::::::::::::::::*/
-	$(function () {
-		if ($(window).width() <= 992) {
-			$(".logo__img").each(function () {
-				$(this).attr(
-					"src",
-					$(this)
-						.attr("src")
-						.replace(
-							"./images/logo/logo.png",
-							"images/logo/logo-short.png"
-						)
-				);
-				$window.resize(resize).trigger("resize");
-			});
-		}
-		$window.resize(resize).trigger("resize");
-	});
-
-	$(function () {
-		var logo = document.querySelector(".logo__img");
-		if ($(window).width() <= 345) {
-			$(".logo__img").each(function () {
-				logo.classList.add("sr-only");
-				$window.resize(resize).trigger("resize");
-			});
-		}
-
-		if ($(window).width() > 345) {
-			$(".logo__img").each(function () {
-				logo.classList.remove("sr-only");
-				$window.resize(resize).trigger("resize");
-			});
-		}
-		$window.resize(resize).trigger("resize");
-	});
-
-	/*:::::::::::::::::::::::Logo отслеживание размера-finish::::::::::::::::::::*/
 });

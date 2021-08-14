@@ -18,6 +18,10 @@
     @include media-w($xs) {
       display: block;
     }
+
+    @include media-w($xxs) {
+      display: none;
+    }
   }
 }
 
