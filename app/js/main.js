@@ -7,6 +7,7 @@ $(function () {
 	const basket = document.querySelector(".basket");
 	const buttonClose = document.querySelector("[data-modal-close]");
 	let mobileMenuOpen = document.querySelector(".burger");
+	let mobileMenuOpen1 = document.querySelector(".btn-user--roster");
 	let mobMenu = document.querySelector(".mobile");
 	let mobClose = document.querySelector(".mobile__close");
 	let btn = document.querySelector(".roster__btn--search");
@@ -106,6 +107,13 @@ $(function () {
 		this.classList.add("active");
 	});
 
+	mobileMenuOpen1.addEventListener("click", function () {
+		console.log("клик по юзеру");
+		modal.classList.add("fade-block--active");
+		mobMenu.classList.add("mobile--active");
+		this.classList.add("active");
+	});
+
 	mobClose.addEventListener("click", function () {
 		modal.classList.remove("fade-block--active");
 		mobMenu.classList.remove("mobile--active");
@@ -128,6 +136,17 @@ $(function () {
 			timeoutId = setTimeout($.proxy(select, "hide"), 1000);
 		}
 	);
+
+	$(".mobile__goods").hover(
+		function () {
+			clearTimeout(timeoutId);
+			select.show(500);
+		},
+		function () {
+			timeoutId = setTimeout($.proxy(select, "hide"), 1000);
+		}
+	);
+
 	select
 		.mouseenter(function () {
 			clearTimeout(timeoutId);

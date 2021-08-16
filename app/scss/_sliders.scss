@@ -69,7 +69,7 @@
       font-size: 16px;
       line-height: 1.4;
       letter-spacing: 0.3px;
-      @include overflow($row-2);
+      @include overflow(2);
     }
   }
 
@@ -82,7 +82,7 @@
     line-height: 1.3;
     text-transform: uppercase;
     margin-bottom: 2px;
-    @include overflow($row-2);
+    @include overflow(2);
 
     @include media-w($md) {
       font-size: 50px;
@@ -122,6 +122,11 @@
       margin-bottom: 16px;
       font-size: 20px;
     }
+  }
+
+  &__action {
+    max-height: 65px;
+    @include overflow(2);
   }
 
   .slick-arrow {

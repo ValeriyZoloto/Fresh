@@ -16,8 +16,8 @@
   &__btn {
     content: "";
     position: absolute;
-    top: 12px;
-    right: 10px;
+    top: -6px;
+    right: -5px;
     width: 12px;
     height: 12px;
     border: none;
@@ -28,8 +28,8 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 12px;
-      height: 12px;
+      width: 45px;
+      height: 45px;
       background-image: url(../images/basket/removebtn.svg);
       background-repeat: no-repeat;
       background-position: center;
@@ -47,6 +47,10 @@
     margin-right: 29px;
     max-width: 151px;
     min-height: 45px;
+  }
+
+  &__link {
+    display: flex;
   }
 
   &__name {
@@ -102,7 +106,7 @@
   }
 
   &--long {
-    max-width: 630px;
+    min-width: 630px;
     width: 100%;
     text-shadow: 1px 1px 0px $dark-925;
     color: $white;
@@ -177,12 +181,15 @@
     object-fit: cover;
   }
 
-  &__name {
+  &__wrapper {
     padding: 18px;
+  }
+
+  &__name {
     font-weight: 600;
     font-size: 18px;
     line-height: 140%;
-    @include overflow($row-3);
+    @include overflow(3);
   }
 
   &__date {
@@ -232,7 +239,7 @@
   max-width: 300px;
   border: 1px solid rgba(17, 17, 17, .2);
   border-radius: 6px;
-  transition: border .3s;
+  transition: border 0.3s;
 
   &:hover {
     border: 1px solid $green-900;
@@ -245,16 +252,18 @@
     justify-content: space-between;
   }
 
-  &__status--avilible {
-    color: $green-900;
-  }
+  &__status {
+    &--avilible {
+      color: $green-900;
+    }
 
-  &__status--not-avilible {
-    color: $silver-600;
-  }
+    &--not-avilible {
+      color: $silver-600;
+    }
 
-  &__status--ends {
-    color: $red-900;
+    &--ends {
+      color: $red-900;
+    }
   }
 
   &__holder {
@@ -317,6 +326,7 @@
   }
 
   &__picture {
+    padding-right: 5px;
     text-align: left;
     position: relative;
     min-width: 110px;
@@ -338,7 +348,7 @@
     font-size: 14px;
     line-height: 1.4;
     margin-bottom: auto;
-    @include overflow($row-3);
+    @include overflow(3);
   }
 }
 
@@ -383,9 +393,6 @@
       right: 0;
       background-color: $dark-910;
       z-index: 9;
-      background-image: url(../images/products/icon-search.svg);
-      background-repeat: no-repeat;
-      background-position: center;
       transition: 0.3s;
       transform: translateX(-100%);
     }
@@ -401,7 +408,10 @@
       background-color: $white;
       transition: 0.3s;
       transform: translateX(-500%);
-      z-index: 8;
+      background-image: url(../images/products/icon-search.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 9;
     }
 
     &:hover::before {
@@ -454,7 +464,7 @@
     color: $dark-900;
     height: 60px;
     margin: 6px 18px;
-    @include overflow($row-3);
+    @include overflow(3);
   }
 
   &__text {
@@ -550,28 +560,7 @@
     font-size: 14px;
     line-height: 1.4;
     margin-bottom: auto;
-    @include overflow($row-3);
-  }
-
-  &__status {
-    margin-bottom: 5px;
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 1;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
-
-  &__status--avilible {
-    color: $green-900;
-  }
-
-  &__status--not-avilible {
-    color: $silver-600;
-  }
-
-  &__status--ends {
-    color: $red-900;
+    @include overflow(3);
   }
 
   &__holder {

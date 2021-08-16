@@ -45,9 +45,7 @@
           <div class="header__wrapper">
             <a class="logo" href="#">
               <picture class="logo__picture">
-                <source media="(min-width: 992px) and (max-width: 1900px)"
-                  srcset="./images/logo/logo.png">
-                <source media="(min-width: 991px)" srcset=".images/logo/logo-short.png">
+                <source media="(max-width: 991px)" srcset="images/logo/logo-short.png">
                 <img class="logo__img" src="./images/logo/logo.png"
                   alt="Логотип онлайн-маркета ФрешОк" width="200" height="60">
               </picture>
@@ -67,7 +65,7 @@
                 <a class="dropdown__link" href="#">
                   Молочные продукты
                 </a>
-                <a class="dropdown__link dropdown__link--active" href="#">
+                <a class="dropdown__link" href="#">
                   Хлеб
                 </a>
                 <a class="dropdown__link" href="#">
@@ -115,7 +113,7 @@
               </li>
 
               <li class="roster__item">
-                <button class="roster__btn roster__btn--user" type="button">
+                <button class="btn-user btn-user--roster" type="button">
                   <span class="sr-only">кнопка личный кабинет</span>
                 </button>
               </li>
@@ -142,37 +140,30 @@
       <div class="fade-block" data-modal>
       </div>
       <nav class="mobile">
+        <div class="mobile__head">
+          <a class="logo-mobile" href="#">
+            <img class="logo-mobile__img" src="images/mobile-menu/logo/mobile-logo.png"
+              alt="Логотип онлайн-маркета ФрешОк" width="200" height="60">
+          </a>
+          <button class="mobile__close" type="button">
+            <span class="sr-only">Кнопка закрытия меню</span>
+          </button>
+        </div>
+
+        <div class="mobile__entrance">
+          <button class="btn-user btn-user--mobile" type="button">
+            <span class="sr-only">Ссылка вход регистрация</span>
+          </button>
+          <div class="mobile__registry"><a class="mobile__link" href="#"> Вход </a> |
+            <a class="mobile__link" href="#">Регистрация</a> </div>
+        </div>
+
         <ul class="mobile__list">
           <li class="mobile__item">
-            <div class="mobile__head">
-              <a class="logo-mobile" href="#">
-                <img class="logo-mobile__img"
-                  src="images/mobile-menu/logo/mobile-logo.png"
-                  alt="Логотип онлайн-маркета ФрешОк" width="200" height="60">
-              </a>
-              <button class="mobile__close" href="#" type="button">
-                <img class="mobile__closed" src="images/mobile-menu/icons/close btn.svg"
-                  alt="Кнопка закрытия мобильного меню">
-              </button>
-            </div>
-          </li>
-
-          <li class="mobile__item">
-            <div class="mobile__entrance">
-              <button class="mobile__user" type="button">
-                <img class="mobile__client" src="images/header-icons/user-link.svg"
-                  alt="Ссылка вход регистрация" width="24" height="32">
-              </button>
-              <div class="mobile__registry"><a class="mobile__link" href="#"> Вход </a> |
-                <a class="mobile__link" href="#">Регистрация</a> </div>
-            </div>
-          </li>
-
-          <li class="mobile__item">
             <div class="mobile__catalog">
-              <span class="mobile__goods">
+              <a class="mobile__goods" href="#">
                 Каталог товаров
-              </span>
+              </a>
             </div>
           </li>
 
@@ -285,24 +276,26 @@
           </button>
           <button class="basket__empty" type="button">очистить корзину</button>
         </div>
-        <div class="basket__content">
-          <ul class="basket__list">
-            <li class="basket__item">
-              <a href="" class="basket__link">
+        <div class="basket__wrapper">
+          <div class="basket__content">
+            <ul class="basket__list">
+              <li class="basket__item">
                 <article class="basket-card">
                   <button class="basket-card__btn">
-                    <span class="sr-only">кнопка закрыть карточку</span>
+                    <span class="sr-only">удалить товар из корзины</span>
                   </button>
-                  <div class="basket-card__picture"
-                    style="background-image: url(../images/basket/pineapple.jpg);">
-                  </div>
-                  <div class="basket-card__content">
-                    <span class="basket-card__name">Ананас, 1 кг</span>
-                    <span class="basket-card__new-price">
-                      999
-                      <span class="basket-card__symbol">₽</span>
-                    </span>
-                  </div>
+                  <a class="basket-card__link" href="#">
+                    <div class="basket-card__picture"
+                      style="background-image: url(../images/basket/pineapple.jpg);">
+                    </div>
+                    <div class="basket-card__content">
+                      <span class="basket-card__name">Ананас, 1 кг</span>
+                      <span class="basket-card__new-price">
+                        999
+                        <span class="basket-card__symbol">₽</span>
+                      </span>
+                    </div>
+                  </a>
                   <div class="basket-card__details">
                     <div class="counter">
                       <input class="counter__current" type="number" value="2" min="1">
@@ -311,27 +304,27 @@
                     <span class="basket-card__symbol">₽</span>
                   </div>
                 </article>
-              </a>
-            </li>
+              </li>
 
-            <li class="basket__item">
-              <a href="" class="basket__link">
+              <li class="basket__item">
                 <article class="basket-card">
                   <button class="basket-card__btn">
-                    <span class="sr-only">кнопка закрыть карточку</span>
+                    <span class="sr-only">удалить товар из корзины</span>
                   </button>
-                  <div class="basket-card__picture"
-                    style="background-image: url(../images/basket/pitakhaia.jpg);">
-                  </div>
-                  <div class="basket-card__content">
-                    <span class="basket-card__name">Питахайя красная с белой
-                      мякотью,
-                      1шт</span>
-                    <span class="basket-card__new-price">
-                      1019
-                      <span class="basket-card__symbol">₽</span>
-                    </span>
-                  </div>
+                  <a class="basket-card__link" href="#">
+                    <div class="basket-card__picture"
+                      style="background-image: url(../images/basket/pitakhaia.jpg);">
+                    </div>
+                    <div class="basket-card__content">
+                      <span class="basket-card__name">Питахайя красная с белой
+                        мякотью,
+                        1шт</span>
+                      <span class="basket-card__new-price">
+                        1019
+                        <span class="basket-card__symbol">₽</span>
+                      </span>
+                    </div>
+                  </a>
                   <div class="basket-card__details">
                     <div class="counter">
                       <input class="counter__current" type="number" value="2" min="1"
@@ -341,20 +334,20 @@
                     <span class="basket-card__symbol">₽</span>
                   </div>
                 </article>
-              </a>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="basket__summ">
+            <span class="basket__goods">Товаров на сумму</span>
+            <span class="basket__price">
+              2038
+              <span class="basket-card__symbol">₽</span>
+            </span>
+          </div>
         </div>
-        <div class="basket__summ">
-          <span class="basket__goods">Товаров на сумму</span>
-          <span class="basket__price">
-            2038
-            <span class="basket-card__symbol">₽</span>
-          </span>
-        </div>
-        <div class="basket__bottom">
-          <a class="basket__order" href="#">Оформить заказ</a>
-        </div>
+        <a class="basket__bottom" href="#">
+          <span class="basket__order">Оформить заказ</span>
+        </a>
       </div>
     </div>
   </header>

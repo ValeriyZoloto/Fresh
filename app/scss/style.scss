@@ -151,7 +151,7 @@
     line-height: 1.4;
     letter-spacing: 0.03em;
     color: $green-900;
-    @include overflow($row);
+    @include overflow(1);
     transition: background-color 0.3s;
 
     @include media-w($lg) {
@@ -376,8 +376,12 @@
 /*::::::::::::::::::::::::::header-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::support::::::::::::::::::::::::::::::::::::::::::::::*/
 .support {
+  display: flex;
+  align-items: center;
   padding: 48px 0;
   background-color: $silver-100;
+  max-height: 146px;
+  overflow: hidden;
 
   @include media-w($md) {
     padding: 30px 0;
@@ -410,27 +414,24 @@
       width: 50px;
       height: 50px;
       z-index: 5;
+      @extend %bg-center-contain;
     }
-
 
     &--scooter::before {
       background-image: url(../images/support/scooter.svg);
-      @extend %bg-center-contain;
     }
 
     &--return::before {
       background-image: url(../images/support/return-box.svg);
-      @extend %bg-center-contain;
     }
 
     &--24::before {
       background-image: url(../images/support/24-hours.svg);
-      @extend %bg-center-contain;
     }
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 30px;
+    margin-right: 48px;
   }
 
   &__title {
@@ -440,7 +441,7 @@
     line-height: 1.4;
     letter-spacing: -0.5px;
     margin-bottom: 6px;
-    @include overflow($row);
+    @include overflow(2);
 
   }
 
@@ -449,7 +450,7 @@
     max-width: 201px;
     font-size: 14px;
     line-height: 1.4;
-    @include overflow($row-2);
+    @include overflow(2);
   }
 }
 
@@ -485,6 +486,10 @@
       grid-auto-rows: 409px;
 
     }
+  }
+
+  &__btn {
+    margin-bottom: 70px;
   }
 }
 
@@ -527,14 +532,6 @@
     text-align: left;
   }
 
-  &__item--long {
-    max-width: 630px;
-    width: 100%;
-
-    @include media-w($sm) {
-      // max-width: 100%;
-    }
-  }
 }
 
 /*::::::::::::::::::::::::::top-products-finish::::::::::::::::::::::::::::::::::*/

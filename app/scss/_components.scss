@@ -95,15 +95,13 @@
   }
 }
 
-.btn-green {
+.btn {
   display: inline-block;
   padding: 12px 26px;
   border-radius: 6px;
   font-size: 18px;
   line-height: 1.3;
   letter-spacing: 0.03em;
-  background-color: $green-900;
-  color: $white;
   transition: background-color 0.3s,
     box-shadow 0.3s,
     color 0.3s;
@@ -124,26 +122,30 @@
     box-shadow: inset 0px 4px 4px $dark-925;
     color: $dark-400;
   }
-}
 
-.btn-transparent {
-  margin-bottom: 70px;
-  border: 1px solid $green-900;
-  background-color: $white;
-  color: $green-900;
-  transition: background-color 0.3s,
-    box-shadow 0.3s;
-
-  &:focus {
-    box-shadow: 0px 0px 0px 4px $green-200;
+  &--green {
+    background-color: $green-900;
+    color: $white;
   }
 
-  &:hover {
-    background-color: $green-100;
-  }
+  &--transparent {
+    border: 1px solid $green-900;
+    background-color: $white;
+    color: $green-900;
+    transition: background-color 0.3s,
+      box-shadow 0.3s;
 
-  &:active {
-    box-shadow: inset 0px 10px 4px $dark-910;
+    &:focus {
+      box-shadow: 0px 0px 0px 4px $green-200;
+    }
+
+    &:hover {
+      background-color: $green-100;
+    }
+
+    &:active {
+      box-shadow: inset 0px 10px 4px $dark-910;
+    }
   }
 }
 
@@ -179,7 +181,7 @@
     line-height: 1.4;
     text-transform: uppercase;
     transition: border-bottom 0.3s;
-    @include overflow($row);
+    @include overflow(1);
     transition: border-bottom 0.3s;
 
     &:active {
@@ -227,6 +229,84 @@
     max-width: 37px;
     background-color: $orange-900;
   }
+
+  &--hide {
+    display: none;
+  }
+}
+
+.btn-user {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  padding: 8px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    width: 25px;
+    height: 32px;
+    background-image: url(../images/header-icons/user-link.svg);
+    @extend %bg-center-cover;
+  }
+
+  &:focus {
+    outline-color: transparent;
+    box-shadow: 0px 0px 0px 4px $dark-400;
+  }
+
+  &:hover {
+    background-color: $dark-911;
+  }
+
+  &:active {
+    color: $silver-600;
+  }
+
+  &--mobile {
+    position: relative;
+    padding: 7px 0;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 18px;
+    border: none;
+    background-color: transparent;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 5px;
+      width: 24px;
+      height: 31px;
+      background-image: url('../images/header-icons/user-link.svg');
+      @extend %bg-center-contain;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -17px;
+      left: -9px;
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &--roster {
+    width: 50px;
+    height: 50px;
+
+    @include media-w($xs) {
+      display: none;
+    }
+  }
 }
 
 .mobile {
@@ -266,16 +346,30 @@
   }
 
   &__close {
+    position: relative;
     padding: 14px 0;
     border: none;
     background-color: transparent;
+    width: 45px;
+    height: 45px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 11px;
+      left: 28px;
+      width: 18px;
+      height: 18px;
+      background-image: url('../images/mobile-menu/icons/close\ btn.svg');
+      @extend %bg-center-contain;
+    }
   }
 
   &__entrance {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 21px 56px 7px 30px;
+    padding: 18px 57px 5px 26px;
     height: 48px;
     width: 100%;
     background-color: $green-900;
@@ -291,9 +385,9 @@
     &::before {
       content: '';
       position: absolute;
-      top: -7px;
+      top: -13px;
       left: 0;
-      width: 239px;
+      width: 100%;
       height: 45px;
       border: solid 1px transparent;
     }
@@ -303,7 +397,8 @@
     }
 
     &:hover {
-      color: $green-900;
+      background-color: $hover-1000;
+      color: $white;
     }
 
     &:active {
@@ -311,18 +406,11 @@
     }
   }
 
-  &__user {
-    padding: 7px 0;
-    margin-bottom: 11px;
-    border: none;
-    background-color: transparent;
-  }
-
   &__registry {
     font-size: 18px;
     line-height: 1;
     letter-spacing: 0.03em;
-    @include overflow($row);
+    @include overflow(1);
   }
 
   &__catalog {
@@ -339,7 +427,7 @@
     font-size: 18px;
     line-height: 1;
     letter-spacing: 0.03em;
-    @include overflow($row);
+    @include overflow(1);
 
     &::before {
       position: absolute;
@@ -352,6 +440,18 @@
       @extend %bg-center-contain;
       cursor: pointer;
     }
+
+    &:focus {
+      border: 2px solid $green-200;
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+
+    &:active {
+      background-color: $green-200;
+    }
   }
 
   &__address {
@@ -360,7 +460,7 @@
 
   &__ref {
     position: relative;
-    padding: 9px 0 14px 39px;
+    padding: 6px 0 10px 37px;
     display: inline-block;
     width: 100%;
     font-size: 18px;
@@ -369,12 +469,25 @@
     color: $dark-800;
     line-height: 1;
     transition: opacity 0.3s;
+    border: 2px solid transparent;
 
     &::before {
       position: absolute;
       content: '';
       top: 7px;
       left: 0;
+    }
+
+    &:focus {
+      border: 2px solid $green-200;
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+
+    &:active {
+      background-color: $green-200;
     }
 
     &--tel::before {
@@ -416,12 +529,9 @@
     background-color: $white;
     color: $dark-800;
   }
-
-
 }
 
 .address {
-
   &__list {
     margin-bottom: 15px;
   }
@@ -458,13 +568,6 @@
 }
 
 .fade-block {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.15);
-  z-index: -1;
   transform: translateY(-150%);
 
   &--active {
@@ -473,7 +576,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba($dark-1000, 0.15);
     z-index: 1;
     transform: translateY(0%);
   }
@@ -531,6 +634,10 @@
     &:hover {
       background-color: $silver-300;
     }
+
+    &:hover path {
+      fill: $green-900;
+    }
   }
 
   &__empty {
@@ -543,11 +650,16 @@
     background-color: transparent;
   }
 
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   &__content {
     min-width: 452px;
     padding: 13px 12px 13px 12px;
-    height: 75vh;
-    overflow: scroll;
   }
 
   &__list {
@@ -561,10 +673,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-  }
-
-  &__link {
-    display: block;
   }
 
   &__summ {
@@ -589,6 +697,7 @@
   }
 
   &__bottom {
+    display: block;
     text-align: center;
     padding: 23px 0;
     background-color: $green-900;
@@ -596,6 +705,19 @@
     font-size: 18px;
     line-height: 1.3;
     letter-spacing: 0.03em;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 4px $green-200;
+    }
+
+    &:hover {
+      background-color: $hover-1000;
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px $dark-925;
+      color: $dark-400;
+    }
   }
 }
 
@@ -639,14 +761,14 @@
   position: relative;
   margin-top: -12px;
   width: 24px;
-  height: 24px;
+  height: 23px;
   background-color: $green-900;
   cursor: pointer;
 }
 
 .jq-number__spin.plus {
   position: relative;
-  top: -25px;
+  top: -23px;
   right: -58px;
 
   &::before {
@@ -705,7 +827,7 @@
 
 .jq-number__field input {
   width: 100%;
-  height: 24px;
+  height: 23px;
   border: none;
   outline: none;
   font-family: 'Lato', sans-serif;
@@ -735,13 +857,9 @@
     padding: 15px 24px 15px 24px;
     display: block;
     border-bottom: 1px solid $silver-300;
+    border-left: 3px solid transparent;
 
     &:hover {
-      border-left: 3px solid $green-900;
-      color: $green-900;
-    }
-
-    &--active {
       border-left: 3px solid $green-900;
       color: $green-900;
     }
@@ -973,6 +1091,10 @@
     display: block;
     width: 32px;
     height: 32px;
+
+    &:hover path {
+      fill: $green-900;
+    }
   }
 
   &__link {

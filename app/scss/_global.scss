@@ -16,7 +16,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  position: fixed;
+  overflow-y: scroll;
 }
 
 .main {
@@ -52,5 +53,5 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $dark-900;
-  @include overflow($row-2);
+  @include overflow(2);
 }

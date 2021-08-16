@@ -1,19 +1,19 @@
 /*::::::::::::::::::::::::::цвета:::::::::::::::::::::::::::::::::::::::::::::::*/
-$green-900:rgb(99, 166, 14);
-$green-200:rgb(224, 237, 207);
-$green-100:rgb(239, 246, 231);
-$hover-1000:rgb(77, 129, 12);
+$green-900:#63a60e;
+$green-200:#e0edcf;
+$green-100:#eff6e7;
+$hover-1000:#4d810c;
 
-$dark-1000: #000000;
-$dark-925: #00000040;
+$dark-1000:#000000;
+$dark-925:#00000040;
 $dark-911:#ffffff1a;
-$dark-910:rgba(0, 0, 0, 0.1);
-$dark-920: rgba(133, 98, 98, 0.1);
+$dark-910:rgba($dark-1000, 0.1);
+$dark-920:rgba(133, 98, 98, 0.102);
 $dark-900:#121212;
-$dark-810: rgba(99, 166, 14, 0.1);
+$dark-810:rgba(99, 166, 14, 0.1);
 $dark-800:#31352b;
 $dark-500:#505050;
-$dark-400: #ffffff80;
+$dark-400:#ffffff80;
 
 $red-900:#cf3e3b;
 
@@ -24,10 +24,10 @@ $yellow-900:#ffb800;
 $silver-600:rgb(193, 193, 193);
 $silver-100:rgb(246, 246, 246);
 $silver-200:rgb(245, 245, 245);
-$silver-250:rgba(255, 255, 255, .8);
-$silver-300:rgba(193, 193, 193, 0.3);
+$silver-250:rgba(255, 255, 255, 0.8);
+$silver-300:rgba($silver-600, 0.3);
 
-$white:#ffffff;
+$white:rgb(255, 255, 255);
 /*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::переменные::::::::::::::::::::::::::::::::::::::::::*/
 $row: 1;
@@ -38,20 +38,6 @@ $row-3:3;
 
 @mixin overflow($row) {
   -webkit-line-clamp: $row;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-@mixin overflow($row-2) {
-  -webkit-line-clamp: $row-2;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-@mixin overflow($row-3) {
-  -webkit-line-clamp: $row-3;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
