@@ -162,12 +162,20 @@
     font-size: 14px;
   }
 
+  @include media-w($xs) {
+    margin-bottom: 20px;
+  }
+
   &__item {
     max-width: 101px;
   }
 
   &__item:not(:last-child) {
     margin-right: 28px;
+
+    @include media-w($xs) {
+      margin-right: 20px;
+    }
   }
 
   &__btn {
@@ -183,6 +191,12 @@
     transition: border-bottom 0.3s;
     @include overflow(1);
     transition: border-bottom 0.3s;
+
+    @include media-w($xs) {
+      padding: 15px 0 0 0;
+      font-size: 14px;
+      letter-spacing: 0.03em;
+    }
 
     &:active {
       border-bottom: $hover-1000;
@@ -823,6 +837,7 @@
   border-bottom-color: transparent;
   border-radius: 0px;
   box-shadow: none;
+
 }
 
 .jq-number__field input {
@@ -957,8 +972,8 @@
     }
 
     @include media-w($sm) {
-      padding: 13px 15px 13px 10px;
-      width: 150px;
+      padding: 13px 5px 13px 5px;
+      width: 130px;
       letter-spacing: -0.8px;
     }
 

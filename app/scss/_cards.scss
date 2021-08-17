@@ -102,21 +102,33 @@
   @extend %bg-center-cover;
 
   @include media-w($sm) {
+    min-width: 373px;
     width: 100%;
+  }
+
+  @include media-w($xs) {
+    // min-width: 345px;
+    // min-width: 100%;
+    max-width: 100%;
   }
 
   &--long {
     min-width: 630px;
+    // padding: 77px 215px 80px 30px;
     width: 100%;
     text-shadow: 1px 1px 0px $dark-925;
     color: $white;
 
     @include media-w($sm) {
+      min-width: 345px;
       max-width: 100%;
     }
 
     @include media-w($xs) {
-      min-width: 300px;
+      // min-width: 345px;
+      // max-width: 100%;
+      min-width: 100%;
+      max-width: 100%;
     }
   }
 
@@ -363,6 +375,29 @@
   border-radius: 6px;
   transition: border 0.3s;
 
+  @include media-w($sm) {
+    max-width: 250px;
+  }
+
+  @include media-w($xs) {
+    padding: 12px 0px 12px 0px;
+    // max-width: 170px;
+  }
+
+  & .jq-number {
+    .counter__current {
+      @include media-w($sm) {
+        display: none;
+      }
+    }
+  }
+
+  & .jq-number__spin {
+    @include media-w($sm) {
+      display: none;
+    }
+  }
+
   &__inner {
     max-width: 66px;
     margin-right: auto;
@@ -395,6 +430,10 @@
       z-index: 9;
       transition: 0.3s;
       transform: translateX(-100%);
+
+      @include media-w($xs) {
+        height: 127px;
+      }
     }
 
     &::after {
@@ -412,6 +451,15 @@
       background-repeat: no-repeat;
       background-position: center;
       z-index: 9;
+
+      @include media-w($sm) {
+        right: 93px;
+      }
+
+      @include media-w($xs) {
+        top: 111px;
+        right: 56px;
+      }
     }
 
     &:hover::before {
@@ -429,6 +477,10 @@
     margin: 0 auto;
     width: 100%;
     min-height: 60px;
+
+    @include media-w($xs) {
+      min-height: 45px;
+    }
   }
 
   &__wrapper {
@@ -444,6 +496,10 @@
     right: 3px;
     transition: fill 0.3s;
 
+    @include media-w($xs) {
+      padding: 5px;
+    }
+
     &:hover path {
       fill: $yellow-900;
     }
@@ -452,6 +508,12 @@
   &__image {
     padding: 15px;
     object-fit: contain;
+
+    @include media-w($xs) {
+      padding: 0;
+      width: 170px;
+      height: 120px;
+    }
   }
 
   &__commodity {
@@ -465,12 +527,19 @@
     height: 60px;
     margin: 6px 18px;
     @include overflow(3);
+
+    @include media-w($xs) {
+      margin: 17px 10px 9px 9px;
+    }
   }
 
   &__text {
     margin: 5px 18px;
-    width: 264px;
     text-align: left;
+
+    @include media-w($sm) {
+      margin: -7px 6px 1px 11px;
+    }
   }
 
   &__price-area {

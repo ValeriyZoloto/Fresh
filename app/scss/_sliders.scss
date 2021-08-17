@@ -2,6 +2,18 @@
 .top-slider {
   background-color: $white;
 
+  @include media-w($md) {
+    margin-bottom: -42px;
+  }
+
+  @include media-w($sm) {
+    margin-bottom: -22px;
+  }
+
+  @include media-w($xs) {
+    margin-bottom: 0;
+  }
+
   &__item {
     padding: 143px 0 219px 0;
     max-height: 600px;
@@ -12,7 +24,7 @@
     }
 
     @include media-w($lg) {
-      padding: 83px 0 159px 0;
+      padding: 126px 0 159px 0;
     }
 
     @include media-w($md) {
