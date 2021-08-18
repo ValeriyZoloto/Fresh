@@ -101,20 +101,23 @@
   min-height: 300px;
   @extend %bg-center-cover;
 
+  @include media-w($md) {
+    position: relative;
+  }
+
   @include media-w($sm) {
-    min-width: 373px;
+    padding: 74px 143px 26px 22px;
     width: 100%;
   }
 
   @include media-w($xs) {
-    // min-width: 345px;
-    // min-width: 100%;
+    padding: 77px 149px 26px 12px;
     max-width: 100%;
   }
 
   &--long {
     min-width: 630px;
-    // padding: 77px 215px 80px 30px;
+    padding: 79px 206px 80px 33px;
     width: 100%;
     text-shadow: 1px 1px 0px $dark-925;
     color: $white;
@@ -125,9 +128,19 @@
     }
 
     @include media-w($xs) {
-      // min-width: 345px;
-      // max-width: 100%;
+      padding: 77px 61px 28px 13px;
       min-width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &--last {
+    @include media-w($sm) {
+      padding: 75px 158px 33px 20px;
+    }
+
+    @include media-w($xs) {
+      padding: 77px 164px 30px 10px;
       max-width: 100%;
     }
   }
@@ -140,6 +153,10 @@
     text-transform: uppercase;
     margin-bottom: 18px;
     letter-spacing: 0.1em;
+
+    @include media-w($xs) {
+      margin-bottom: 15px;
+    }
   }
 
   &__title {
@@ -155,6 +172,10 @@
     @include media-w($sm) {
       font-size: 24px;
     }
+
+    @include media-w($xs) {
+      margin-bottom: 77px;
+    }
   }
 
   &__link {
@@ -164,6 +185,20 @@
     line-height: 1;
     text-transform: uppercase;
     border-bottom: 2px solid;
+
+    @include media-w($md) {
+      // position: absolute;
+      bottom: 79px;
+    }
+
+    @include media-w($sm) {
+      bottom: 50px;
+    }
+
+    @include media-w($xs) {
+      // position: absolute;
+      bottom: 30px;
+    }
   }
 }
 
@@ -384,18 +419,26 @@
     // max-width: 170px;
   }
 
+  & .counter {
+    @include media-w($sm) {
+      margin-right: 28px;
+    }
+
+    @include media-w($xs) {
+      position: absolute;
+      top: 0;
+      left: 32px;
+    }
+  }
+
   & .jq-number {
     .counter__current {
-      @include media-w($sm) {
-        display: none;
-      }
+      @include media-w($sm) {}
     }
   }
 
   & .jq-number__spin {
-    @include media-w($sm) {
-      display: none;
-    }
+    @include media-w($sm) {}
   }
 
   &__inner {
@@ -519,17 +562,18 @@
   &__commodity {
     text-align: left;
     display: block;
+    min-height: 60px;
     font-weight: 600;
     font-size: 14px;
     line-height: 1.4;
     letter-spacing: 0.03em;
     color: $dark-900;
-    height: 60px;
     margin: 6px 18px;
     @include overflow(3);
 
     @include media-w($xs) {
-      margin: 17px 10px 9px 9px;
+      margin: 17px 10px 12px 9px;
+      min-height: 35px;
     }
   }
 
@@ -546,6 +590,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include media-w($xs) {
+      position: relative;
+      height: 68px;
+    }
   }
 
   &__price {

@@ -49,7 +49,7 @@
     background-color: $green-900;
 
     @include media-w($xs) {
-      padding: 2px 0;
+      padding: 0px 0px;
     }
   }
 
@@ -308,6 +308,10 @@
       width: 33px;
       height: 34px;
       background-image: url(../images/header-icons/icon-cart.svg);
+
+      @include media-w($xs) {
+        display: none;
+      }
     }
 
     &:focus {
@@ -365,6 +369,10 @@
     color: $red-900;
     z-index: 2;
 
+    @include media-w($xs) {
+      display: none;
+    }
+
     &--favorite {
       @include media-w($sm) {
         display: none;
@@ -389,11 +397,10 @@
   }
 
   @include media-w($xs) {
-    min-height: 271px;
+    min-height: 270px;
   }
 
   &__list {
-    // max-height: 50px;
     max-width: 924px;
     margin: 0 auto;
     display: flex;
@@ -438,7 +445,7 @@
     margin-right: 48px;
 
     @include media-w($md) {
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
 
     @include media-w($sm) {
@@ -477,14 +484,14 @@
   text-align: center;
 
   @include media-w($xs) {
-    padding: 48px 0 73px;
+    padding: 48px 0 49px;
   }
 
   &__title {
     margin-bottom: 12px;
 
     @include media-w($xs) {
-      margin-bottom: 8px;
+      margin-bottom: 11px;
     }
   }
 
@@ -495,12 +502,11 @@
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
     grid-gap: 30px;
     margin-bottom: 45px;
 
     @include media-w($xl) {
-      grid-template-columns: repeat(3, 1fr);
       align-items: auto;
     }
 
@@ -521,6 +527,7 @@
     margin-bottom: 70px;
 
     @include media-w($xs) {
+      padding: 11px 21px;
       font-size: 18px;
       margin-bottom: 47px;
     }
@@ -575,15 +582,25 @@
   background-color: $silver-200;
   text-align: center;
 
+  @include media-w($xs) {
+    padding: 48px 0;
+  }
+
   &__title {
     margin-bottom: 10px;
   }
 
   &__content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(298px, 298px));
     grid-gap: 30px;
     margin-bottom: 53px;
+    justify-content: center;
+
+    @include media-w($md) {
+      grid-gap: 17px;
+      margin-bottom: 24px;
+    }
   }
 
   &__img {
@@ -604,6 +621,12 @@
       height: 16px;
       background-image: url(../images/actions/star-icon.svg);
       @extend %bg-center-cover;
+    }
+  }
+
+  & .mix-filters {
+    @include media-w($xs) {
+      margin-bottom: 24px;
     }
   }
 }

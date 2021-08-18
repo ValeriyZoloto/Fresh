@@ -36,8 +36,8 @@
     }
 
     @include media-w($xs) {
-      height: 315px;
-      padding: 58px 0px 56px 0px;
+      height: 320px;
+      padding: 61px 0px 56px 0px;
     }
 
     &--one {
@@ -66,7 +66,7 @@
       margin-left: -23px;
       margin-right: -23px;
       padding: 15px 6px 17px 19px;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
 
     &--two {
@@ -131,7 +131,7 @@
     }
 
     @include media-w($xs) {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       font-size: 20px;
     }
   }
@@ -264,6 +264,10 @@
 .partners-slider {
   padding-top: 65px;
 
+  @include media-w($xs) {
+    padding-top: 45px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -271,6 +275,10 @@
     width: 100%;
     height: 100%;
     margin-bottom: 65px;
+
+    @include media-w($xs) {
+      margin-bottom: 42px;
+    }
   }
 
   &__slide {

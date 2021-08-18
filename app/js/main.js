@@ -48,6 +48,24 @@ $(function () {
 		spaceBetween: 170,
 		slidesPerGroup: 6,
 		loop: true,
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 100,
+				with: 80,
+			},
+			// when window width is >= 480px
+			480: {
+				slidesPerView: 2,
+				spaceBetween: 140,
+			},
+			// when window width is >= 640px
+			640: {
+				slidesPerView: 5,
+				spaceBetween: 150,
+			},
+		},
 	});
 	/*:::::::::::::::::::::::swiper-slider-finish:::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::mixitap::::::::::::::::::::::::::::::::::::::::::::::::::*/
