@@ -15,6 +15,8 @@ $(function () {
 	var select = $(".dropdown"),
 		timeoutId;
 	var inp = document.querySelector(".search-form__input");
+	const footerItem = document.querySelector(".footer__item");
+	const footerItemMobile = document.querySelector(".footer__item--mobile");
 	/*:::::::::::::::::::::::переменные-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::top-slider:::::::::::::::::::::::::::::::::::::::::::::::*/
 	$(".top-slider__inner").slick({
@@ -55,15 +57,36 @@ $(function () {
 				spaceBetween: 100,
 				with: 80,
 			},
-			// when window width is >= 480px
+			//when window width is >= 480px
 			480: {
-				slidesPerView: 2,
-				spaceBetween: 140,
+				slidesPerView: 3,
+				spaceBetween: 130,
 			},
 			// when window width is >= 640px
 			640: {
+				slidesPerView: 3,
+				spaceBetween: 140,
+			},
+			// when window width is >= 768px
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 150,
+			},
+			// when window width is >= 992px
+			992: {
 				slidesPerView: 5,
 				spaceBetween: 150,
+			},
+			// when window width is >= 1200px
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 170,
+			},
+			// when window width is >= 1200px
+			1440: {
+				slidesPerView: 6,
+				slidesPerGroup: 6,
+				spaceBetween: 170,
 			},
 		},
 	});

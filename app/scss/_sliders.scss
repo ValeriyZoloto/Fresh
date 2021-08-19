@@ -305,6 +305,10 @@
     &:hover {
       opacity: 0.5;
     }
+
+    @include media-w($xs) {
+      width: 80px;
+    }
   }
 }
 
