@@ -1,7 +1,7 @@
 $(function () {
 	/*:::::::::::::::::::::::переменные:::::::::::::::::::::::::::::::::::::::::::::::*/
 	var containerEl1 = document.querySelector('[data-ref="container-1"]');
-	const containerEl2 = document.querySelector('[data-ref="container-2"]');
+	var containerEl2 = document.querySelector('[data-ref="container-2"]');
 	const button = document.querySelector(".roster__btn--cart");
 	const modal = document.querySelector(".fade-block");
 	const basket = document.querySelector(".basket");
@@ -97,9 +97,6 @@ $(function () {
 			scope: "local",
 		},
 	};
-
-	const mixer1 = mixitup(containerEl1, config);
-	const mixer2 = mixitup(containerEl2, config);
 	/*:::::::::::::::::::::::mixitap-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::counter:::::::::::::::::::::::::::::::::::::::::::::::*/
 	$(".counter__current").styler();
@@ -224,4 +221,15 @@ $(function () {
 	});
 	window.dispatchEvent(new Event("resize"));
 	/*:::::::::::::::::::::::Замена текста в инпуте-finish:::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::Range-slider::::::::::::::::::::::::::::::::::::::::*/
+	$(".filter-price__input").ionRangeSlider({
+		type: "double",
+		min: 100,
+		max: 1000,
+	});
+
+	/*:::::::::::::::::::::::Range-slider-finish:::::::::::::::::::::::::::::::::*/
+
+	var mixer1 = mixitup(containerEl1, config);
+	var mixer2 = mixitup(containerEl2, config);
 });

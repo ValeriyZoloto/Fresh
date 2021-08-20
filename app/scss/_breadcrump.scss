@@ -1,0 +1,39 @@
+.top {
+  padding: 24px 0;
+  background-color: $silver-100;
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    padding-right: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 10px;
+      top: 5px;
+      right: 6px;
+      background-image: url(../images/breadcrumbs/chevron.svg);
+    }
+
+    &:last-child {
+      color: $green-900;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+}
