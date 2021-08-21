@@ -89,8 +89,171 @@
   }
 }
 
-.filter-price {
-  &__form {
-    padding: 22px 18px 26px 18px;
+.filter-proposal {
+  &__box {
+    padding-left: 36px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__custom {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    top: 0;
+    left: 0;
+  }
+
+  &__selected {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 8px;
+    left: 8px;
+    background-image: url(../images/filter/check.svg);
+    @extend %bg-center-contain;
+    display: none;
+  }
+
+  &__check {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
   }
 }
+
+.filter-price {
+  &__form {
+    padding: 18px 18px 17px 18px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 120px;
+  }
+
+  &__range {
+    max-width: 18px;
+    font-family: 'Signika', 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $silver-600;
+    letter-spacing: 0.03em;
+    margin-right: 6px;
+  }
+
+  &__currency {
+    font-size: 16px;
+    line-height: 1;
+    color: $silver-600;
+  }
+
+  &__currency:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__from,
+  &__to {
+    min-width: 80px;
+    height: 40px;
+    padding: 12px 25px;
+    color: #505050;
+    font-family: "Lato",
+      sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    text-shadow: none;
+    background-color: #f6f6f6;
+    border: 1px solid #c1c1c1;
+    border-radius: 3px;
+    margin-right: 6px;
+  }
+
+
+}
+
+/*:::::::::::::::::::::::Ползунок цены::::::::::::::::::::::::::*/
+.irs--flat .irs-line {
+  top: 30px;
+  height: 2px;
+  background-color: $silver-700;
+  border-radius: 4px;
+}
+
+.irs--flat .irs-bar {
+  top: 30px;
+  height: 2px;
+  background-color: $green-900;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-left: -1px;
+  background-color: $green-900;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $green-200;
+  }
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  display: none;
+  padding: 12px 20px;
+  color: $dark-500;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  text-shadow: none;
+  background-color: $silver-100;
+  border: 1px solid #C1C1C1;
+  border-radius: 3px;
+  top: -54px;
+}
+
+.irs--flat .irs-from {
+  left: 10px;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+  top: 0;
+  padding: 1px 3px;
+  color: #999;
+  font-size: 10px;
+  line-height: 1.333;
+  text-shadow: none;
+  background-color: #e1e4e9;
+  border-radius: 4px;
+}
+
+/*:::::::::::::::::::::::Ползунок цены-finish::::::::::::::::::::*/

@@ -52,6 +52,36 @@
               <span class="sr-only">Кнопка для выбота предложения</span>
             </button>
           </div>
+          <form class="filter-proposal__form" action="#">
+            <ul class="filter__list">
+              <li class="filter__item">
+                <label class="filter-proposal__box">
+                  <input class="filter-proposal__check" type="checkbox">
+                  <span class="filter-proposal__custom"></span>
+                  <span class="filter-proposal__selected "></span>
+                  <span class="filter-proposal__text">Со скидкой</span>
+                </label>
+              </li>
+
+              <li class="filter__item">
+                <label class="filter-proposal__box">
+                  <input class="filter-proposal__check" type="checkbox">
+                  <span class="filter-proposal__custom"></span>
+                  <span class="filter-proposal__selected "></span>
+                  <span class="filter-proposal__text">Новинка</span>
+                </label>
+              </li>
+
+              <li class="filter__item">
+                <label class="filter-proposal__box">
+                  <input class="filter-proposal__check" type="checkbox">
+                  <span class="filter-proposal__custom"></span>
+                  <span class="filter-proposal__selected "></span>
+                  <span class="filter-proposal__text">Хит</span>
+                </label>
+              </li>
+            </ul>
+          </form>
         </div>
 
         <div class="filter-brand filter__point">
@@ -71,8 +101,19 @@
             </button>
           </div>
           <form class="filter-price__form" action="#">
+            <label class="filter-price__top">
+              <div class="filter-price__price">
+                <span class="filter-price__range ">от</span>
+                <span class="filter-price__from"></span>
+                <span class="filter-price__currency">₽</span>
+                <span class="filter-price__range ">до</span>
+                <span class="filter-price__to"></span>
+                <span class="filter-price__currency">₽</span>
+              </div>
+              <div class="filter-price__price"></div>
+            </label>
             <input class="filter-price__input" type="text" data-min="100" data-max="1000"
-              data-from="200" data-to="900">
+              data-from="100" data-to="880">
           </form>
         </div>
 

@@ -220,12 +220,20 @@ $(function () {
 		);
 	});
 	window.dispatchEvent(new Event("resize"));
-	/*:::::::::::::::::::::::Замена текста в инпуте-finish:::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::Замена текста в инпуте-finish:::::::::::::::::::::::*/ 0;
 	/*:::::::::::::::::::::::Range-slider::::::::::::::::::::::::::::::::::::::::*/
 	$(".filter-price__input").ionRangeSlider({
 		type: "double",
 		min: 100,
 		max: 1000,
+		onStart: function (data) {
+			$(".filter-price__from").text(data.from);
+			$(".filter-price__to").text(data.to);
+		},
+		onChange: function (data) {
+			$(".filter-price__from").text(data.from);
+			$(".filter-price__to").text(data.to);
+		},
 	});
 
 	/*:::::::::::::::::::::::Range-slider-finish:::::::::::::::::::::::::::::::::*/
