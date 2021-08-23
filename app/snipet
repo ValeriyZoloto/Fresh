@@ -20,8 +20,8 @@ body {
 
 Импорт файлов в scss:  @import '';
 .hot__item:not(:last-child)
-/*:::::::::::::::::::::::Checkbox::::::::::::::::::::::::::*/
-/*:::::::::::::::::::::::Checkbox-finish::::::::::::::::::::*/
+/*:::::::::::::::::::::::catalog-content__btn::::::::::::::::::::::::::*/
+/*:::::::::::::::::::::::catalog-content__btn-finish:::::::::::::::::::*/
 @extend %lato-Regular-14;
 @extend %bg1;
 @include overflow-2;
@@ -85,5 +85,5 @@ http://localhost:3000/catalog.html
 &__item:not(:last-child)
 
 Хронометраж
-1. Search 40-52
+1. Search 2-20-59
 2.

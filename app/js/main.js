@@ -101,6 +101,23 @@ $(function () {
 	/*:::::::::::::::::::::::counter:::::::::::::::::::::::::::::::::::::::::::::::*/
 	$(".counter__current").styler();
 	/*:::::::::::::::::::::::counter-finish::::::::::::::::::::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::Select::::::::::::::::::::::::::::::::::::::::::::::::*/
+	$(".select-style").styler();
+	/*:::::::::::::::::::::::Select-finish::::::::::::::::::::::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::catalog-content__btn:::::::::::::::::::::::::::::::::::*/
+	$(".catalog-content__btn").on("click", function () {
+		$(".catalog-content__btn").removeClass("catalog-content__btn--active");
+		$(this).addClass("catalog-content__btn--active");
+	});
+
+	$(".button-grid").on("click", function () {
+		$(".catalog-content__item").addClass("catalog-content__item--list");
+	});
+
+	$(".button-list").on("click", function () {
+		$(".catalog-content__item").removeClass("catalog-content__item--list");
+	});
+	/*:::::::::::::::::::::::catalog-content__btn-finish::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::Корзина:::::::::::::::::::::::::::::::::::::::::::::::*/
 	button.addEventListener("click", function () {
 		console.log("клик по кнопке открыть корзину");
