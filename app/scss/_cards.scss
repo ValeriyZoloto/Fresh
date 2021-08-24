@@ -429,10 +429,36 @@
 
   @include media-w($xs) {
     padding: 12px 0px 12px 0px;
-    // max-width: 170px;
+  }
+
+  &__raiting {
+    position: absolute;
+    top: 6px;
+    right: 38px;
+    display: none;
+
+    &--list {
+      display: block;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -22px;
+      top: 1px;
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/actions/star-icon.svg);
+    }
+
   }
 
   & .counter {
+
+    &--list {
+      display: none;
+    }
+
     @include media-w($sm) {
       margin-right: 28px;
     }
@@ -452,6 +478,22 @@
 
   & .jq-number__spin {
     @include media-w($sm) {}
+  }
+
+  &__status {
+    display: none;
+  }
+
+  &__status--not-avilible {
+    color: $silver-600;
+  }
+
+  &__status--ends {
+    color: $red-900;
+  }
+
+  &__status--avilible {
+    color: $green-900;
   }
 
   &__inner {
@@ -490,6 +532,7 @@
       @include media-w($xs) {
         height: 127px;
       }
+
     }
 
     &::after {
@@ -607,6 +650,13 @@
     @include media-w($xs) {
       position: relative;
       height: 68px;
+    }
+
+    &--list {
+      position: absolute;
+      min-width: 229px;
+      bottom: 10px;
+      left: 218px;
     }
   }
 
@@ -740,5 +790,95 @@
     min-width: 110px;
     background-repeat: no-repeat;
     object-fit: cover;
+  }
+}
+
+.products-card--list {
+  padding: 3px 0px 10px 0px;
+  min-height: 162px;
+  position: relative;
+  max-width: 466px;
+  width: 100%;
+
+}
+
+.products-card__image--list {
+  position: absolute;
+  width: 200px;
+  height: 144px;
+  top: 0px;
+  left: 0px;
+  padding: 1px;
+  object-fit: contain;
+  z-index: -1;
+}
+
+.products-card__commodity--list {
+  max-width: 178px;
+  position: absolute;
+  top: 32px;
+  left: 200px;
+  text-align: left;
+  display: block;
+  min-height: 60px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: .03em;
+  color: #121212;
+  @include overflow(3);
+
+  &__link {
+    color: inherit;
+  }
+}
+
+.products-card__status--list {
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 216px;
+}
+
+.products-card__heart-btn--list {
+  top: 53px;
+  right: 11px;
+
+  &:hover path {
+    fill: $yellow-800;
+  }
+}
+
+.products-card__link--list {
+  &::before {
+    position: absolute;
+    content: '';
+    width: 201px;
+    height: 147px;
+    top: 7px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $dark-910;
+    z-index: 9;
+    transition: 0.3s;
+    transform: translateX(-100%);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 48px;
+    height: 48px;
+    top: 92px;
+    right: 281px;
+    border-radius: 50%;
+    background-color: $white;
+    transition: 0.3s;
+    transform: translateX(-500%);
+    background-image: url(../images/products/icon-search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 9;
   }
 }

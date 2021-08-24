@@ -203,6 +203,12 @@
   max-width: 960px;
   width: 100%;
 
+  &__botom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__filter {
     display: flex;
     justify-content: space-between;
@@ -305,7 +311,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
     grid-gap: 30px;
-    margin-bottom: 45px;
+    margin-bottom: 48px;
 
     @include media-w($xl) {
       align-items: auto;
@@ -328,6 +334,17 @@
     display: flex;
     justify-content: center;
   }
+
+}
+
+
+.catalog-content__inner--list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.catalog-content__item--list {
+  max-height: 162px;
 }
 
 /*:::::::::::::::::::::::Ползунок цены::::::::::::::::::::::::::*/

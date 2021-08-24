@@ -111,12 +111,49 @@ $(function () {
 	});
 
 	$(".button-grid").on("click", function () {
+		$(".products-card").addClass("products-card--list");
+		$(".catalog-content__inner").addClass("catalog-content__inner--list");
 		$(".catalog-content__item").addClass("catalog-content__item--list");
+		$(".products-card__image").addClass("products-card__image--list");
+		$(".products-card__commodity").addClass(
+			"products-card__commodity--list"
+		);
+		$(".products-card__status").addClass("products-card__status--list");
+		$(".products-card__heart-btn").addClass(
+			"products-card__heart-btn--list"
+		);
+		$(".counter").addClass("counter--list");
+		$(".products-card__price-area").addClass(
+			"products-card__price-area--list"
+		);
+		$(".products-card__raiting").addClass("products-card__raiting--list");
+		$(".products-card__link").addClass("products-card__link--list");
 	});
 
 	$(".button-list").on("click", function () {
+		$(".products-card").removeClass("products-card--list");
+		$(".catalog-content__inner").removeClass(
+			"catalog-content__inner--list"
+		);
 		$(".catalog-content__item").removeClass("catalog-content__item--list");
+		$(".products-card__image").removeClass("products-card__image--list");
+		$(".products-card__commodity").removeClass(
+			"products-card__commodity--list"
+		);
+		$(".products-card__status").removeClass("products-card__status--list");
+		$(".products-card__heart-btn").removeClass(
+			"products-card__heart-btn--list"
+		);
+		$(".counter").removeClass("counter--list");
+		$(".products-card__price-area").removeClass(
+			"products-card__price-area--list"
+		);
+		$(".products-card__raiting").removeClass(
+			"products-card__raiting--list"
+		);
+		$(".products-card__link").removeClass("products-card__link--list");
 	});
+
 	/*:::::::::::::::::::::::catalog-content__btn-finish::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::Корзина:::::::::::::::::::::::::::::::::::::::::::::::*/
 	button.addEventListener("click", function () {
