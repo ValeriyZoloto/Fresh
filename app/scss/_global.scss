@@ -60,3 +60,92 @@ body {
     font-size: 24px;
   }
 }
+
+/*:::::::::::::::::::::::pagination::::::::::::::::::::::::::*/
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  @include media-w($sm) {
+    margin-top: 24px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__arrows {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background-color: $silver-100;
+    border-radius: 3px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background-color: $silver-100;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 1;
+
+    &--active {
+      border: 1px solid $dark-500;
+    }
+  }
+
+  &__item:nth-child(2) {
+    @include media-w($sm) {
+      display: none;
+    }
+  }
+
+  &__item:nth-child(4) {
+    @include media-w($sm) {
+      display: none;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &__prev {
+    margin-right: 5px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 39%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 18px;
+      background-image: url(../images/pagination/chevron-left.svg);
+      @extend %bg-center-contain;
+    }
+  }
+
+  &__next {
+    margin-left: 5px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 39%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 18px;
+      background-image: url(../images/pagination/chevron-right.svg);
+      @extend %bg-center-contain;
+    }
+  }
+}
+
+/*:::::::::::::::::::::::pagination-finish:::::::::::::::::::*/

@@ -23,7 +23,67 @@
   }
 }
 
+.catalog__filters-head {
+  background-color: $white;
+  z-index: 99;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background-color: transparent;
+  display: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/catalog/close-btn.svg);
+  }
+
+  @include media-w($md) {
+    height: 45px;
+    width: 45px;
+    display: block;
+  }
+}
+
+.filter--active::-webkit-scrollbar-thumb {
+  width: 4px;
+  height: 129px;
+  background-color: $silver-700;
+  border-radius: 3px;
+}
+
 .filter {
+
+  @include media-w($md) {
+    position: absolute;
+    // padding-top: 76px;
+    transform: translateX(-150%);
+    transition: 0.5s;
+  }
+
+  &--active {
+    display: block;
+    width: 320px;
+    height: 600px;
+    overflow-y: scroll;
+    padding-top: 76px;
+    padding-right: 21px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 99;
+    transform: translateX(0%);
+  }
+
   &__point {
     border: 1px solid $silver-600;
     background-color: $white;
@@ -76,6 +136,24 @@
 
   &__list {
     padding: 18px 9px 18px 16px;
+
+    &--category {
+      max-height: 305px;
+      overflow-y: scroll;
+    }
+  }
+
+  .filter__list--category::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 3px;
+    background-color: transparent;
+  }
+
+  .filter__list--category::-webkit-scrollbar-thumb {
+    width: 4px;
+    height: 129px;
+    background-color: $silver-700;
+    border-radius: 3px;
   }
 
   &__item:not(:last-child) {
@@ -207,6 +285,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__swich {
+    position: relative;
+    margin-right: 10px;
+    background-color: $silver-100;
+    border: none;
+    border-radius: 3px;
+    width: 47px;
+    height: 47px;
+    display: none;
+
+    @include media-w($md) {
+      display: block;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 33px;
+      top: 7px;
+      left: 7px;
+      background-image: url(../images/catalog/catalog-btn.svg);
+      @extend %bg-center-contain;
+    }
   }
 
   &__filter {
@@ -216,6 +324,10 @@
     max-width: 385px;
     margin-left: auto;
     margin-bottom: 48px;
+
+    @include media-w($md) {
+      margin-left: 0px;
+    }
   }
 
   &__selects {
@@ -288,6 +400,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($md) {
+      display: none;
+    }
   }
 
   &__btn {

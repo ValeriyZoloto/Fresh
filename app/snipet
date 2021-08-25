@@ -20,10 +20,10 @@ body {
 
 Импорт файлов в scss:  @import '';
 .hot__item:not(:last-child)
-/*:::::::::::::::::::::::catalog-content__btn::::::::::::::::::::::::::*/
-/*:::::::::::::::::::::::catalog-content__btn-finish:::::::::::::::::::*/
+/*:::::::::::::::::::::::filters::::::::::::::::::::::::::*/
+/*:::::::::::::::::::::::filters-finish:::::::::::::::::::*/
 @extend %lato-Regular-14;
-@extend %bg1;
+@extend %bg-center-contain;
 @include overflow-2;
 /*---------------------------@media(max-width: 1030px)------------------------*/
 @media (max-width: 1030px){
@@ -88,5 +88,3 @@ http://localhost:3000/catalog.html
 1. Search 3-10-17
 2.
 
-<span class="mini-card__status mini-card__status--avilible">в
-                   наличии</span>

@@ -371,7 +371,7 @@
     <div class="breadcrumbs">
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Главная</a>
+          <a class="breadcrumbs__link" href="index.html">Главная</a>
         </li>
 
         <li class="breadcrumbs__item">
@@ -386,6 +386,11 @@
     <h2 class="catalog__title">Каталог товаров</h2>
     <div class="catalog__inner">
       <div class="catalog__filters filter">
+      	<div class="catalog__filters-head">
+      		<button class="close-btn">
+      		 	<span class="sr-only">Кнопка для закрытия сайдбара</span>
+      		</button>
+      	</div>
         <div class="filter-category filter__point">
           <div class="filter__head">
             <h3 class="filter__title">Категории</h3>
@@ -393,7 +398,39 @@
               <span class="sr-only">Кнопка для выбота категории</span>
             </button>
           </div>
-          <ul class="filter__list">
+          <ul class="filter__list filter__list--category">
+            <li class="filter__item">
+              <a class="filter__link" href="#">Овощи и фрукты</a>
+            </li>
+
+            <li class="filter__item">
+              <a class="filter__link" href="#">Бакалея</a>
+            </li>
+
+            <li class="filter__item">
+              <a class="filter__link" href="#">Молочные продукты</a>
+            </li>
+
+            <li class="filter__item">
+              <a class="filter__link" href="#">Хлеб</a>
+            </li>
+
+            <li class="filter__item">
+              <a class="filter__link" href="#">Мясо</a>
+            </li>
+
+            <li class="filter__item">
+              <a class="filter__link" href="#">Колбаса</a>
+            </li>
+
+            <li class="filter__item">
+              <a class="filter__link" href="#">Рыба</a>
+            </li>
+
+            <li class="filter__item">
+              <a class="filter__link" href="#">Алкоголь</a>
+            </li>
+
             <li class="filter__item">
               <a class="filter__link" href="#">Овощи и фрукты</a>
             </li>
@@ -552,6 +589,10 @@
       <div class="catalog-content">
         <div class="catalog-content__filter">
           <form class="catalog-content__selects" action="#">
+          	<button class="catalog-content__swich">
+          		 <span class="sr-only">кнопка открыть каталог</span>
+          	</button>
+
             <select class="catalog-content__name select-style">
               <option value="">По названию</option>
               <option value="">По категории</option>
@@ -1407,6 +1448,37 @@
         </ul>
         <div class="catalog-content__botom">
           <a class="btn btn--green btn--size-18" href="#">Показать еще</a>
+          <div class="pagination">
+          	<a class="pagination__prev pagination__link pagination__arrows" href="">
+          		
+          	</a>
+
+          	<ul class="pagination__list">
+          		<li class="pagination__item"> 
+          			<a class="pagination__link pagination__link--active" href="#">1</a>
+          		</li>
+
+          		<li class="pagination__item"> 
+          			<a class="pagination__link" href="#">2</a>
+          		</li>
+
+          		<li class="pagination__item"> 
+          			<span class="pagination__link" >...</span>
+          		</li>
+
+          		<li class="pagination__item"> 
+          			<a class="pagination__link" href="#">9</a>
+          		</li>
+
+          		<li class="pagination__item"> 
+          			<a class="pagination__link" href="#">10</a>
+          		</li>
+          	</ul>
+
+          	<a class="pagination__next pagination__link pagination__arrows" href="">
+          		
+          	</a>
+          </div>
         </div>
       </div>
     </div>

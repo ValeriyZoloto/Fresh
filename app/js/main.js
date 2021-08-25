@@ -17,6 +17,9 @@ $(function () {
 	var inp = document.querySelector(".search-form__input");
 	const footerItem = document.querySelector(".footer__item");
 	const footerItemMobile = document.querySelector(".footer__item--mobile");
+	const openFiltersButton = document.querySelector(".catalog-content__swich");
+	const closeFiltersButton = document.querySelector(".close-btn");
+	const catalogFilter = document.querySelector(".filter");
 	/*:::::::::::::::::::::::переменные-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::top-slider:::::::::::::::::::::::::::::::::::::::::::::::*/
 	$(".top-slider__inner").slick({
@@ -155,6 +158,17 @@ $(function () {
 	});
 
 	/*:::::::::::::::::::::::catalog-content__btn-finish::::::::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::filters::::::::::::::::::::::::::::::::::::::::::::::::*/
+	openFiltersButton.addEventListener("click", function () {
+		modal.classList.add("fade-block--active");
+		catalogFilter.classList.add("filter--active");
+	});
+
+	closeFiltersButton.addEventListener("click", function () {
+		modal.classList.remove("fade-block--active");
+		catalogFilter.classList.remove("filter--active");
+	});
+	/*:::::::::::::::::::::::filters-finish:::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::Корзина:::::::::::::::::::::::::::::::::::::::::::::::*/
 	button.addEventListener("click", function () {
 		console.log("клик по кнопке открыть корзину");
@@ -172,6 +186,7 @@ $(function () {
 		console.log("клик по фейду");
 		modal.classList.remove("fade-block--active");
 		basket.classList.remove("basket__active");
+		catalogFilter.classList.remove("filter--active");
 	});
 
 	$(".basket__link").on("click", function (event) {
@@ -189,6 +204,7 @@ $(function () {
 			mobMenu.classList.remove("mobile--active");
 			basket.classList.remove("basket__active");
 			mobileForm.classList.remove("search-form--active");
+			catalogFilter.classList.remove("filter--active");
 		}
 	});
 	/*:::::::::::::::::::::::Корзина-finish::::::::::::::::::::::::::::::::::::::::*/
