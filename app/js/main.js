@@ -105,7 +105,9 @@ $(function () {
 	$(".counter__current").styler();
 	/*:::::::::::::::::::::::counter-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::Select::::::::::::::::::::::::::::::::::::::::::::::::*/
-	$(".select-style").styler();
+	$(".select-style").styler({
+		selectSearch: true,
+	});
 	/*:::::::::::::::::::::::Select-finish::::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::catalog-content__btn:::::::::::::::::::::::::::::::::::*/
 	$(".catalog-content__btn").on("click", function () {
