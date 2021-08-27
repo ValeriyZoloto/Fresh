@@ -2,6 +2,10 @@
   padding: 48px 0 73px 0;
   background-color: $white;
 
+  @include media-w($sm) {
+    padding: 33px 0 22px 0;
+  }
+
   &__title {
     font-family: 'Signika',
       'Open Sans',
@@ -11,6 +15,11 @@
     font-size: 42px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+
+    @include media-w($sm) {
+      font-size: 30px;
+      margin-bottom: 29px;
+    }
   }
 
   &__inner {
@@ -234,13 +243,6 @@
     margin-bottom: 3px;
   }
 
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 120px;
-  }
-
   &__range {
     max-width: 18px;
     font-family: 'Signika', 'Open Sans', sans-serif;
@@ -331,6 +333,10 @@
     @include media-w($md) {
       margin-left: 0px;
     }
+
+    @include media-w($xs) {
+      margin-bottom: 31px;
+    }
   }
 
   &__selects {
@@ -353,9 +359,11 @@
     letter-spacing: 0.03em;
     color: $dark-500;
 
-    // &:focus {
-    //   box-shadow: 0px 0px 0px 3px #e0edcf;
-    // }
+    @include media-w($xs) {
+      padding: 17px 2px 16px 6px;
+      width: 114px;
+      margin-right: 8px;
+    }
   }
 
   &__number {
@@ -370,9 +378,10 @@
     letter-spacing: 0.03em;
     color: $dark-500;
 
-    // &:focus {
-    //   box-shadow: 0px 0px 0px 3px #e0edcf;
-    // }
+    @include media-w($xs) {
+      padding: 17px 2px 16px 6px;
+      width: 71px;
+    }
   }
 
   /*:::::::::::::::::::::::Select::::::::::::::::::::::::::*/
@@ -401,6 +410,12 @@
   // .focused .jq-selectbox__select {
   //   box-shadow: 0px 0px 0px 3px #e0edcf;
   // }
+
+  .jq-selectbox__select-text {
+    @include media-w($xs) {
+      font-size: 12px;
+    }
+  }
 
   .jq-selectbox__trigger {
     border-left: none;

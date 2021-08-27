@@ -196,7 +196,6 @@
     }
 
     @include media-w($xs) {
-      // position: absolute;
       bottom: 30px;
     }
   }
@@ -467,6 +466,16 @@
       position: absolute;
       top: 0;
       left: 32px;
+
+      & .counter--hide {
+        display: none;
+      }
+    }
+  }
+
+  & .counter--hide {
+    @include media-w($xs) {
+      display: none;
     }
   }
 

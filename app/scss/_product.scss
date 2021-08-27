@@ -1,0 +1,130 @@
+.product {
+  padding: 48px 0 72px;
+  background-color: $white;
+}
+
+.product-item {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    font-family: 'Signika', 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $dark-900;
+  }
+
+  &__slide {
+    max-width: 630px;
+    padding: 69px 105px;
+    border: 1px solid $silver-600;
+    border-radius: 4px;
+  }
+
+  &__status {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__identifier {
+    max-width: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__cod {
+    display: block;
+    padding: 4px 5px 3px 5px;
+    margin-right: 12px;
+    font-size: 14px;
+    line-height: 1.2;
+    background-color: $silver-100;
+    border-radius: 3px;
+    color: $silver-600;
+    letter-spacing: 0.03em;
+  }
+
+  &__stars {
+    max-width: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 6px;
+  }
+
+  &__presence {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+
+    &--green {
+      color: $green-900;
+    }
+  }
+
+  &__price {
+    max-width: 155px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 59px;
+  }
+
+  &__old {
+    position: relative;
+    margin-right: 19px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $silver-600;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 55px;
+      height: 2px;
+      background-color: $silver-600;
+      bottom: 6px;
+      left: 0;
+      transform: rotate(-14.99deg);
+
+    }
+  }
+
+  &__new {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $green-900;
+  }
+
+  &__amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+  &__quantity {
+    max-width: 429px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}

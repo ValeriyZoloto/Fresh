@@ -265,6 +265,11 @@
   &--hide {
     display: none;
   }
+
+  &--relative {
+    position: relative;
+    margin-bottom: 18px;
+  }
 }
 
 .btn-user {
