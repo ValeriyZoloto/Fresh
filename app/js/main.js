@@ -17,8 +17,9 @@ $(function () {
 	var inp = document.querySelector(".search-form__input");
 	const footerItem = document.querySelector(".footer__item");
 	const footerItemMobile = document.querySelector(".footer__item--mobile");
-	const openFiltersButton = document.querySelector(".catalog-content__swich");
-	const closeFiltersButton = document.querySelector(".close-btn");
+
+	// const openFiltersButton = document.querySelector(".catalog-content__swich");
+	// const closeFiltersButton = document.querySelector(".close-btn");
 	const catalogFilter = document.querySelector(".filter");
 	/*:::::::::::::::::::::::переменные-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::top-slider:::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -48,7 +49,17 @@ $(function () {
 	});
 	/*:::::::::::::::::::::::top-slider-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::product-slider:::::::::::::::::::::::::::::::::::::::::::*/
-	$(".product-item__slide").slick({});
+	$(".product-item__slide").slick({
+		dots: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+
+		prevArrow:
+			'<button type="button" class="slick-prev product-slide__arow--prev"><span class="sr-only">Стрелка слайдера влево</span><img class="slick-img" src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"> <img class="slick-img-green" src="./images/slider/arrows/arrow-left-green.svg" alt="стрелка влево"></button>',
+		nextArrow:
+			' <button type="button" class="slick-next product-slide__arow--next"><span class="sr-only">Стрелка слайдера вправо</span><img class="slick-img" src="./images/slider/arrows/arrow-right.svg" alt="стрелка вправо" /><img class="slick-img-green" src="./images/slider/arrows/arrow-right-green.svg" alt="стрелка вправо" /></button>',
+	});
 	/*:::::::::::::::::::::::product-slider-finish::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::swiper-slider::::::::::::::::::::::::::::::::::::::::::::*/
 	const swiper = new Swiper(".partners-slider", {
@@ -164,14 +175,19 @@ $(function () {
 
 	/*:::::::::::::::::::::::catalog-content__btn-finish::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::filters::::::::::::::::::::::::::::::::::::::::::::::::*/
-	openFiltersButton.addEventListener("click", function () {
-		modal.classList.add("fade-block--active");
-		catalogFilter.classList.add("filter--active");
+	$(".catalog-content__swich").on("click", function () {
+		$(".filter").addClass("filter--active");
+		$(".fade-block").addClass("fade-block--active");
 	});
 
-	closeFiltersButton.addEventListener("click", function () {
-		modal.classList.remove("fade-block--active");
-		catalogFilter.classList.remove("filter--active");
+	$(".close-btn").on("click", function () {
+		$(".filter").removeClass("filter--active");
+		$(".fade-block").removeClass("fade-block--active");
+	});
+
+	$(".fade-block").on("click", function () {
+		$(".filter").removeClass("filter--active");
+		$(".fade-block").removeClass("fade-block--active");
 	});
 	/*:::::::::::::::::::::::filters-finish:::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::Корзина:::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -315,4 +331,39 @@ $(function () {
 
 	var mixer1 = mixitup(containerEl1, config);
 	var mixer2 = mixitup(containerEl2, config);
+});
+
+/*:::::::::::::::::::::::custom-counter::::::::::::::::::::::::::::::::::::::*/
+window.addEventListener("click", function (event) {
+	if (event.target.hasAttribute("data-action")) {
+		//От кнопки по которой кликнули находим родительский элемент обертку текущего счетчика
+		const counterWrapper = event.target.closest(".counter-wrapper");
+		//От обертки  находим div со значением  счетчика
+		const counter = counterWrapper.querySelector("[data-counter]");
+
+		if (event.target.dataset.action === "plus") {
+			//Изменяем текст показания счетчика увеличивая его на единицу
+			counter.innerText = ++counter.innerText;
+
+			if (event.target.closest(".cart-wrapper")) {
+				toggleCartStatus();
+			}
+		} else if (event.target.dataset.action === "minus") {
+			if (event.target.closest(".cart-wrapper")) {
+				//Уменьшаем счетчик только до единицы
+				if (parseInt(counter.innerText) > 1) {
+					//Изменяем текст показания счетчика уменьшая его на единицу
+					counter.innerText = --counter.innerText;
+				} else {
+					event.target.closest(".cart-item").remove();
+				}
+				toggleCartStatus();
+			} else {
+				if (parseInt(counter.innerText) > 1) {
+					counter.innerText = --counter.innerText;
+				}
+			}
+		}
+	}
+	/*:::::::::::::::::::::::custom-counter-finish:::::::::::::::::::::::::::::::*/
 });

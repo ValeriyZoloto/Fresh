@@ -236,6 +236,12 @@
     padding: 18px 18px 17px 18px;
   }
 
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
