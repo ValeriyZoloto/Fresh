@@ -49,7 +49,7 @@ $(function () {
 	});
 	/*:::::::::::::::::::::::top-slider-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::product-slider:::::::::::::::::::::::::::::::::::::::::::*/
-	$(".product-item__slide").slick({
+	$(".product-one__slide").slick({
 		dots: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
