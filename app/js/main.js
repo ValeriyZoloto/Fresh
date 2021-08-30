@@ -328,6 +328,19 @@ $(function () {
 	});
 
 	/*:::::::::::::::::::::::Range-slider-finish:::::::::::::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::tabs:::::::::::::::::::::::::::::::::::::::::::::::::*/
+	$(".product-tabs__item").on("click", function (e) {
+		e.preventDefault();
+		$(".product-tabs__item").removeClass("product-tabs__item--active");
+		$(this).addClass("product-tabs__item--active");
+
+		$(".product-tabs__point--active").removeClass(
+			"product-tabs__point--active"
+		);
+
+		$($(this).attr("href")).addClass("product-tabs__point--active");
+	});
+	/*:::::::::::::::::::::::tabs-finish::::::::::::::::::::::::::::::::::::::::::*/
 
 	var mixer1 = mixitup(containerEl1, config);
 	var mixer2 = mixitup(containerEl2, config);

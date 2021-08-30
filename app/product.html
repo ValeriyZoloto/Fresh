@@ -420,8 +420,8 @@
             <div class="product-one__status">
               <div class="product-one__identifier">
                 <span class="product-one__cod">Код: 0111111</span>
-                <ul class="product-one__stars">
-                  <li class="product-one__star">
+                <ul class="product-stars">
+                  <li class="product-stars__star">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0)">
@@ -437,7 +437,7 @@
                       </defs>
                     </svg>
                   </li>
-                  <li class="product-one__star">
+                  <li class="product-stars__star">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0)">
@@ -453,7 +453,7 @@
                       </defs>
                     </svg>
                   </li>
-                  <li class="product-one__star">
+                  <li class="product-stars__star">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0)">
@@ -469,7 +469,7 @@
                       </defs>
                     </svg>
                   </li>
-                  <li class="product-one__star">
+                  <li class="product-stars__star">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0)">
@@ -485,7 +485,7 @@
                       </defs>
                     </svg>
                   </li>
-                  <li class="product-one__star">
+                  <li class="product-stars__star">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0)">
@@ -584,19 +584,429 @@
   <div class="container">
     <div class="product-tabs">
       <div class="product-tabs__top">
-        <a class="product-tabs__item" href="#">описание</a>
-        <a class="product-tabs__item" href="#">характеристики</a>
-        <a class="product-tabs__item" href="#"> отзывы <span class="">(3)</span></a>
+        <a class="product-tabs__item product-tabs__item--active"
+          href="#tab-1">описание</a>
+        <a class="product-tabs__item" href="#tab-2">характеристики</a>
+        <a class="product-tabs__item" href="#tab-3"> отзывы <span class="">(3)</span></a>
       </div>
       <div class="product-tabs__content">
-        <div class="product-tabs__point">
-
+        <div
+          class="product-tabs__point product-tabs__point--active product-tabs__point--one"
+          id="tab-1">
+          <p class="product-tabs__text"> Питахайя – это источник питательных веществ и
+            витаминов. Содержит витамин С,
+            который способствует укреплению иммунной системы. В составе питайи много
+            клетчатки, она благотворно влияет на работу ЖКТ. Оказывает
+            противовоспалительное
+            действие, так как фрукт богат антиоксидантами. При употреблении питахайи,
+            понижается уровень сахара в крови, улучшается зрение и работа
+            сердечно–сосудистой системы. Так как фрукт низкокалорийный и состоит на 90% из
+            воды, способствует снижению веса.</p>
+          <span class="product-tabs__line">Витамины: С, Е, РР, витамины группы В</span>
+          <span class="product-tabs__line">Микроэлементы: железо, калий, кальций, магний,
+            фосфор</span>
+          <span class="product-tabs__line">Внешний вид товара может отличаться от
+            изображений,
+            представленных на
+            сайте.</span>
         </div>
-        <div class="product-tabs__point">
 
-        </div>
-        <div class="product-tabs__point">
+        <ul class="product-tabs__point product-tabs__point--two" id="tab-2">
+          <li class="product-tabs__string">
+            <span class="product-tabs__thick"> Вес:</span>
+            <span class="product-tabs__thin">250-350 г;</span>
+          </li>
 
+          <li class="product-tabs__string">
+            <span class="product-tabs__thick"> Калорийность (на 100г): </span>
+            <span class="product-tabs__thin">50 ккал;</span>
+          </li>
+
+          <li class="product-tabs__string">
+            <span class="product-tabs__thick"> Условия хранения: </span>
+            <span class="product-tabs__thin">температура от +3 до +8;</span>
+          </li>
+
+          <li class="product-tabs__string">
+            <span class="product-tabs__thick"> Другие названия: </span>
+            <span class="product-tabs__thin">Драконов фрукт, Глаз дракона;</span>
+          </li>
+
+          <li class="product-tabs__string">
+            <span class="product-tabs__thick"> Страна происхождения: </span>
+            <span class="product-tabs__thin">Вьетнам;</span>
+          </li>
+
+          <li class="product-tabs__string">
+            <span class="product-tabs__thick"> Срок хранения: </span>
+            <span class="product-tabs__thin">до 5 дней.</span>
+          </li>
+        </ul>
+
+        <div class="product-tabs__point product-tabs__point--three" id="tab-3">
+          <h3 class="product-one__subtitle  product-one__subtitle--review">мнения наших
+            клиентов
+          </h3>
+
+          <ul class="review-list">
+            <li class="review-list__item">
+              <div class="review-list__top">
+                <div class="review-list__avatar">
+                  <img class="review-list__picture" src="../../images/tabs/review-img.jpg"
+                    alt="Аватар покупателя" width="70" height="70">
+                  <div class="review-list__names">
+                    <h4 class="review-list__name">Андрей</h4>
+                    <time class="review-list__time"
+                      datetime='2021-06-10T20:31:06+07:00'>10.06.2021</time>
+
+                  </div>
+                </div>
+
+                <ul class="product-stars">
+                  <li class="product-stars__star">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                          fill="#FFB800" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="16" height="16" fill="white"
+                            transform="matrix(-1 0 0 1 16 0)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                  <li class="product-stars__star">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                          fill="#FFB800" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="16" height="16" fill="white"
+                            transform="matrix(-1 0 0 1 16 0)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                  <li class="product-stars__star">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                          fill="#FFB800" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="16" height="16" fill="white"
+                            transform="matrix(-1 0 0 1 16 0)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                  <li class="product-stars__star">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                          fill="#FFB800" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="16" height="16" fill="white"
+                            transform="matrix(-1 0 0 1 16 0)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                  <li class="product-stars__star">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                          fill="#C1C1C1" fill-opacity="0.3" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="16" height="16" fill="white"
+                            transform="matrix(-1 0 0 1 16 0)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="review-list__bottom">
+                <p class="review-list__text">
+                  Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
+                </p>
+              </div>
+
+
+            </li>
+
+            <li class="review-list__item">
+              <div class="review-list__top">
+                <div class="review-list__avatar">
+                  <img class="review-list__picture" src="../../images/tabs/review-img.jpg"
+                    alt="Аватар покупателя" width="70" height="70">
+                  <div class="review-list__names">
+                    <h4 class="review-list__name">Екатерина Белая</h4>
+                    <time class="review-list__time"
+                      datetime='2021-06-7T20:21:06+07:00'>7.06.2021</time>
+
+                  </div>
+                </div>
+
+                <ul class="product-stars">
+                  <li class="product-stars__star">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                          fill="#FFB800" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="16" height="16" fill="white"
+                            transform="matrix(-1 0 0 1 16 0)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+
+                  <li class="product-stars__star">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                          fill="#FFB800" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="16" height="16" fill="white"
+                            transform="matrix(-1 0 0 1 16 0)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+
+                  <li class="product-stars__star">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                          fill="#FFB800" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="16" height="16" fill="white"
+                            transform="matrix(-1 0 0 1 16 0)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+
+
+                  <li class="product-stars__star">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                          fill="#FFB800" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="16" height="16" fill="white"
+                            transform="matrix(-1 0 0 1 16 0)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+
+                  <li class="product-stars__star">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path
+                          d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                          fill="#FFB800" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="16" height="16" fill="white"
+                            transform="matrix(-1 0 0 1 16 0)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="review-list__bottom">
+                <p class="review-list__text">
+                  Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же
+                  яркий (просто взрыв), но нет. Вкус "сдержанно-сладкий" и очень-очень
+                  свежий! Рад, что есть такая возможность - пробовать экзотические фрукты.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <form class="review-form" action="#">
+
+            <p class="review-form__subtitle  product-one__subtitle--review">Оставить отзыв
+            </p>
+
+            <div class="review-form__grade">
+              <span class="review-grade__yours">Ваша оценка *</span>
+
+              <label class="review-form__label">
+                <input class="review-form__input" type="radio" name="star">
+                <span class="review-form__radio">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                        fill="#C1C1C1" fill-opacity="0.3" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="16" height="16" fill="white"
+                          transform="matrix(-1 0 0 1 16 0)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </label>
+
+              <label class="review-form__label">
+                <input class="review-form__input" type="radio" name="star">
+                <span class="review-form__radio">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                        fill="#C1C1C1" fill-opacity="0.3" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="16" height="16" fill="white"
+                          transform="matrix(-1 0 0 1 16 0)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </label>
+
+              <label class="review-form__label">
+                <input class="review-form__input" type="radio" name="star">
+                <span class="review-form__radio">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                        fill="#C1C1C1" fill-opacity="0.3" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="16" height="16" fill="white"
+                          transform="matrix(-1 0 0 1 16 0)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </label>
+
+              <label class="review-form__label">
+                <input class="review-form__input" type="radio" name="star">
+                <span class="review-form__radio">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                        fill="#C1C1C1" fill-opacity="0.3" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="16" height="16" fill="white"
+                          transform="matrix(-1 0 0 1 16 0)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </label>
+
+              <label class="review-form__label">
+                <input class="review-form__input" type="radio" name="star">
+                <span class="review-form__radio">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M0.0229731 6.16426C0.0780973 5.99454 0.224753 5.87085 0.401315 5.84523L5.36139 5.12445L7.57966 0.629872C7.6586 0.469872 7.82157 0.368591 7.99997 0.368591C8.17841 0.368591 8.34135 0.469872 8.42032 0.629872L10.6387 5.12445L15.5987 5.84523C15.7752 5.87085 15.9219 5.99454 15.977 6.16422C16.0322 6.33394 15.9862 6.52022 15.8584 6.64475L12.2694 10.1433L13.1165 15.0834C13.1467 15.2593 13.0744 15.4369 12.9301 15.5418C12.8484 15.6012 12.7517 15.6313 12.6545 15.6313C12.5799 15.6313 12.505 15.6136 12.4365 15.5775L8 13.2451L3.56374 15.5775C3.40577 15.6605 3.21443 15.6467 3.07009 15.5418C2.92574 15.4369 2.8534 15.2592 2.88356 15.0833L3.73096 10.1433L0.141566 6.64472C0.0138168 6.52022 -0.0322151 6.33394 0.0229731 6.16426Z"
+                        fill="#C1C1C1" fill-opacity="0.3" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="16" height="16" fill="white"
+                          transform="matrix(-1 0 0 1 16 0)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </label>
+            </div>
+
+            <div class="review-form__wrapper">
+
+              <label class="review-form__name">
+                <span class="review-form__denotation">Ваш отзыв *</span>
+                <textarea class="review-form__area" name="message" required
+                  placeholder="Введите текст отзыва"></textarea>
+              </label>
+
+              <div class="review-form__column">
+                <label class="review-form__name">
+                  <span class="review-form__denotation">Имя</span>
+                  <input class="review-form__text review-form__text--one" type="text"
+                    name="name" placeholder="Введите ваше имя">
+                </label>
+
+                <label class="review-form__name">
+                  <span class="review-form__denotation">Email *</span>
+                  <input class="review-form__text" type="text" name="name"
+                    placeholder="youremail@mail.com">
+                </label>
+              </div>
+            </div>
+
+            <label class="review-form__box">
+              <input class="review-form__check" type="checkbox">
+              <span class="review-form__custom"></span>
+              <span class="review-form__checkbox-text">Сохранить моё имя, email и адрес
+                сайта в этом браузере для последующих моих комментариев.</span>
+            </label>
+            <a class="btn btn--green btn--size-18" href="#">Оставить отзыв</a>
+          </form>
         </div>
       </div>
     </div>

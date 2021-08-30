@@ -1,0 +1,277 @@
+.product-tabs {
+  max-width: 690px;
+  margin: 0 auto;
+  margin-bottom: 84px;
+  font-size: 16px;
+  line-height: 1.6;
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__line:not(:last-child) {
+    margin-bottom: 27px;
+  }
+
+  &__line {
+    display: block;
+  }
+
+  &__string {
+    margin-bottom: 11px;
+  }
+
+  &__point {
+    display: none;
+
+    &.product-tabs__point--active {
+      display: block;
+    }
+
+    &--one {
+      color: $silver-150;
+    }
+
+    &--two {
+      color: $dark-500;
+    }
+
+    &--three {
+      max-width: 692px;
+      color: $dark-500;
+    }
+  }
+
+  &__thick {
+    font-weight: 700;
+  }
+
+  &__thin {
+    font-weight: 400;
+  }
+}
+
+.review-list {
+  margin-bottom: 52px;
+
+  &__item {
+    padding: 24px 0 24px 0;
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $silver-600;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__avatar {
+    max-width: 205px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__names {
+    max-width: 111px;
+  }
+
+  &__name {
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $dark-900;
+  }
+
+  &__time {
+    font-size: 14px;
+    line-height: 1.7;
+    color: $silver-150;
+  }
+
+  &__picture {
+    margin-right: 24px;
+  }
+
+  &__bottom {
+    padding-top: 24px;
+  }
+
+  &__text {
+    font-family: 'Lato',
+      sans-serif;
+    font-weight: 400;
+  }
+}
+
+.review-form {
+  width: 100%;
+
+  &__subtitle {
+    padding-bottom: 18px;
+    font-family: "Signika",
+      "Open Sans",
+      sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: $dark-900;
+  }
+
+  &__grade {
+    max-width: 229px;
+    padding: 22px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__yours {
+    line-height: 1.3;
+    color: $dark-900;
+  }
+
+  &__label {
+    position: relative;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__radio {
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+
+    path {
+      fill: $silver-600;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 21px;
+  }
+
+  &__input {
+    margin: 0;
+    padding: 0;
+    display: none;
+
+    &:checked+.review-form__radio {
+      path {
+        fill: $yellow-900;
+      }
+    }
+  }
+
+  &__column {
+    max-width: 260px;
+  }
+
+  &__denotation {
+    display: block;
+    margin-bottom: 14px;
+    color: $dark-900;
+    line-height: 1.3;
+  }
+
+  &__text {
+    padding: 9px 16px 13px 16px;
+    width: 260px;
+    height: 54px;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+
+    &::placeholder {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.3;
+      color: $silver-600;
+    }
+
+    &--one {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__area {
+    padding: 16px 5px 5px 16px;
+    width: 100%;
+    width: 400px;
+    height: 165px;
+    resize: none;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+
+    &::placeholder {
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.3;
+      color: $silver-600;
+    }
+  }
+
+  &__box {
+    padding-left: 36px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 23px;
+  }
+
+  &__check {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  &__check:focus+&__custom {
+    border: 2px solid $green-900;
+  }
+
+  &__check:checked+&__custom::before {
+    display: block;
+  }
+
+  &__custom {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    top: 0;
+    left: 0;
+  }
+
+  &__custom::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 6px;
+    left: 6px;
+    background-image: url(../images/filter/check.svg);
+    @extend %bg-center-contain;
+    z-index: 99;
+    display: none;
+  }
+
+  &__checkbox-text {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}

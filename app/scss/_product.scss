@@ -107,17 +107,6 @@
     letter-spacing: 0.03em;
   }
 
-  &__stars {
-    max-width: 104px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__star:not(:last-child) {
-    margin-right: 6px;
-  }
-
   &__presence {
     font-weight: 600;
     font-size: 16px;
@@ -241,6 +230,11 @@
     letter-spacing: 0.03em;
     color: $dark-900;
     border-bottom: 1px solid $silver-600;
+
+    &--review {
+      border-bottom: none;
+      margin-bottom: 7px;
+    }
   }
 
   &__list {
@@ -273,6 +267,19 @@
     }
   }
 }
+
+.product-stars {
+  max-width: 104px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__star:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+
 
 .counter-wrapper {
   display: flex;
@@ -341,6 +348,7 @@
   &__top {
     max-width: 629px;
     margin: 0 auto;
+    margin-bottom: 46px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -359,6 +367,22 @@
     color: $dark-900;
     transition: color 0.3s,
       border-top 0.3s;
+
+    &--active {
+      position: relative;
+      color: $green-900;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: -3px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $green-900;
+      }
+    }
 
     &:hover {
       color: $green-900;
