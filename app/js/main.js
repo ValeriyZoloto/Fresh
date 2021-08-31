@@ -21,6 +21,7 @@ $(function () {
 	// const openFiltersButton = document.querySelector(".catalog-content__swich");
 	// const closeFiltersButton = document.querySelector(".close-btn");
 	const catalogFilter = document.querySelector(".filter");
+	const hideBlock = document.querySelector(".hide-block");
 	/*:::::::::::::::::::::::переменные-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::top-slider:::::::::::::::::::::::::::::::::::::::::::::::*/
 	$(".top-slider__inner").slick({
@@ -108,6 +109,29 @@ $(function () {
 		},
 	});
 	/*:::::::::::::::::::::::swiper-slider-finish:::::::::::::::::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::related-slider:::::::::::::::::::::::::::::::::::::::::::*/
+	$(".related__content").slick({
+		dots: false,
+		slidesToShow: 4,
+
+		prevArrow:
+			'<button type="button" class="slick-prev related-arow--prev"><span class="sr-only">Стрелка слайдера влево</span><img class="slick-img" src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"> <img class="slick-img-green" src="./images/slider/arrows/arrow-left-green.svg" alt="стрелка влево"></button>',
+		nextArrow:
+			' <button type="button" class="slick-next related-arow--next"><span class="sr-only">Стрелка слайдера вправо</span><img class="slick-img" src="./images/slider/arrows/arrow-right.svg" alt="стрелка вправо" /><img class="slick-img-green" src="./images/slider/arrows/arrow-right-green.svg" alt="стрелка вправо" /></button>',
+	});
+	/*:::::::::::::::::::::::related-slider-finish::::::::::::::::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::hide-slider::::::::::::::::::::::::::::::::::::::::::::::*/
+	$(".hide-slider").slick({
+		dots: true,
+		slidesToShow: 1,
+		dotsClass: "slick-dots__hide",
+
+		prevArrow:
+			'<button type="button" class="slick-prev hide-arow--prev"><span class="sr-only">Стрелка слайдера влево</span><img class="slick-img" src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"> <img class="slick-img-green" src="./images/slider/arrows/arrow-left-green.svg" alt="стрелка влево"></button>',
+		nextArrow:
+			' <button type="button" class="slick-next hide-arow--next"><span class="sr-only">Стрелка слайдера вправо</span><img class="slick-img" src="./images/slider/arrows/arrow-right.svg" alt="стрелка вправо" /><img class="slick-img-green" src="./images/slider/arrows/arrow-right-green.svg" alt="стрелка вправо" /></button>',
+	});
+	/*:::::::::::::::::::::::hide-slider-finish:::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::mixitap::::::::::::::::::::::::::::::::::::::::::::::::::*/
 	const config = {
 		controls: {
@@ -226,6 +250,7 @@ $(function () {
 			basket.classList.remove("basket__active");
 			mobileForm.classList.remove("search-form--active");
 			catalogFilter.classList.remove("filter--active");
+			hideBlock.classList.remove("hide-block--active");
 		}
 	});
 	/*:::::::::::::::::::::::Корзина-finish::::::::::::::::::::::::::::::::::::::::*/
@@ -379,4 +404,13 @@ window.addEventListener("click", function (event) {
 		}
 	}
 	/*:::::::::::::::::::::::custom-counter-finish:::::::::::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::hide-block:::::::::::::::::::::::::::::::::::::::::::*/
+	$(".product-slide__link").on("click", function () {
+		$(".hide-block").addClass("hide-block--active");
+	});
+
+	$(".hide-slider__btn").on("click", function () {
+		$(".hide-block").removeClass("hide-block--active");
+	});
+	/*:::::::::::::::::::::::hide-block-finish::::::::::::::::::::::::::::::::::::*/
 });

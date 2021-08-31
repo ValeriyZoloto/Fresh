@@ -1,0 +1,68 @@
+.hide-block {
+  padding: 54px 96px;
+  background-color: rgba($dark-1000, 0.15);
+  display: none;
+}
+
+.hide-block--active {
+  padding: 54px 96px;
+  background-color: rgba($dark-1000, 0.15);
+  display: block;
+}
+
+.hide-slider {
+  &__item {
+    position: relative;
+    padding: 60px 218px 166px 484px;
+    background-color: $white;
+    border-radius: 15px;
+  }
+
+  &__btn {
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+    top: 36px;
+    right: 31px;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.hide-arow--prev {
+  padding: 6px 12px;
+  position: absolute;
+  top: 463px;
+  left: 68px;
+  z-index: 1;
+  border: none;
+  background-color: transparent;
+}
+
+.hide-arow--next {
+  padding: 6px 12px;
+  position: absolute;
+  top: 463px;
+  right: 68px;
+  z-index: 1;
+  border: none;
+  background-color: transparent;
+}
+
+.slick-dots__hide {
+  display: flex;
+  position: absolute;
+  bottom: 99px;
+  left: 48%;
+
+  & button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #c1c1c1;
+    background-color: rgba($dark-1000, 0.15);
+    font-size: 0;
+    padding: 0;
+    margin: 0 7px;
+  }
+
+}

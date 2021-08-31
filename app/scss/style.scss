@@ -9,6 +9,8 @@
 @import 'product';
 @import 'components';
 @import 'tabs';
+@import 'related';
+@import 'hide';
 @import 'sliders';
 
 
@@ -776,7 +778,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-      max-width: 300px;
+      max-width: 301px;
 
       @include media-w($xs) {
         padding: 2px 0 0px 0;

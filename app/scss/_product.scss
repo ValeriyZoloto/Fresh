@@ -1,5 +1,5 @@
 .product-page {
-  padding: 48px 0 72px;
+  padding: 48px 0 0px;
   background-color: $white;
 
   &__line {
@@ -89,7 +89,7 @@
   }
 
   &__identifier {
-    max-width: 220px;
+    max-width: 221px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -279,8 +279,6 @@
   }
 }
 
-
-
 .counter-wrapper {
   display: flex;
   justify-content: space-between;
@@ -319,7 +317,6 @@
   }
 
   &__minus {
-
     width: 29px;
     height: 2px;
     background-color: $white;
@@ -392,8 +389,4 @@
       border-top: solid 3px $green-900;
     }
   }
-
-  &__content {}
-
-  &__point {}
 }
