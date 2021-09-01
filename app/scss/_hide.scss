@@ -8,9 +8,11 @@
   padding: 54px 96px;
   background-color: rgba($dark-1000, 0.15);
   display: block;
+  z-index: 999;
 }
 
 .hide-slider {
+
   &__item {
     position: relative;
     padding: 60px 218px 166px 484px;
@@ -26,6 +28,7 @@
     border: none;
     background-color: transparent;
   }
+
 }
 
 .hide-arow--prev {

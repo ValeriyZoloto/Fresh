@@ -386,7 +386,7 @@
     </div>
   </div>
 </div>
-<div class="hide-block" data-modal="#">
+<div class="hide-block" data-modal="#" id="hide-block">
   <ul class="hide-slider">
     <li class="hide-slider__item">
       <a class="hide-slider__btn" type="button" href="#">
@@ -450,7 +450,6 @@
       <img class="hide-slider__img" src="../../images/product/gallery.jpg"
         alt="Питахайя красная с белой мякотью" width="750" height="750">
     </li>
-
   </ul>
 </div>
 <section class="product-page">
@@ -459,7 +458,7 @@
       <div class="product-one__inner">
         <ul class="product-one__slide">
           <li class="product-slide">
-            <a class="product-slide__link" href="#">
+            <a class="product-slide__link">
               <img class="product-slide__picture" src="images/product/1.jpg"
                 alt="Питахайя красная с белой мякотью" width="420" height="420">
             </a>
@@ -1094,7 +1093,7 @@
 
     <ul class="related__content">
       <li class="top-products__item mix category-a category-all">
-        <article class="products-card">
+        <article class="products-card products-card--related">
           <div class="products-card__heart">
             <div class="products-card__inner">
               <span class="badge  badge--green products-card__badge">
@@ -1119,6 +1118,14 @@
           <a class="products-card__link" href="#">
             <img class="products-card__image" src="images/products/pineapple.jpg"
               alt="перейти на страницу ананасы" width="298" height="215">
+            <div class="products-card__stat">
+              <span class="products-card__status products-card__status--avilible
+                 products-card__stat--left">
+                в наличии
+              </span>
+              <span class="products-card__raiting products-card__raiting--list">4.5
+              </span>
+            </div>
             <h3 class="products-card__commodity">Ананас, 1кг</h3>
           </a>
           <div class="products-card__text">
@@ -1133,7 +1140,7 @@
                   <span class="products-card__symbol">₽</span>
                 </span>
               </div>
-              <div class="counter products-card__counter">
+              <div class="counter counter--related">
                 <input class="counter__current" type="number" value="2" min="1">
               </div>
               <a class="products-card__cart" type="button" href="#">
@@ -1157,7 +1164,7 @@
       </li>
 
       <li class="top-products__item mix category-a category-all">
-        <article class="products-card">
+        <article class="products-card products-card--related">
           <div class="products-card__heart">
             <div class="products-card__inner">
               <span class="badge  badge--green products-card__badge badge--hide">
@@ -1182,6 +1189,14 @@
           <a class="products-card__link" href="#">
             <img class="products-card__image" src="images/products/lemon.jpg"
               alt="перейти на страницу Лимон" width="298" height="215">
+            <div class="products-card__stat">
+              <span class="products-card__status products-card__status--avilible
+                 products-card__stat--left">
+                в наличии
+              </span>
+              <span class="products-card__raiting products-card__raiting--list">4.5
+              </span>
+            </div>
             <h3 class="products-card__commodity">Лимон, 1кг</h3>
           </a>
           <div class="products-card__text">
@@ -1193,7 +1208,7 @@
                 </span>
               </div>
 
-              <div class="counter products-card__counter">
+              <div class="counter counter--related">
                 <input class="counter__current" type="number" value="2" min="1">
               </div>
 
@@ -1218,7 +1233,7 @@
       </li>
 
       <li class="top-products__item mix category-a category-all">
-        <article class="products-card">
+        <article class="products-card products-card--related">
           <div class="products-card__heart">
             <div class="products-card__inner">
               <span class="badge  badge--green products-card__badge badge--hide">
@@ -1243,6 +1258,14 @@
           <a class="products-card__link" href="product.html">
             <img class="products-card__image" src="images/products/dragon-fruit.jpg"
               alt="перейти на страницу Питахайя" width="298" height="215">
+            <div class="products-card__stat">
+              <span class="products-card__status products-card__status--avilible
+                 products-card__stat--left">
+                в наличии
+              </span>
+              <span class="products-card__raiting products-card__raiting--list">4.5
+              </span>
+            </div>
             <h3 class="products-card__commodity">
               Питахайя красная с белой мякотью, 1шт
             </h3>
@@ -1255,7 +1278,7 @@
                   <span class="products-card__symbol">₽</span>
                 </span>
               </div>
-              <div class="counter products-card__counter">
+              <div class="counter counter--related">
                 <input class="counter__current" type="number" value="2" min="1">
               </div>
               <a class="products-card__cart" type="button" href="#">
@@ -1279,7 +1302,7 @@
       </li>
 
       <li class="top-products__item mix category-b category-all">
-        <article class="products-card">
+        <article class="products-card products-card--related">
           <div class="products-card__heart">
             <div class="products-card__inner">
               <span class="badge  badge--green products-card__badge">
@@ -1304,6 +1327,14 @@
           <a class="products-card__link" href="#">
             <img class="products-card__image" src="images/products/paprik-1.jpg"
               alt="перейти на страницу Перец" width="298" height="215">
+            <div class="products-card__stat">
+              <span class="products-card__status products-card__status--ends
+                 products-card__stat--left">
+                заканчивается
+              </span>
+              <span class="products-card__raiting products-card__raiting--list">4.5
+              </span>
+            </div>
             <h3 class="products-card__commodity">Перец оранжевый, 1кг</h3>
           </a>
           <div class="products-card__text">
@@ -1314,7 +1345,7 @@
                   <span class="products-card__symbol">₽</span>
                 </span>
               </div>
-              <div class="counter products-card__counter">
+              <div class="counter counter--related">
                 <input class="counter__current" type="number" value="2" min="1">
               </div>
               <a class="products-card__cart" type="button" href="#">
@@ -1338,7 +1369,7 @@
       </li>
 
       <li class="top-products__item mix category-b category-all">
-        <article class="products-card">
+        <article class="products-card products-card--related">
           <div class="products-card__heart">
             <div class="products-card__inner">
               <span class="badge  badge--green products-card__badge badge--hide">
@@ -1363,6 +1394,14 @@
           <a class="products-card__link" href="#">
             <img class="products-card__image" src="images/products/carrot-1.jpg"
               alt="перейти на страницу Морковь" width="298" height="215">
+            <div class="products-card__stat">
+              <span class="products-card__status products-card__status--not-avilible
+                 products-card__stat--left">
+                нет в наличии
+              </span>
+              <span class="products-card__raiting products-card__raiting--list">4.5
+              </span>
+            </div>
             <h3 class="products-card__commodity">
               Морковь молодая с бабушкиной грядки, 1кг
             </h3>
@@ -1375,7 +1414,7 @@
                   <span class="products-card__symbol">₽</span>
                 </span>
               </div>
-              <div class="counter products-card__counter">
+              <div class="counter counter--related">
                 <input class="counter__current" type="number" value="2" min="1">
               </div>
               <a class="products-card__cart" type="button" href="#">
@@ -1399,7 +1438,7 @@
       </li>
 
       <li class="top-products__item mix category-c category-all">
-        <article class="products-card">
+        <article class="products-card products-card--related">
           <div class="products-card__heart">
             <div class="products-card__inner">
               <span class="badge  badge--green products-card__badge badge--hide">
@@ -1424,6 +1463,14 @@
           <a class="products-card__link" href="#">
             <img class="products-card__image" src="images/products/juice-1.jpg"
               alt="перейти на страницу Напиток сокосодержащий" width="298" height="215">
+            <div class="products-card__stat">
+              <span class="products-card__status products-card__status--avilible
+                 products-card__stat--left">
+                в наличии
+              </span>
+              <span class="products-card__raiting products-card__raiting--list">4.5
+              </span>
+            </div>
             <h3 class="products-card__commodity">
               Напиток сокосодержащий Sanpellegrino
               Aranciata Orange Красный апельсин безалкогольный...
@@ -1441,7 +1488,7 @@
                   <span class="products-card__symbol">₽</span>
                 </span>
               </div>
-              <div class="counter products-card__counter">
+              <div class="counter counter--related">
                 <input class="counter__current" type="number" value="2" min="1">
               </div>
               <a class="products-card__cart" type="button" href="#">
@@ -1465,7 +1512,7 @@
       </li>
 
       <li class="top-products__item mix category-c category-all">
-        <article class="products-card">
+        <article class="products-card products-card--related">
           <div class="products-card__heart">
             <div class="products-card__inner">
               <span class="badge  badge--green products-card__badge">
@@ -1490,6 +1537,14 @@
           <a class="products-card__link" href="#">
             <img class="products-card__image" src="images/products/coffee-1.jpg"
               alt="перейти на страницу Кофе с коноплей" width="298" height="215">
+            <div class="products-card__stat">
+              <span class="products-card__status products-card__status--ends
+                 products-card__stat--left">
+                заканчивается
+              </span>
+              <span class="products-card__raiting products-card__raiting--list">4.5
+              </span>
+            </div>
             <h3 class="products-card__commodity">
               Кофе с коноплей органический Caffé Salomoni 250г
             </h3>
@@ -1502,7 +1557,7 @@
                   <span class="products-card__symbol">₽</span>
                 </span>
               </div>
-              <div class="counter products-card__counter">
+              <div class="counter counter--related">
                 <input class="counter__current" type="number" value="2" min="1">
               </div>
               <a class="products-card__cart" type="button" href="#">
@@ -1526,7 +1581,7 @@
       </li>
 
       <li class="top-products__item mix category-d category-all">
-        <article class="products-card">
+        <article class="products-card products-card--related">
           <div class="products-card__heart">
             <div class="products-card__inner">
               <span class="badge  badge--green products-card__badge badge--hide">
@@ -1551,6 +1606,14 @@
           <a class="products-card__link" href="#">
             <img class="products-card__image" src="images/products/ketchup-1.jpg"
               alt="перейти на страницу кетчуп" width="298" height="215">
+            <div class="products-card__stat">
+              <span
+                class="products-card__status products-card__status--ends products-card__stat--left">
+                заканчивается
+              </span>
+              <span class="products-card__raiting products-card__raiting--list">4.5
+              </span>
+            </div>
             <h3 class="products-card__commodity">
               Кетчуп томатный детский органический Bio-Zentrale 500мл
             </h3>
@@ -1563,7 +1626,7 @@
                   <span class="products-card__symbol">₽</span>
                 </span>
               </div>
-              <div class="counter products-card__counter">
+              <div class="counter counter--related">
                 <input class="counter__current" type="number" value="2" min="1">
               </div>
               <a class="products-card__cart" type="button" href="#">

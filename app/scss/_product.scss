@@ -2,6 +2,11 @@
   padding: 48px 0 0px;
   background-color: $white;
 
+  @include media-w($lg) {
+    position: relative;
+    padding: 122px 0 0px;
+  }
+
   &__line {
     display: block;
     width: 100%;
@@ -54,6 +59,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($lg) {
+      flex-wrap: wrap;
+    }
   }
 
   &__title {
@@ -64,6 +73,12 @@
     line-height: 1.2;
     letter-spacing: 0.03em;
     color: $dark-900;
+
+    @include media-w($lg) {
+      position: absolute;
+      top: 30px;
+      left: 0;
+    }
   }
 
   &__slide {
@@ -72,6 +87,14 @@
     border: 1px solid $silver-600;
     border-radius: 4px;
     max-height: 558px;
+
+    @include media-w($xl) {
+      max-width: 530px;
+    }
+
+    @include media-w($lg) {
+      margin-bottom: 30px;
+    }
   }
 
   &__content {
@@ -79,6 +102,10 @@
     width: 100%;
     min-height: 520px;
     height: 100%;
+
+    @include media-w($xl) {
+      max-width: 530px;
+    }
   }
 
   &__status {

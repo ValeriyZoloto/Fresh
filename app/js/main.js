@@ -23,6 +23,16 @@ $(function () {
 	const catalogFilter = document.querySelector(".filter");
 	const hideBlock = document.querySelector(".hide-block");
 	/*:::::::::::::::::::::::переменные-finish::::::::::::::::::::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::hide-block:::::::::::::::::::::::::::::::::::::::::::::::*/
+	$(".product-slide__link").on("click", function () {
+		$(".hide-block").addClass("hide-block--active");
+	});
+
+	$(".hide-slider__btn").on("click", function () {
+		$(".hide-block").removeClass("hide-block--active");
+	});
+
+	/*:::::::::::::::::::::::hide-block-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::top-slider:::::::::::::::::::::::::::::::::::::::::::::::*/
 	$(".top-slider__inner").slick({
 		dots: false,
@@ -118,6 +128,23 @@ $(function () {
 			'<button type="button" class="slick-prev related-arow--prev"><span class="sr-only">Стрелка слайдера влево</span><img class="slick-img" src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"> <img class="slick-img-green" src="./images/slider/arrows/arrow-left-green.svg" alt="стрелка влево"></button>',
 		nextArrow:
 			' <button type="button" class="slick-next related-arow--next"><span class="sr-only">Стрелка слайдера вправо</span><img class="slick-img" src="./images/slider/arrows/arrow-right.svg" alt="стрелка вправо" /><img class="slick-img-green" src="./images/slider/arrows/arrow-right-green.svg" alt="стрелка вправо" /></button>',
+
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 888,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+				},
+			},
+		],
 	});
 	/*:::::::::::::::::::::::related-slider-finish::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::hide-slider::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -125,7 +152,10 @@ $(function () {
 		dots: true,
 		slidesToShow: 1,
 		dotsClass: "slick-dots__hide",
-
+		autoplay: true,
+		autoplaySpeed: 1000,
+		infinite: true,
+		fade: true,
 		prevArrow:
 			'<button type="button" class="slick-prev hide-arow--prev"><span class="sr-only">Стрелка слайдера влево</span><img class="slick-img" src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"> <img class="slick-img-green" src="./images/slider/arrows/arrow-left-green.svg" alt="стрелка влево"></button>',
 		nextArrow:
@@ -404,13 +434,4 @@ window.addEventListener("click", function (event) {
 		}
 	}
 	/*:::::::::::::::::::::::custom-counter-finish:::::::::::::::::::::::::::::::*/
-	/*:::::::::::::::::::::::hide-block:::::::::::::::::::::::::::::::::::::::::::*/
-	$(".product-slide__link").on("click", function () {
-		$(".hide-block").addClass("hide-block--active");
-	});
-
-	$(".hide-slider__btn").on("click", function () {
-		$(".hide-block").removeClass("hide-block--active");
-	});
-	/*:::::::::::::::::::::::hide-block-finish::::::::::::::::::::::::::::::::::::*/
 });
