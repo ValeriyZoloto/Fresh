@@ -2,6 +2,10 @@
   position: relative;
   padding-bottom: 65px;
 
+  @include media-w($xs) {
+    padding-bottom: 50px;
+  }
+
   &__title {
     font-family: "Signika", "Open Sans", sans-serif;
     font-weight: 700;
@@ -11,16 +15,15 @@
     letter-spacing: 0.03em;
     color: $dark-1000;
     margin-bottom: 61px;
+
+    @include media-w($xs) {
+      margin-top: -36px;
+      margin-bottom: 32px;
+      font-size: 24px;
+    }
   }
 
-
-
-  &__content {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
-    // grid-gap: 30px;
-    // margin-bottom: 45px;
-  }
+  &__content {}
 }
 
 .related-arow--prev {

@@ -7,6 +7,10 @@
 
   &__text {
     margin-bottom: 30px;
+
+    @include media-w($xs) {
+      line-height: 26px;
+    }
   }
 
   &__line:not(:last-child) {

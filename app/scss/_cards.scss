@@ -433,12 +433,12 @@
   &--related {
     max-width: 300px;
 
-    @include media-w($xl) {
-      max-width: 280px;
+    @include media-w($sm) {
+      max-width: 210px;
     }
 
-    @include media-w($lg) {
-      // max-width: 230px;
+    @include media-w($xs) {
+      max-width: 170px;
     }
   }
 
@@ -455,6 +455,13 @@
     right: 38px;
     display: none;
 
+    @include media-w($xs) {
+      font-size: 10px;
+      line-height: 1;
+      top: -22px;
+      right: 30px;
+    }
+
     &--list {
       display: block;
     }
@@ -467,6 +474,14 @@
       width: 16px;
       height: 16px;
       background-image: url(../images/actions/star-icon.svg);
+
+      @include media-w($xs) {
+        right: -15px;
+        top: -2px;
+        width: 12px;
+        height: 12px;
+        background-size: contain;
+      }
     }
 
   }
@@ -664,7 +679,7 @@
 
     @include media-w($xs) {
       margin: 17px 10px 12px 9px;
-      min-height: 35px;
+      min-height: 62px;
     }
   }
 
@@ -683,8 +698,9 @@
     align-items: flex-end;
 
     @include media-w($xs) {
+      max-width: 145px;
       position: relative;
-      height: 68px;
+      height: 69px;
     }
 
     &--list {
@@ -880,6 +896,11 @@
   position: absolute;
   top: 8px;
   left: 19px;
+
+  @include media-w($xs) {
+    top: -30px;
+    left: 11px;
+  }
 }
 
 .products-card__heart-btn--list {

@@ -6,6 +6,11 @@
 .breadcrumbs {
   &__list {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    white-space: nowrap;
   }
 
   &__item {

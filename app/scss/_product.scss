@@ -18,6 +18,16 @@
 .product-slide {
   position: relative;
 
+  &__picture {
+    width: 420px;
+    height: 420px;
+
+    @include media-w($xs) {
+      width: 270px;
+      height: 270px;
+    }
+  }
+
   &__arow {
     position: absolute;
     top: 249px;
@@ -55,6 +65,10 @@
 .product-one {
   margin-bottom: 63px;
 
+  @include media-w($xs) {
+    margin-bottom: 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -62,6 +76,11 @@
 
     @include media-w($lg) {
       flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    @include media-w($md) {
+      flex-direction: column;
     }
   }
 
@@ -77,7 +96,11 @@
     @include media-w($lg) {
       position: absolute;
       top: 30px;
-      left: 0;
+      left: 12px;
+    }
+
+    @include media-w($xs) {
+      font-size: 26px;
     }
   }
 
@@ -89,11 +112,26 @@
     max-height: 558px;
 
     @include media-w($xl) {
+      padding: 20px 38px 19px 77px;
       max-width: 530px;
     }
 
     @include media-w($lg) {
       margin-bottom: 30px;
+    }
+
+    @include media-w($sm) {
+      padding: 20px 38px 19px 60px;
+      max-width: 100%;
+    }
+
+    @include media-w($xs) {
+      padding: 20px 38px 19px 77px;
+      max-height: 309px;
+    }
+
+    @include media-w($xxs) {
+      padding: 20px 38px 19px 37px;
     }
   }
 
@@ -113,6 +151,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($xs) {
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 24px;
+    }
   }
 
   &__identifier {
@@ -120,6 +164,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($xs) {
+      margin-bottom: 21px;
+    }
   }
 
   &__cod {
@@ -132,6 +180,11 @@
     border-radius: 3px;
     color: $silver-600;
     letter-spacing: 0.03em;
+
+    @include media-w($xs) {
+      padding: 4px 5px 3px 3px;
+    }
+
   }
 
   &__presence {
@@ -150,6 +203,11 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 59px;
+
+    @include media-w($xs) {
+      max-width: 154px;
+      margin-bottom: 29px;
+    }
   }
 
   &__old {
@@ -187,6 +245,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 31px;
+
+    @include media-w($xs) {
+      margin-bottom: 33px;
+    }
   }
 
   &__quantity {
@@ -228,6 +290,12 @@
       box-shadow: inset 0px 4px 4px $dark-925;
       color: $dark-400;
     }
+
+
+    @include media-w($xs) {
+      padding: 16px 0px 14px 45px;
+      width: 48px;
+    }
   }
 
   &__cart {
@@ -240,6 +308,10 @@
     padding: 0;
     border: none;
     background-color: transparent;
+
+    @include media-w($xs) {
+      margin-right: 2px;
+    }
   }
 
   &__heart:hover path {
@@ -376,6 +448,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($xs) {
+      padding: 0 12px 0 0;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
@@ -391,6 +469,15 @@
     color: $dark-900;
     transition: color 0.3s,
       border-top 0.3s;
+
+    @include media-w($xs) {
+      font-size: 14px;
+      letter-spacing: 0px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 13px;
+    }
 
     &--active {
       position: relative;

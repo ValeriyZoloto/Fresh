@@ -65,11 +65,21 @@ $(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
+		arrows: true,
 
 		prevArrow:
 			'<button type="button" class="slick-prev product-slide__arow--prev"><span class="sr-only">Стрелка слайдера влево</span><img class="slick-img" src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"> <img class="slick-img-green" src="./images/slider/arrows/arrow-left-green.svg" alt="стрелка влево"></button>',
 		nextArrow:
 			' <button type="button" class="slick-next product-slide__arow--next"><span class="sr-only">Стрелка слайдера вправо</span><img class="slick-img" src="./images/slider/arrows/arrow-right.svg" alt="стрелка вправо" /><img class="slick-img-green" src="./images/slider/arrows/arrow-right-green.svg" alt="стрелка вправо" /></button>',
+
+		responsive: [
+			{
+				breakpoint: 1440,
+				settings: {
+					arrows: false,
+				},
+			},
+		],
 	});
 	/*:::::::::::::::::::::::product-slider-finish::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::swiper-slider::::::::::::::::::::::::::::::::::::::::::::*/
@@ -131,17 +141,35 @@ $(function () {
 
 		responsive: [
 			{
-				breakpoint: 1200,
+				breakpoint: 1440,
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 1,
 				},
 			},
 			{
-				breakpoint: 888,
+				breakpoint: 992,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 775,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					arrows: false,
+				},
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+					arrows: false,
+					dotsClass: "slick-dots__related",
+					dots: true,
 				},
 			},
 		],
