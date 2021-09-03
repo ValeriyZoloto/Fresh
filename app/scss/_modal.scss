@@ -1,0 +1,166 @@
+.modal {
+  position: absolute;
+  display: block;
+  min-height: 100vh;
+  padding: 54px 96px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($dark-1000, 0.15);
+
+  @include media-w($sm) {
+    padding: 0;
+  }
+
+}
+
+.modal-slider {
+
+  &__item {
+    position: relative;
+    padding: 60px 0 162px 0;
+    height: 90vh;
+    border-radius: 15px;
+    background-color: $white;
+
+    @include media-w($md) {
+      padding: 152px 0 162px 0;
+    }
+
+    @include media-w($xs) {
+      height: 667px;
+    }
+  }
+
+  &__btn {
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+    top: 36px;
+    right: 31px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include media-w($xs) {
+      padding: 11px 11px 11px 11px;
+      top: 16px;
+      right: 19px;
+    }
+  }
+
+  &__close {
+    @include media-w($xs) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__img {
+    width: 550px;
+    height: 550px;
+    margin: 0 auto;
+
+    @include media-w($md) {
+      width: 450px;
+      height: 450px;
+    }
+
+    @include media-w($sm) {
+      width: 400px;
+      height: 400px;
+    }
+
+    @include media-w($xs) {
+      width: 360px;
+      height: 360px;
+    }
+
+    @include media-w($xxs) {
+      width: 300px;
+      height: 300px;
+    }
+
+  }
+}
+
+.modal-arow--prev {
+  padding: 6px 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 68px;
+  z-index: 1;
+  border: none;
+  background-color: $silver-250;
+  border-radius: 6px;
+
+  @include media-w($md) {
+    left: 50px;
+  }
+
+  @include media-w($sm) {
+    left: 30px;
+  }
+
+  @include media-w($xs) {
+    left: 0;
+  }
+
+  @include media-w($xxs) {
+    display: none;
+  }
+
+}
+
+.modal-arow--next {
+  padding: 6px 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 68px;
+  z-index: 1;
+  border: none;
+  background-color: $silver-250;
+  border-radius: 6px;
+
+  @include media-w($md) {
+    right: 50px;
+  }
+
+  @include media-w($sm) {
+    right: 30px;
+  }
+
+  @include media-w($xs) {
+    right: 0;
+  }
+
+  @include media-w($xxs) {
+    display: none;
+  }
+}
+
+.slick-dots__modal {
+  display: flex;
+  position: absolute;
+  bottom: 99px;
+  left: 48%;
+
+  @include media-w($xs) {
+    bottom: 118px;
+    left: 40%;
+  }
+
+
+  & button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #c1c1c1;
+    background-color: rgba($dark-1000, 0.15);
+    font-size: 0;
+    padding: 0;
+    margin: 0 7px;
+  }
+}

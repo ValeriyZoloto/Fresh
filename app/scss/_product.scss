@@ -298,6 +298,12 @@
     }
   }
 
+  &__add {
+    @include media-w($xs) {
+      display: none;
+    }
+  }
+
   &__cart {
     position: absolute;
     top: 10px;
@@ -333,6 +339,10 @@
     &--review {
       border-bottom: none;
       margin-bottom: 7px;
+
+      @include media-w($xs) {
+        margin-bottom: -11px;
+      }
     }
   }
 

@@ -89,3 +89,5 @@ http://localhost:3000/catalog.html
 2.
 
 Поиск: выделяешь текст и сочетание клавиш alt F3
+
+onclick="location.href='product.html'"
