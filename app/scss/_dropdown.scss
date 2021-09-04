@@ -1,0 +1,91 @@
+.form-group:not(:last-child) {
+  margin-right: 15px;
+}
+
+.dropdown {
+  position: relative;
+
+  &__button {
+    position: relative;
+    display: block;
+    text-align: left;
+    padding: 14px 28px 14px 13px;
+    width: 100%;
+    height: 47px;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    margin-right: 15px;
+    font-family: "Lato",
+      sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+    background-color: $white;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 0px 3px $green-200;
+    }
+
+    &:hover {
+      border: 1px solid $dark-500;
+    }
+
+    &:active {
+      border: 1px solid $dark-500;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 11px;
+      height: 6px;
+      top: 19px;
+      right: 15px;
+      background-image: url(../images/dropdown/chevron-down.svg);
+      pointer-events: none;
+    }
+
+    @include media-w($xs) {
+      padding: 17px 2px 16px 6px;
+      width: 114px;
+      margin-right: 8px;
+    }
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    padding: 2px 0px 2px 0px;
+    left: 0;
+    top: 47px;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid $silver-600;
+    border-radius: 0px 0px 6px 6px;
+    overflow: hidden;
+    z-index: 7;
+  }
+
+  .dropdown__list--visible {
+    display: block;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 2px;
+  }
+
+  &__list-item {
+    padding: 13px 2px 13px 12px;
+    line-height: 1.2;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $silver-200;
+    }
+  }
+
+  &__input-hidden {
+    display: none;
+  }
+}

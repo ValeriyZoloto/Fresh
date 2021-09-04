@@ -208,21 +208,79 @@
               <span class="sr-only">кнопка открыть каталог</span>
             </button>
 
-            <select class="catalog-content__name select-style">
+            <div class="form-group">
+              <div class="dropdown">
+                <button class="dropdown__button">По названию</button>
+                <ul class="dropdown__list">
+                  <li class="dropdown__list-item" data-value="name">
+                    По названию
+                  </li>
+
+                  <li class="dropdown__list-item" data-value="popularity">
+                    По популярности
+                  </li>
+
+                  <li class="dropdown__list-item" data-value="cheap">
+                    Сначала дешевые
+                  </li>
+
+                  <li class="dropdown__list-item" data-value="expensive">
+                    Сначала дорогие
+                  </li>
+
+                  <li class="dropdown__list-item" data-value="alphabet">
+                    По алфавиту
+                  </li>
+                </ul>
+                <input class="dropdown__input-hidden" type="text" name="select-category"
+                  value="">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="dropdown">
+                <button class="dropdown__button">по 12</button>
+                <ul class="dropdown__list">
+                  <li class="dropdown__list-item" data-value="name">
+                    по 12
+                  </li>
+
+                  <li class="dropdown__list-item" data-value="popularity">
+                    по 18
+                  </li>
+
+                  <li class="dropdown__list-item" data-value="cheap">
+                    по 24
+                  </li>
+
+                  <li class="dropdown__list-item" data-value="expensive">
+                    по 30
+                  </li>
+
+                  <li class="dropdown__list-item" data-value="alphabet">
+                    по 36
+                  </li>
+                </ul>
+                <input class="dropdown__input-hidden" type="text" name="select-category"
+                  value="">
+              </div>
+            </div>
+
+            <!-- <select class="catalog-content__name select-style">
               <option value="-1">По названию</option>
               <option value="">По популярности</option>
               <option value="">Сначала дешевые</option>
               <option value="">Сначала дорогие</option>
               <option value="">По алфавиту</option>
-            </select>
+            </select> -->
 
-            <select class="catalog-content__number select-style">
+            <!-- <select class="catalog-content__number select-style">
               <option value="-1">по 12</option>
               <option value="">по 18</option>
               <option value="">по 24</option>
               <option value="">по 30</option>
               <option value="">по 36</option>
-            </select>
+            </select> -->
           </form>
           <div class="catalog-content__buttons">
             <button class="catalog-content__btn button-grid"><svg width="35" height="35"
@@ -334,7 +392,7 @@
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
                     <svg class="products-card__svg-icon" width="16" height="16"
-                        counter--hide>
+                      counter--hide>
                       <path
                         d="M15.8989 2.01937C15.8113 1.9099 15.6787 1.84619 15.5385 1.84619H3.25475L2.91125 0.35775C2.8629 0.148344 2.67643 0 2.46153 0H0.461531C0.206656 0 0 0.206656 0 0.461562C0 0.716468 0.206656 0.923093 0.461531 0.923093H2.09437L4.426 11.0269C4.47431 11.2363 4.66081 11.3846 4.87571 11.3846H14.123C14.378 11.3846 14.5846 11.178 14.5846 10.9231C14.5846 10.6682 14.3779 10.4616 14.123 10.4616H5.2429L4.8879 8.92309H14.1539C14.3697 8.92309 14.5568 8.77346 14.6041 8.56287L15.9887 2.40903C16.0195 2.27222 15.9865 2.12887 15.8989 2.01937ZM13.7846 7.99999H4.67487L3.46778 2.76925H14.9615L13.7846 7.99999Z"
                         fill="white" />

@@ -12,7 +12,7 @@ $(function () {
 	let mobClose = document.querySelector(".mobile__close");
 	let btn = document.querySelector(".roster__btn--search");
 	let mobileForm = document.querySelector(".search-form");
-	var select = $(".dropdown"),
+	var select = $(".fall-out"),
 		timeoutId;
 	var inp = document.querySelector(".search-form__input");
 	const footerItem = document.querySelector(".footer__item");
@@ -23,16 +23,6 @@ $(function () {
 	const catalogFilter = document.querySelector(".filter");
 	const hideBlock = document.querySelector(".hide-block");
 	/*:::::::::::::::::::::::переменные-finish::::::::::::::::::::::::::::::::::::::::*/
-	/*:::::::::::::::::::::::hide-block:::::::::::::::::::::::::::::::::::::::::::::::*/
-	// $(".product-slide__link").on("click", function () {
-	// 	$(".hide-block").addClass("hide-block--active");
-	// });
-
-	// $(".hide-slider__btn").on("click", function () {
-	// 	$(".hide-block").removeClass("hide-block--active");
-	// });
-
-	/*:::::::::::::::::::::::hide-block-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::top-slider:::::::::::::::::::::::::::::::::::::::::::::::*/
 	$(".top-slider__inner").slick({
 		dots: false,
@@ -180,10 +170,7 @@ $(function () {
 		dots: true,
 		slidesToShow: 1,
 		dotsClass: "slick-dots__modal",
-		// autoplay: true,
-		// autoplaySpeed: 1000,
 		infinite: true,
-		// fade: true,
 		prevArrow:
 			'<button type="button" class="slick-prev modal-arow--prev"><span class="sr-only">Стрелка слайдера влево</span><img class="slick-img" src="./images/slider/arrows/arrow-left.svg" alt="стрелка влево"> <img class="slick-img-green" src="./images/slider/arrows/arrow-left-green.svg" alt="стрелка влево"></button>',
 		nextArrow:
@@ -201,9 +188,67 @@ $(function () {
 	$(".counter__current").styler();
 	/*:::::::::::::::::::::::counter-finish::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::Select::::::::::::::::::::::::::::::::::::::::::::::::*/
-	$(".select-style").styler({
-		selectSearch: true,
+	// Полифилл для метода forEach для NodeList
+	if (window.NodeList && !NodeList.prototype.forEach) {
+		NodeList.prototype.forEach = function (callback, thisArg) {
+			thisArg = thisArg || window;
+			for (var i = 0; i < this.length; i++) {
+				callback.call(thisArg, this[i], i, this);
+			}
+		};
+	}
+
+	document.querySelectorAll(".dropdown").forEach(function (dropDownWrapper) {
+		const dropDownBtn = dropDownWrapper.querySelector(".dropdown__button");
+		const dropDownBtnActive = dropDownWrapper.querySelector(
+			".dropdown__button--active"
+		);
+		const dropDownList = dropDownWrapper.querySelector(".dropdown__list");
+		const dropDownListItems = dropDownList.querySelectorAll(
+			".dropdown__list-item"
+		);
+		const dropDownInput = dropDownWrapper.querySelector(
+			".dropdown__input-hidden"
+		);
+
+		// Клик по кнопке. Открыть/Закрыть select
+		dropDownBtn.addEventListener("click", function (e) {
+			dropDownList.classList.toggle("dropdown__list--visible");
+			this.classList.add("dropdown__button--active");
+		});
+
+		// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+		dropDownListItems.forEach(function (listItem) {
+			listItem.addEventListener("click", function (e) {
+				e.stopPropagation();
+				dropDownBtn.innerText = this.innerText;
+				dropDownBtn.focus();
+				dropDownInput.value = this.dataset.value;
+				dropDownList.classList.remove("dropdown__list--visible");
+			});
+		});
+
+		// dropDownBtnActive.addEventListener("click", function (e) {
+		// 	e.preventDefault();
+		// });
+
+		// Клик снаружи дропдауна. Закрыть дропдаун
+		document.addEventListener("click", function (e) {
+			if (e.target !== dropDownBtn) {
+				dropDownBtn.classList.remove("dropdown__button--active");
+				dropDownList.classList.remove("dropdown__list--visible");
+			}
+		});
+
+		// Нажатие на Tab или Escape. Закрыть дропдаун
+		document.addEventListener("keydown", function (e) {
+			if (e.key === "Tab" || e.key === "Escape") {
+				dropDownBtn.classList.remove("dropdown__button--active");
+				dropDownList.classList.remove("dropdown__list--visible");
+			}
+		});
 	});
+
 	/*:::::::::::::::::::::::Select-finish::::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::catalog-content__btn:::::::::::::::::::::::::::::::::::*/
 	$(".catalog-content__btn").on("click", function () {
