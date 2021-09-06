@@ -18,7 +18,11 @@
 
     @include media-w($sm) {
       font-size: 30px;
-      margin-bottom: 29px;
+      margin-bottom: 26px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 28px;
     }
   }
 

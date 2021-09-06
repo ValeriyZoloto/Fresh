@@ -210,6 +210,9 @@ $(function () {
 		const dropDownInput = dropDownWrapper.querySelector(
 			".dropdown__input-hidden"
 		);
+		const dropDownListVisible = dropDownWrapper.querySelector(
+			".dropdown__list--visible"
+		);
 
 		// Клик по кнопке. Открыть/Закрыть select
 		dropDownBtn.addEventListener("click", function (e) {
@@ -228,7 +231,7 @@ $(function () {
 			});
 		});
 
-		// dropDownBtnActive.addEventListener("click", function (e) {
+		// dropDownListVisible.addEventListener("click", function (e) {
 		// 	e.preventDefault();
 		// });
 

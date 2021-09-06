@@ -22,6 +22,10 @@
     color: $dark-500;
     background-color: $white;
 
+    @include media-w($xs) {
+      font-size: 12px;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0px 0px 0px 3px $green-200;
@@ -44,31 +48,52 @@
       right: 15px;
       background-image: url(../images/dropdown/chevron-down.svg);
       pointer-events: none;
+
+      @include media-w($xs) {
+        right: 9px;
+      }
     }
 
     @include media-w($xs) {
-      padding: 17px 2px 16px 6px;
+      padding: 15px 2px 16px 7px;
       width: 114px;
-      margin-right: 8px;
+      margin-right: -5px;
+
+      &--number {
+        width: 71px;
+      }
     }
   }
 
   &__list {
     display: none;
     position: absolute;
-    padding: 2px 0px 2px 0px;
+    padding: -2px 0px 2px 0px;
     left: 0;
-    top: 47px;
+    top: -2px;
     width: 100%;
     background-color: $white;
     border: 1px solid $silver-600;
-    border-radius: 0px 0px 6px 6px;
+    border-radius: 6px 6px 6px 6px;
     overflow: hidden;
     z-index: 7;
+
   }
 
   .dropdown__list--visible {
     display: block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 11px;
+      height: 6px;
+      top: 19px;
+      right: 15px;
+      background-image: url(../images/dropdown/chevron-up.svg);
+      pointer-events: none;
+      z-index: 99;
+    }
   }
 
   &__list-item:not(:last-child) {
@@ -83,6 +108,11 @@
     &:hover {
       background-color: $silver-200;
     }
+  }
+
+  &__list-item:first-child {
+    border: 1px solid $dark-500;
+    border-radius: 3px 3px 0px 0px;
   }
 
   &__input-hidden {

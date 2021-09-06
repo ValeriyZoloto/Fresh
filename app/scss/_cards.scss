@@ -440,7 +440,13 @@
     @include media-w($xs) {
       max-width: 170px;
     }
+
+    @include media-w($xxs) {
+      max-width: 140px;
+    }
   }
+
+
 
   &__stat {
     position: absolute;
