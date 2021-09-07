@@ -45,6 +45,7 @@
   }
 
   &__text {
+
     @include media-w($sm) {
       display: none;
     }

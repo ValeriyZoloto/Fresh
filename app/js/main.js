@@ -166,6 +166,10 @@ $(function () {
 	});
 	/*:::::::::::::::::::::::related-slider-finish::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::hide-slider::::::::::::::::::::::::::::::::::::::::::::::*/
+	$(document).ready(function () {
+		$(".product-slide__link").fancybox();
+	});
+
 	$(".modal-slider").slick({
 		dots: true,
 		slidesToShow: 1,
@@ -277,6 +281,7 @@ $(function () {
 		);
 		$(".products-card__raiting").addClass("products-card__raiting--list");
 		$(".products-card__link").addClass("products-card__link--list");
+		$(".products-card__stat").addClass("products-card__stat--hide");
 	});
 
 	$(".button-list").on("click", function () {
@@ -301,6 +306,7 @@ $(function () {
 			"products-card__raiting--list"
 		);
 		$(".products-card__link").removeClass("products-card__link--list");
+		$(".products-card__stat").removeClass("products-card__stat--hide");
 	});
 
 	/*:::::::::::::::::::::::catalog-content__btn-finish::::::::::::::::::::::::::::*/

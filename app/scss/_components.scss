@@ -974,7 +974,7 @@
       height: 20px;
       background-image: url(../images/header-icons/icon-search.svg);
       background-repeat: no-repeat;
-      z-index: 99;
+      z-index: 199;
 
       @include media-w($md) {
         top: 13px;

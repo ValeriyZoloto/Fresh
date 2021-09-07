@@ -21,6 +21,7 @@
     letter-spacing: 0.03em;
     color: $dark-500;
     background-color: $white;
+    @include overflow($row);
 
     @include media-w($xs) {
       font-size: 12px;

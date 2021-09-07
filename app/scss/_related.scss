@@ -15,6 +15,7 @@
     letter-spacing: 0.03em;
     color: $dark-1000;
     margin-bottom: 61px;
+    @include overflow($row);
 
     @include media-w($xs) {
       margin-top: -36px;

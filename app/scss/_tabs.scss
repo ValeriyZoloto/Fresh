@@ -7,6 +7,7 @@
 
   &__text {
     margin-bottom: 30px;
+    @include overflow($row-10);
 
     @include media-w($xs) {
       line-height: 26px;
@@ -19,6 +20,7 @@
 
   &__line {
     display: block;
+    @include overflow($row-2);
   }
 
   &__string {
