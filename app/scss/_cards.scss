@@ -430,6 +430,14 @@
     padding: 12px 0px 12px 0px;
   }
 
+  &__heart-picture {
+    fill: $silver-600;
+
+    &:hover {
+      fill: $yellow-900;
+    }
+  }
+
   &--related {
     max-width: 300px;
 
@@ -697,6 +705,7 @@
     &:hover path {
       fill: $yellow-900;
     }
+
   }
 
   &__image {
@@ -753,6 +762,15 @@
       min-width: 229px;
       bottom: 10px;
       left: 218px;
+
+      @include media-w($xl) {
+        left: 218px;
+        min-width: auto;
+      }
+
+      @include media-w($lg) {
+        left: 141px;
+      }
     }
   }
 
@@ -907,6 +925,11 @@
   padding: 1px;
   object-fit: contain;
   z-index: -1;
+
+  @include media-w($lg) {
+    width: 150px;
+    height: 100px;
+  }
 }
 
 .products-card__commodity--list {
@@ -924,6 +947,11 @@
   color: #121212;
   @include overflow(3);
 
+  @include media-w($lg) {
+    left: 116px;
+    max-width: 130px;
+  }
+
   &__link {
     color: inherit;
   }
@@ -934,6 +962,10 @@
   position: absolute;
   top: 4px;
   left: 216px;
+
+  @include media-w($lg) {
+    left: 144px;
+  }
 }
 
 .products-card__stat--left {

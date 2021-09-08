@@ -3,7 +3,7 @@
     <div class="page__inner">
       <div class="page__filters filter sr-only">
         <div class="catalog__filters-head">
-          <button class="close-btn">
+          <button class="close-btn" type="button">
             <span class="sr-only">Кнопка для закрытия сайдбара</span>
           </button>
         </div>
@@ -92,7 +92,7 @@
             <ul class="filter__list">
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Со скидкой</span>
                 </label>
@@ -100,7 +100,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Новинка</span>
                 </label>
@@ -108,7 +108,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Хит</span>
                 </label>
@@ -128,7 +128,7 @@
             <ul class="filter__list">
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">CocaCola</span>
                 </label>
@@ -136,7 +136,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Pepsi</span>
                 </label>
@@ -144,7 +144,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Sprite</span>
                 </label>
@@ -152,7 +152,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Fanta</span>
                 </label>
@@ -160,7 +160,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">RedBull</span>
                 </label>
@@ -168,7 +168,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Dr Pepper</span>
                 </label>
@@ -194,7 +194,7 @@
               <span class="filter-price__currency">₽</span>
             </label>
             <input class="filter-price__input" type="text" data-min="100" data-max="1000"
-              data-from="100" data-to="880">
+              data-from="100" data-to="880" required>
           </form>
         </div>
 
@@ -202,7 +202,7 @@
       <div class="page-content">
         <div class="page-content__filter sr-only">
           <form class="catalog-content__selects" action="#">
-            <button class="catalog-content__swich">
+            <button class="catalog-content__swich" type="button">
               <span class="sr-only">кнопка открыть каталог</span>
             </button>
 
@@ -224,8 +224,9 @@
 
           </form>
           <div class="catalog-content__buttons">
-            <button class="catalog-content__btn button-grid"><svg width="35" height="35"
-                viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="catalog-content__btn button-grid" type="button"><svg width="35"
+                height="35" viewBox="0 0 35 35" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M32.4 28H24.6C23.1641 28 22 28.6268 22 29.4V33.6C22 34.3732 23.1641 35 24.6 35H32.4C33.8359 35 35 34.3732 35 33.6V29.4C35 28.6268 33.8359 28 32.4 28Z"
                   fill="#C1C1C1" />
@@ -247,7 +248,8 @@
               </svg>
             </button>
 
-            <button class="catalog-content__btn catalog-content__btn--active button-list">
+            <button class="catalog-content__btn catalog-content__btn--active button-list"
+              type="button">
               <svg width="36" height="34" viewBox="0 0 36 34" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -328,7 +330,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -390,7 +393,8 @@
                   </div>
 
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
 
                   <button class="products-card__cart" type="button">
@@ -455,7 +459,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -520,7 +525,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -590,7 +596,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -654,7 +661,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -716,7 +724,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -780,7 +789,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -846,7 +856,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -909,7 +920,8 @@
                   </div>
 
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
 
                   <button class="products-card__cart" type="button">
@@ -974,7 +986,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -1039,7 +1052,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>

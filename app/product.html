@@ -283,9 +283,7 @@
           <button class="basket__close" type="button" data-modal-close>
             <svg class="basket__svg" width="24" height="24" viewBox="0 0 24 24"
               fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.4069 12.0066L23.6947 1.7188C24.0917 1.33532 24.1028 0.702587 23.7193 0.305521C23.3358 -0.0915446 22.7031 -0.102555 22.306 0.280924C22.2977 0.288948 22.2895 0.297147 22.2814 0.305521L11.9935 10.5933L1.70569 0.305463C1.30863 -0.0780163 0.675896 -0.0670062 0.292417 0.33006C-0.0816925 0.717404 -0.0816925 1.33145 0.292417 1.7188L10.5802 12.0066L0.292417 22.2944C-0.0977977 22.6847 -0.0977977 23.3174 0.292417 23.7077C0.68269 24.0979 1.31542 24.0979 1.70569 23.7077L11.9935 13.4199L22.2813 23.7077C22.6784 24.0912 23.3111 24.0802 23.6946 23.6831C24.0687 23.2958 24.0687 22.6817 23.6946 22.2944L13.4069 12.0066Z"
-                fill="#31352B" />
+              <use xlink:href="images/basket/sprite-basket-close.svg#vector"></use>
             </svg>
           </button>
           <button class="basket__empty" type="button">очистить корзину</button>
@@ -296,7 +294,7 @@
               <li class="basket__item">
                 <article class="basket-card">
                   <h3 class="basket-card-title sr-only">Скрытый заголовок</h3>
-                  <button class="basket-card__btn">
+                  <button class="basket-card__btn" type="button">
                     <span class="sr-only">удалить товар из корзины</span>
                   </button>
                   <a class="basket-card__link" href="#">
@@ -324,7 +322,7 @@
               <li class="basket__item">
                 <article class="basket-card">
                   <h3 class="basket-card-title sr-only">Скрытый заголовок</h3>
-                  <button class="basket-card__btn">
+                  <button class="basket-card__btn" type="button">
                     <span class="sr-only">удалить товар из корзины</span>
                   </button>
                   <a class="basket-card__link" href="#">
@@ -723,7 +721,7 @@
               <span class="review-grade__yours">Ваша оценка *</span>
 
               <label class="review-form__label">
-                <input class="review-form__input" type="radio" name="star">
+                <input class="review-form__input" type="radio" name="star" required>
                 <span class="review-form__radio">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -743,7 +741,7 @@
               </label>
 
               <label class="review-form__label">
-                <input class="review-form__input" type="radio" name="star">
+                <input class="review-form__input" type="radio" name="star" required>
                 <span class="review-form__radio">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -763,7 +761,7 @@
               </label>
 
               <label class="review-form__label">
-                <input class="review-form__input" type="radio" name="star">
+                <input class="review-form__input" type="radio" name="star" required>
                 <span class="review-form__radio">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -783,7 +781,7 @@
               </label>
 
               <label class="review-form__label">
-                <input class="review-form__input" type="radio" name="star">
+                <input class="review-form__input" type="radio" name="star" required>
                 <span class="review-form__radio">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -803,7 +801,7 @@
               </label>
 
               <label class="review-form__label">
-                <input class="review-form__input" type="radio" name="star">
+                <input class="review-form__input" type="radio" name="star" required>
                 <span class="review-form__radio">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -835,19 +833,19 @@
                 <label class="review-form__name">
                   <span class="review-form__denotation">Имя</span>
                   <input class="review-form__text review-form__text--one" type="text"
-                    name="name" placeholder="Введите ваше имя">
+                    name="name" placeholder="Введите ваше имя" required>
                 </label>
 
                 <label class="review-form__name">
                   <span class="review-form__denotation">Email *</span>
                   <input class="review-form__text" type="text" name="name"
-                    placeholder="youremail@mail.com">
+                    placeholder="youremail@mail.com" required>
                 </label>
               </div>
             </div>
 
             <label class="review-form__box">
-              <input class="review-form__check" type="checkbox">
+              <input class="review-form__check" type="checkbox" required>
               <span class="review-form__custom"></span>
               <span class="review-form__checkbox-text">Сохранить моё имя, email и адрес
                 сайта в этом браузере для последующих моих комментариев.</span>
@@ -880,11 +878,8 @@
             </div>
             <a class="products-card__heart-btn" href="#">
               <span class="sr-only">кнопка добавить в избранное</span>
-              <svg class="products-card__svg" width="32" height="29" viewBox="0 0 32 29"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                  fill="#C1C1C1" />
+              <svg class="products-card__heart-picture" width="32" height="29">
+                <use xlink:href="images/product/heart-sprite.svg#heart"></use>
               </svg>
             </a>
           </div>
@@ -914,21 +909,12 @@
                 </span>
               </div>
               <div class="counter counter--related">
-                <input class="counter__current" type="number" value="2" min="1">
+                <input class="counter__current" type="number" value="2" min="1" required>
               </div>
               <a class="products-card__cart" href="#">
                 <span class="sr-only">Добавить в корзину</span>
-                <svg class="products-card__svg-icon" width="16" height="16"
-                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M15.8989 2.01937C15.8113 1.9099 15.6787 1.84619 15.5385 1.84619H3.25475L2.91125 0.35775C2.8629 0.148344 2.67643 0 2.46153 0H0.461531C0.206656 0 0 0.206656 0 0.461562C0 0.716468 0.206656 0.923093 0.461531 0.923093H2.09437L4.426 11.0269C4.47431 11.2363 4.66081 11.3846 4.87571 11.3846H14.123C14.378 11.3846 14.5846 11.178 14.5846 10.9231C14.5846 10.6682 14.3779 10.4616 14.123 10.4616H5.2429L4.8879 8.92309H14.1539C14.3697 8.92309 14.5568 8.77346 14.6041 8.56287L15.9887 2.40903C16.0195 2.27222 15.9865 2.12887 15.8989 2.01937ZM13.7846 7.99999H4.67487L3.46778 2.76925H14.9615L13.7846 7.99999Z"
-                    fill="white" />
-                  <path
-                    d="M6.76922 12C5.83609 12 5.0769 12.7591 5.0769 13.6923C5.0769 14.6255 5.83606 15.3846 6.76922 15.3846C7.70234 15.3846 8.46153 14.6255 8.46153 13.6923C8.46153 12.7591 7.70237 12 6.76922 12ZM6.76922 14.4615C6.34506 14.4615 6 14.1165 6 13.6923C6 13.2681 6.34506 12.9231 6.76922 12.9231C7.19337 12.9231 7.53843 13.2681 7.53843 13.6923C7.53843 14.1165 7.19337 14.4615 6.76922 14.4615Z"
-                    fill="white" />
-                  <path
-                    d="M12.3077 12C11.3745 12 10.6154 12.7591 10.6154 13.6923C10.6154 14.6255 11.3745 15.3846 12.3077 15.3846C13.2408 15.3846 14 14.6255 14 13.6923C14 12.7591 13.2408 12 12.3077 12ZM12.3077 14.4615C11.8835 14.4615 11.5384 14.1165 11.5384 13.6923C11.5384 13.2682 11.8835 12.9231 12.3077 12.9231C12.7318 12.9231 13.0769 13.2682 13.0769 13.6923C13.0769 14.1165 12.7318 14.4615 12.3077 14.4615Z"
-                    fill="white" />
+                <svg class="products-card__svg-icon" width="16" height="16">
+                  <use xlink:href="images/products/sprite-cart.svg#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -951,11 +937,8 @@
             </div>
             <a class="products-card__heart-btn" href="#">
               <span class="sr-only">кнопка добавить в избранное</span>
-              <svg class="products-card__svg" width="32" height="29" viewBox="0 0 32 29"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                  fill="#C1C1C1" />
+              <svg class="products-card__heart-picture" width="32" height="29">
+                <use xlink:href="images/product/heart-sprite.svg#heart"></use>
               </svg>
             </a>
           </div>
@@ -982,22 +965,13 @@
               </div>
 
               <div class="counter counter--related">
-                <input class="counter__current" type="number" value="2" min="1">
+                <input class="counter__current" type="number" value="2" min="1" required>
               </div>
 
               <a class="products-card__cart" href="#">
                 <span class="sr-only">Добавить в корзину</span>
-                <svg class="products-card__svg-icon" width="16" height="16"
-                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M15.8989 2.01937C15.8113 1.9099 15.6787 1.84619 15.5385 1.84619H3.25475L2.91125 0.35775C2.8629 0.148344 2.67643 0 2.46153 0H0.461531C0.206656 0 0 0.206656 0 0.461562C0 0.716468 0.206656 0.923093 0.461531 0.923093H2.09437L4.426 11.0269C4.47431 11.2363 4.66081 11.3846 4.87571 11.3846H14.123C14.378 11.3846 14.5846 11.178 14.5846 10.9231C14.5846 10.6682 14.3779 10.4616 14.123 10.4616H5.2429L4.8879 8.92309H14.1539C14.3697 8.92309 14.5568 8.77346 14.6041 8.56287L15.9887 2.40903C16.0195 2.27222 15.9865 2.12887 15.8989 2.01937ZM13.7846 7.99999H4.67487L3.46778 2.76925H14.9615L13.7846 7.99999Z"
-                    fill="white" />
-                  <path
-                    d="M6.76922 12C5.83609 12 5.0769 12.7591 5.0769 13.6923C5.0769 14.6255 5.83606 15.3846 6.76922 15.3846C7.70234 15.3846 8.46153 14.6255 8.46153 13.6923C8.46153 12.7591 7.70237 12 6.76922 12ZM6.76922 14.4615C6.34506 14.4615 6 14.1165 6 13.6923C6 13.2681 6.34506 12.9231 6.76922 12.9231C7.19337 12.9231 7.53843 13.2681 7.53843 13.6923C7.53843 14.1165 7.19337 14.4615 6.76922 14.4615Z"
-                    fill="white" />
-                  <path
-                    d="M12.3077 12C11.3745 12 10.6154 12.7591 10.6154 13.6923C10.6154 14.6255 11.3745 15.3846 12.3077 15.3846C13.2408 15.3846 14 14.6255 14 13.6923C14 12.7591 13.2408 12 12.3077 12ZM12.3077 14.4615C11.8835 14.4615 11.5384 14.1165 11.5384 13.6923C11.5384 13.2682 11.8835 12.9231 12.3077 12.9231C12.7318 12.9231 13.0769 13.2682 13.0769 13.6923C13.0769 14.1165 12.7318 14.4615 12.3077 14.4615Z"
-                    fill="white" />
+                <svg class="products-card__svg-icon" width="16" height="16">
+                  <use xlink:href="images/products/sprite-cart.svg#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -1020,11 +994,8 @@
             </div>
             <a class="products-card__heart-btn" href="#">
               <span class="sr-only">кнопка добавить в избранное</span>
-              <svg class="products-card__svg" width="32" height="29" viewBox="0 0 32 29"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                  fill="#C1C1C1" />
+              <svg class="products-card__heart-picture" width="32" height="29">
+                <use xlink:href="images/product/heart-sprite.svg#heart"></use>
               </svg>
             </a>
           </div>
@@ -1052,21 +1023,12 @@
                 </span>
               </div>
               <div class="counter counter--related">
-                <input class="counter__current" type="number" value="2" min="1">
+                <input class="counter__current" type="number" value="2" min="1" required>
               </div>
               <a class="products-card__cart" href="#">
                 <span class="sr-only">Добавить в корзину</span>
-                <svg class="products-card__svg-icon" width="16" height="16"
-                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M15.8989 2.01937C15.8113 1.9099 15.6787 1.84619 15.5385 1.84619H3.25475L2.91125 0.35775C2.8629 0.148344 2.67643 0 2.46153 0H0.461531C0.206656 0 0 0.206656 0 0.461562C0 0.716468 0.206656 0.923093 0.461531 0.923093H2.09437L4.426 11.0269C4.47431 11.2363 4.66081 11.3846 4.87571 11.3846H14.123C14.378 11.3846 14.5846 11.178 14.5846 10.9231C14.5846 10.6682 14.3779 10.4616 14.123 10.4616H5.2429L4.8879 8.92309H14.1539C14.3697 8.92309 14.5568 8.77346 14.6041 8.56287L15.9887 2.40903C16.0195 2.27222 15.9865 2.12887 15.8989 2.01937ZM13.7846 7.99999H4.67487L3.46778 2.76925H14.9615L13.7846 7.99999Z"
-                    fill="white" />
-                  <path
-                    d="M6.76922 12C5.83609 12 5.0769 12.7591 5.0769 13.6923C5.0769 14.6255 5.83606 15.3846 6.76922 15.3846C7.70234 15.3846 8.46153 14.6255 8.46153 13.6923C8.46153 12.7591 7.70237 12 6.76922 12ZM6.76922 14.4615C6.34506 14.4615 6 14.1165 6 13.6923C6 13.2681 6.34506 12.9231 6.76922 12.9231C7.19337 12.9231 7.53843 13.2681 7.53843 13.6923C7.53843 14.1165 7.19337 14.4615 6.76922 14.4615Z"
-                    fill="white" />
-                  <path
-                    d="M12.3077 12C11.3745 12 10.6154 12.7591 10.6154 13.6923C10.6154 14.6255 11.3745 15.3846 12.3077 15.3846C13.2408 15.3846 14 14.6255 14 13.6923C14 12.7591 13.2408 12 12.3077 12ZM12.3077 14.4615C11.8835 14.4615 11.5384 14.1165 11.5384 13.6923C11.5384 13.2682 11.8835 12.9231 12.3077 12.9231C12.7318 12.9231 13.0769 13.2682 13.0769 13.6923C13.0769 14.1165 12.7318 14.4615 12.3077 14.4615Z"
-                    fill="white" />
+                <svg class="products-card__svg-icon" width="16" height="16">
+                  <use xlink:href="images/products/sprite-cart.svg#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -1089,11 +1051,8 @@
             </div>
             <a class="products-card__heart-btn" href="#">
               <span class="sr-only">кнопка добавить в избранное</span>
-              <svg class="products-card__svg" width="32" height="29" viewBox="0 0 32 29"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                  fill="#C1C1C1" />
+              <svg class="products-card__heart-picture" width="32" height="29">
+                <use xlink:href="images/product/heart-sprite.svg#heart"></use>
               </svg>
             </a>
           </div>
@@ -1119,21 +1078,12 @@
                 </span>
               </div>
               <div class="counter counter--related">
-                <input class="counter__current" type="number" value="2" min="1">
+                <input class="counter__current" type="number" value="2" min="1" required>
               </div>
               <a class="products-card__cart" href="#">
                 <span class="sr-only">Добавить в корзину</span>
-                <svg class="products-card__svg-icon" width="16" height="16"
-                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M15.8989 2.01937C15.8113 1.9099 15.6787 1.84619 15.5385 1.84619H3.25475L2.91125 0.35775C2.8629 0.148344 2.67643 0 2.46153 0H0.461531C0.206656 0 0 0.206656 0 0.461562C0 0.716468 0.206656 0.923093 0.461531 0.923093H2.09437L4.426 11.0269C4.47431 11.2363 4.66081 11.3846 4.87571 11.3846H14.123C14.378 11.3846 14.5846 11.178 14.5846 10.9231C14.5846 10.6682 14.3779 10.4616 14.123 10.4616H5.2429L4.8879 8.92309H14.1539C14.3697 8.92309 14.5568 8.77346 14.6041 8.56287L15.9887 2.40903C16.0195 2.27222 15.9865 2.12887 15.8989 2.01937ZM13.7846 7.99999H4.67487L3.46778 2.76925H14.9615L13.7846 7.99999Z"
-                    fill="white" />
-                  <path
-                    d="M6.76922 12C5.83609 12 5.0769 12.7591 5.0769 13.6923C5.0769 14.6255 5.83606 15.3846 6.76922 15.3846C7.70234 15.3846 8.46153 14.6255 8.46153 13.6923C8.46153 12.7591 7.70237 12 6.76922 12ZM6.76922 14.4615C6.34506 14.4615 6 14.1165 6 13.6923C6 13.2681 6.34506 12.9231 6.76922 12.9231C7.19337 12.9231 7.53843 13.2681 7.53843 13.6923C7.53843 14.1165 7.19337 14.4615 6.76922 14.4615Z"
-                    fill="white" />
-                  <path
-                    d="M12.3077 12C11.3745 12 10.6154 12.7591 10.6154 13.6923C10.6154 14.6255 11.3745 15.3846 12.3077 15.3846C13.2408 15.3846 14 14.6255 14 13.6923C14 12.7591 13.2408 12 12.3077 12ZM12.3077 14.4615C11.8835 14.4615 11.5384 14.1165 11.5384 13.6923C11.5384 13.2682 11.8835 12.9231 12.3077 12.9231C12.7318 12.9231 13.0769 13.2682 13.0769 13.6923C13.0769 14.1165 12.7318 14.4615 12.3077 14.4615Z"
-                    fill="white" />
+                <svg class="products-card__svg-icon" width="16" height="16">
+                  <use xlink:href="images/products/sprite-cart.svg#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -1156,11 +1106,8 @@
             </div>
             <a class="products-card__heart-btn" href="#">
               <span class="sr-only">кнопка добавить в избранное</span>
-              <svg class="products-card__svg" width="32" height="29" viewBox="0 0 32 29"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                  fill="#C1C1C1" />
+              <svg class="products-card__heart-picture" width="32" height="29">
+                <use xlink:href="images/product/heart-sprite.svg#heart"></use>
               </svg>
             </a>
           </div>
@@ -1188,21 +1135,12 @@
                 </span>
               </div>
               <div class="counter counter--related">
-                <input class="counter__current" type="number" value="2" min="1">
+                <input class="counter__current" type="number" value="2" min="1" required>
               </div>
               <a class="products-card__cart" href="#">
                 <span class="sr-only">Добавить в корзину</span>
-                <svg class="products-card__svg-icon" width="16" height="16"
-                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M15.8989 2.01937C15.8113 1.9099 15.6787 1.84619 15.5385 1.84619H3.25475L2.91125 0.35775C2.8629 0.148344 2.67643 0 2.46153 0H0.461531C0.206656 0 0 0.206656 0 0.461562C0 0.716468 0.206656 0.923093 0.461531 0.923093H2.09437L4.426 11.0269C4.47431 11.2363 4.66081 11.3846 4.87571 11.3846H14.123C14.378 11.3846 14.5846 11.178 14.5846 10.9231C14.5846 10.6682 14.3779 10.4616 14.123 10.4616H5.2429L4.8879 8.92309H14.1539C14.3697 8.92309 14.5568 8.77346 14.6041 8.56287L15.9887 2.40903C16.0195 2.27222 15.9865 2.12887 15.8989 2.01937ZM13.7846 7.99999H4.67487L3.46778 2.76925H14.9615L13.7846 7.99999Z"
-                    fill="white" />
-                  <path
-                    d="M6.76922 12C5.83609 12 5.0769 12.7591 5.0769 13.6923C5.0769 14.6255 5.83606 15.3846 6.76922 15.3846C7.70234 15.3846 8.46153 14.6255 8.46153 13.6923C8.46153 12.7591 7.70237 12 6.76922 12ZM6.76922 14.4615C6.34506 14.4615 6 14.1165 6 13.6923C6 13.2681 6.34506 12.9231 6.76922 12.9231C7.19337 12.9231 7.53843 13.2681 7.53843 13.6923C7.53843 14.1165 7.19337 14.4615 6.76922 14.4615Z"
-                    fill="white" />
-                  <path
-                    d="M12.3077 12C11.3745 12 10.6154 12.7591 10.6154 13.6923C10.6154 14.6255 11.3745 15.3846 12.3077 15.3846C13.2408 15.3846 14 14.6255 14 13.6923C14 12.7591 13.2408 12 12.3077 12ZM12.3077 14.4615C11.8835 14.4615 11.5384 14.1165 11.5384 13.6923C11.5384 13.2682 11.8835 12.9231 12.3077 12.9231C12.7318 12.9231 13.0769 13.2682 13.0769 13.6923C13.0769 14.1165 12.7318 14.4615 12.3077 14.4615Z"
-                    fill="white" />
+                <svg class="products-card__svg-icon" width="16" height="16">
+                  <use xlink:href="images/products/sprite-cart.svg#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -1225,11 +1163,8 @@
             </div>
             <a class="products-card__heart-btn" href="#">
               <span class="sr-only">кнопка добавить в избранное</span>
-              <svg class="products-card__svg" width="32" height="29" viewBox="0 0 32 29"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
-                  fill="#C1C1C1" />
+              <svg class="products-card__heart-picture" width="32" height="29">
+                <use xlink:href="images/product/heart-sprite.svg#heart"></use>
               </svg>
             </a>
           </div>
@@ -1262,21 +1197,12 @@
                 </span>
               </div>
               <div class="counter counter--related">
-                <input class="counter__current" type="number" value="2" min="1">
+                <input class="counter__current" type="number" value="2" min="1" required>
               </div>
               <a class="products-card__cart" href="#">
                 <span class="sr-only">Добавить в корзину</span>
-                <svg class="products-card__svg-icon" width="16" height="16"
-                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M15.8989 2.01937C15.8113 1.9099 15.6787 1.84619 15.5385 1.84619H3.25475L2.91125 0.35775C2.8629 0.148344 2.67643 0 2.46153 0H0.461531C0.206656 0 0 0.206656 0 0.461562C0 0.716468 0.206656 0.923093 0.461531 0.923093H2.09437L4.426 11.0269C4.47431 11.2363 4.66081 11.3846 4.87571 11.3846H14.123C14.378 11.3846 14.5846 11.178 14.5846 10.9231C14.5846 10.6682 14.3779 10.4616 14.123 10.4616H5.2429L4.8879 8.92309H14.1539C14.3697 8.92309 14.5568 8.77346 14.6041 8.56287L15.9887 2.40903C16.0195 2.27222 15.9865 2.12887 15.8989 2.01937ZM13.7846 7.99999H4.67487L3.46778 2.76925H14.9615L13.7846 7.99999Z"
-                    fill="white" />
-                  <path
-                    d="M6.76922 12C5.83609 12 5.0769 12.7591 5.0769 13.6923C5.0769 14.6255 5.83606 15.3846 6.76922 15.3846C7.70234 15.3846 8.46153 14.6255 8.46153 13.6923C8.46153 12.7591 7.70237 12 6.76922 12ZM6.76922 14.4615C6.34506 14.4615 6 14.1165 6 13.6923C6 13.2681 6.34506 12.9231 6.76922 12.9231C7.19337 12.9231 7.53843 13.2681 7.53843 13.6923C7.53843 14.1165 7.19337 14.4615 6.76922 14.4615Z"
-                    fill="white" />
-                  <path
-                    d="M12.3077 12C11.3745 12 10.6154 12.7591 10.6154 13.6923C10.6154 14.6255 11.3745 15.3846 12.3077 15.3846C13.2408 15.3846 14 14.6255 14 13.6923C14 12.7591 13.2408 12 12.3077 12ZM12.3077 14.4615C11.8835 14.4615 11.5384 14.1165 11.5384 13.6923C11.5384 13.2682 11.8835 12.9231 12.3077 12.9231C12.7318 12.9231 13.0769 13.2682 13.0769 13.6923C13.0769 14.1165 12.7318 14.4615 12.3077 14.4615Z"
-                    fill="white" />
+                <svg class="products-card__svg-icon" width="16" height="16">
+                  <use xlink:href="images/products/sprite-cart.svg#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -1292,7 +1218,7 @@
     <div class="page__inner">
       <div class="page__filters filter sr-only">
         <div class="catalog__filters-head">
-          <button class="close-btn">
+          <button class="close-btn" type="button">
             <span class="sr-only">Кнопка для закрытия сайдбара</span>
           </button>
         </div>
@@ -1381,7 +1307,7 @@
             <ul class="filter__list">
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Со скидкой</span>
                 </label>
@@ -1389,7 +1315,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Новинка</span>
                 </label>
@@ -1397,7 +1323,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Хит</span>
                 </label>
@@ -1417,7 +1343,7 @@
             <ul class="filter__list">
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">CocaCola</span>
                 </label>
@@ -1425,7 +1351,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Pepsi</span>
                 </label>
@@ -1433,7 +1359,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Sprite</span>
                 </label>
@@ -1441,7 +1367,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Fanta</span>
                 </label>
@@ -1449,7 +1375,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">RedBull</span>
                 </label>
@@ -1457,7 +1383,7 @@
 
               <li class="filter__item">
                 <label class="filter-proposal__box">
-                  <input class="filter-proposal__check" type="checkbox">
+                  <input class="filter-proposal__check" type="checkbox" required>
                   <span class="filter-proposal__custom"></span>
                   <span class="filter-proposal__text">Dr Pepper</span>
                 </label>
@@ -1483,7 +1409,7 @@
               <span class="filter-price__currency">₽</span>
             </label>
             <input class="filter-price__input" type="text" data-min="100" data-max="1000"
-              data-from="100" data-to="880">
+              data-from="100" data-to="880" required>
           </form>
         </div>
 
@@ -1491,7 +1417,7 @@
       <div class="page-content">
         <div class="page-content__filter sr-only">
           <form class="catalog-content__selects" action="#">
-            <button class="catalog-content__swich">
+            <button class="catalog-content__swich" type="button">
               <span class="sr-only">кнопка открыть каталог</span>
             </button>
 
@@ -1513,8 +1439,9 @@
 
           </form>
           <div class="catalog-content__buttons">
-            <button class="catalog-content__btn button-grid"><svg width="35" height="35"
-                viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="catalog-content__btn button-grid" type="button"><svg width="35"
+                height="35" viewBox="0 0 35 35" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M32.4 28H24.6C23.1641 28 22 28.6268 22 29.4V33.6C22 34.3732 23.1641 35 24.6 35H32.4C33.8359 35 35 34.3732 35 33.6V29.4C35 28.6268 33.8359 28 32.4 28Z"
                   fill="#C1C1C1" />
@@ -1536,7 +1463,8 @@
               </svg>
             </button>
 
-            <button class="catalog-content__btn catalog-content__btn--active button-list">
+            <button class="catalog-content__btn catalog-content__btn--active button-list"
+              type="button">
               <svg width="36" height="34" viewBox="0 0 36 34" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -1617,7 +1545,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -1679,7 +1608,8 @@
                   </div>
 
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
 
                   <button class="products-card__cart" type="button">
@@ -1744,7 +1674,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -1809,7 +1740,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -1879,7 +1811,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -1943,7 +1876,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -2005,7 +1939,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -2069,7 +2004,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -2135,7 +2071,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -2198,7 +2135,8 @@
                   </div>
 
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
 
                   <button class="products-card__cart" type="button">
@@ -2263,7 +2201,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>
@@ -2328,7 +2267,8 @@
                     </span>
                   </div>
                   <div class="counter products-card__counter counter--hide">
-                    <input class="counter__current" type="number" value="2" min="1">
+                    <input class="counter__current" type="number" value="2" min="1"
+                      required>
                   </div>
                   <button class="products-card__cart" type="button">
                     <span class="sr-only">Добавить в корзину</span>

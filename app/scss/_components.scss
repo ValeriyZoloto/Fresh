@@ -1017,9 +1017,10 @@
     }
 
     @include media-w($sm) {
-      padding: 13px 5px 13px 5px;
+      padding: 13px 5px 13px 35px;
       width: 130px;
       letter-spacing: -0.8px;
+      font-size: 12px;
     }
 
     @include media-w($xs) {
@@ -1028,6 +1029,7 @@
       height: 48px;
       border-radius: 0;
       border: 1px solid $dark-800;
+      font-size: 14px;
     }
 
   }
