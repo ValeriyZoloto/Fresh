@@ -81,18 +81,49 @@
     }
 
   }
+
+  &:active {
+    background-color: $green-200;
+    border: 1px solid $green-900;
+  }
 }
 
 .modal-arow--prev {
-  padding: 6px 12px;
+  padding: 14px 20px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 68px;
-  z-index: 1;
-  border: none;
   background-color: $silver-250;
+  width: 60px;
+  height: 60px;
   border-radius: 6px;
+  border: 1px solid $silver-600;
+  z-index: 9;
+
+  &:focus {
+    background-color: $green-200;
+    border: 1px solid $green-900;
+    box-shadow: 0px 0px 0px 3px rgba($green-900, 0.5);
+  }
+
+  &:hover {
+    background-color: $green-200;
+    border: 1px solid $green-900;
+
+    .slick-img {
+      display: none;
+    }
+
+    .slick-img-green {
+      display: block;
+    }
+  }
+
+  &:active {
+    background-color: $green-200;
+    border: 1px solid $green-900;
+  }
 
   @include media-w($md) {
     left: 50px;
@@ -109,19 +140,37 @@
   @include media-w($xxs) {
     display: none;
   }
-
 }
 
 .modal-arow--next {
-  padding: 6px 12px;
+  padding: 14px 20px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 68px;
-  z-index: 1;
-  border: none;
   background-color: $silver-250;
   border-radius: 6px;
+  border: 1px solid $silver-600;
+  z-index: 9;
+
+  s &:focus {
+    background-color: $green-200;
+    border: 1px solid $green-900;
+    box-shadow: 0px 0px 0px 3px rgba($green-900, 0.5);
+  }
+
+  &:hover {
+    background-color: $green-200;
+    border: 1px solid $green-900;
+
+    .slick-img {
+      display: none;
+    }
+
+    .slick-img-green {
+      display: block;
+    }
+  }
 
   @include media-w($md) {
     right: 50px;
@@ -151,12 +200,11 @@
     left: 40%;
   }
 
-
   & button {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 1px solid #c1c1c1;
+    border: 1px solid $silver-600;
     background-color: rgba($dark-1000, 0.15);
     font-size: 0;
     padding: 0;

@@ -142,9 +142,7 @@
 
   &__subtitle {
     padding-bottom: 18px;
-    font-family: "Signika",
-      "Open Sans",
-      sans-serif;
+    font-family: "Signika", "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.2;
@@ -259,9 +257,8 @@
   }
 
   &__area {
-    padding: 16px 218px 5px 16px;
-    width: 100%;
-    max-width: 400px;
+    padding: 16px 5px 5px 16px;
+    width: 400px;
     height: 165px;
     resize: none;
     border: 1px solid $silver-600;
@@ -269,6 +266,7 @@
 
     @include media-w($sm) {
       max-width: 100%;
+      width: 100%;
     }
 
     @include media-w($xs) {
@@ -294,7 +292,6 @@
 
     @include media-w($xs) {
       margin-top: -5px;
-
     }
   }
 

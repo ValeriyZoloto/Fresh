@@ -14,7 +14,6 @@
 @import 'modal';
 @import 'sliders';
 
-
 /*::::::::::::::::::::::::::header:::::::::::::::::::::::::::::::::::::::::::::::*/
 .header {
   color: $white;
@@ -45,7 +44,6 @@
   }
 
   &__text {
-
     @include media-w($sm) {
       display: none;
     }
@@ -88,7 +86,6 @@
     transition: opasity 0.5s,
       box-shadow 0.5s,
       color 0.5s;
-
 
     &--tel {
       padding: 15px 1px 15px 34px;
@@ -205,6 +202,10 @@
       transform: translateY(-50%);
       background-image: url(../images/header-icons/shevron-down.svg);
       @extend %bg-left;
+
+      @include media-w($sm) {
+        right: 14px;
+      }
 
       @include media-w($xs) {
         right: 10px;
@@ -341,7 +342,6 @@
       @include media-w($xs) {
         width: 24px;
         height: 24px;
-        // display: none;
       }
     }
 
@@ -362,8 +362,6 @@
       @include media-w($md) {
         display: none;
       }
-
-      @include media-w($sm) {}
     }
 
     &--favorite {
@@ -497,7 +495,6 @@
     letter-spacing: -0.5px;
     margin-bottom: 6px;
     @include overflow(2);
-
   }
 
   &__text {
@@ -585,10 +582,6 @@
     flex-basis: 345px;
   }
 
-  @include media-w($xs) {
-    align-items: center;
-  }
-
   &__item:not(:last-child) {
     margin-right: 30px;
 
@@ -603,12 +596,10 @@
     }
   }
 
-
   &__item {
     @extend %bg-center-cover;
     text-align: left;
   }
-
 }
 
 /*::::::::::::::::::::::::::top-products-finish::::::::::::::::::::::::::::::::::*/
@@ -875,7 +866,6 @@
       max-width: 245px;
       margin: 0;
       margin-top: -9px;
-
     }
   }
 

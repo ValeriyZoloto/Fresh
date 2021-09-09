@@ -86,9 +86,7 @@
   }
 
   &__title {
-    font-family: 'Signika',
-      'Open Sans',
-      sans-serif;
+    font-family: 'Signika', 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 60px;
     line-height: 1.3;
@@ -112,9 +110,7 @@
   &__text {
     display: block;
     margin-bottom: 10px;
-    font-family: 'Signika',
-      'Open Sans',
-      sans-serif;
+    font-family: 'Signika', 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 60px;
     line-height: 1.3;
@@ -180,7 +176,6 @@
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 6px;
     z-index: 9;
-
   }
 
   .slick-prev {
@@ -234,7 +229,6 @@
       font-size: 0;
       padding: 0;
     }
-
   }
 
   & button {
@@ -272,7 +266,6 @@
     height: 10px;
   }
 }
-
 
 .slick-img-green {
   display: none;

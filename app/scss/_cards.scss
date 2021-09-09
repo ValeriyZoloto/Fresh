@@ -113,6 +113,11 @@
   @include media-w($xs) {
     padding: 77px 149px 26px 12px;
     max-width: 100%;
+    min-width: auto;
+  }
+
+  @include media-w($xxs) {
+    padding: 77px 118px 26px 12px;
   }
 
   &--long {
@@ -121,6 +126,10 @@
     width: 100%;
     text-shadow: 1px 1px 0px $dark-925;
     color: $white;
+
+    @include media-w($md) {
+      padding: 79px 178px 80px 33px;
+    }
 
     @include media-w($sm) {
       min-width: 345px;
@@ -143,6 +152,10 @@
       padding: 77px 164px 30px 10px;
       max-width: 100%;
     }
+
+    @include media-w($xxs) {
+      padding: 77px 118px 26px 12px;
+    }
   }
 
   &__text {
@@ -160,9 +173,7 @@
   }
 
   &__title {
-    font-family: 'Signika',
-      'Open Sans',
-      sans-serif;
+    font-family: 'Signika', 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 30px;
     line-height: 1.4;
@@ -185,9 +196,9 @@
     line-height: 1;
     text-transform: uppercase;
     border-bottom: 2px solid;
+    white-space: nowrap;
 
     @include media-w($md) {
-      // position: absolute;
       bottom: 79px;
     }
 
@@ -219,7 +230,6 @@
     @include media-w($xs) {
       min-height: auto;
     }
-
   }
 
   &__picture {
@@ -279,9 +289,7 @@
     text-align: center;
     max-width: 33px;
     margin: 0 auto;
-    font-family: 'Signika',
-      'Open Sans',
-      sans-serif;
+    font-family: 'Signika', 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 30px;
     line-height: 1;
@@ -454,8 +462,6 @@
     }
   }
 
-
-
   &__stat {
     position: absolute;
     bottom: 119px;
@@ -610,7 +616,6 @@
   &__counter {
     margin-bottom: 5px;
     margin-right: -80px;
-
   }
 
   &:hover {
@@ -635,7 +640,6 @@
       @include media-w($xs) {
         height: 127px;
       }
-
     }
 
     &::after {
@@ -705,7 +709,6 @@
     &:hover path {
       fill: $yellow-900;
     }
-
   }
 
   &__image {
@@ -733,7 +736,7 @@
 
     @include media-w($xs) {
       margin: 17px 10px 12px 9px;
-      min-height: 62px;
+      min-height: 73px;
     }
   }
 
@@ -754,7 +757,7 @@
     @include media-w($xs) {
       max-width: 145px;
       position: relative;
-      height: 69px;
+      height: 59px;
     }
 
     &--list {
@@ -820,7 +823,7 @@
     }
 
     &:focus {
-      box-shadow: 0px 0px 0px 4px #E0EDCF;
+      box-shadow: 0px 0px 0px 4px $green-200;
       border-radius: 3px;
     }
 
@@ -891,7 +894,7 @@
       content: "";
       width: 45px;
       height: 1px;
-      background-color: #c1c1c1;
+      background-color: $silver-600;
       bottom: 6px;
       left: 0;
       transform: rotate(-14.99deg);

@@ -33,26 +33,87 @@
     top: 249px;
 
     &--prev {
+      padding: 14px 20px;
       border: none;
       background-color: transparent;
       position: absolute;
       top: 261px;
       left: 35px;
+      width: 60px;
+      height: 60px;
+      background-color: rgba($white, .8);
+      border-radius: 6px;
+      border: 1px solid $silver-600;
+      z-index: 9;
+
+      &:focus {
+        background-color: $green-200;
+        border: 1px solid $green-900;
+        box-shadow: 0px 0px 0px 3px rgba($green-900, 0.5);
+      }
+
+      &:hover {
+        background-color: $green-200;
+        border: 1px solid $green-900;
+
+        .slick-img {
+          display: none;
+        }
+
+        .slick-img-green {
+          display: block;
+        }
+      }
+
+      &:active {
+        background-color: $green-200;
+        border: 1px solid $green-900;
+      }
     }
 
     &--next {
+      padding: 14px 20px;
       border: none;
       background-color: transparent;
       position: absolute;
       top: 261px;
       right: 35px;
+      width: 60px;
+      height: 60px;
+      background-color: rgba($white, .8);
+      border-radius: 6px;
+      border: 1px solid $silver-600;
+      z-index: 9;
+
+      &:focus {
+        background-color: $green-200;
+        border: 1px solid $green-900;
+        box-shadow: 0px 0px 0px 3px rgba($green-900, 0.5);
+      }
+
+      &:hover {
+        background-color: $green-200;
+        border: 1px solid $green-900;
+
+        .slick-img {
+          display: none;
+        }
+
+        .slick-img-green {
+          display: block;
+        }
+      }
+    }
+
+    &:active {
+      background-color: $green-200;
+      border: 1px solid $green-900;
     }
   }
 
   &__prev {
     position: absolute;
     top: 249px;
-
   }
 
   &__next {
@@ -233,7 +294,6 @@
       bottom: 6px;
       left: 0;
       transform: rotate(-14.99deg);
-
     }
   }
 
@@ -284,7 +344,7 @@
     transition: color 0.3s, box-shadow 0.3s;
 
     &:focus {
-      box-shadow: 0px 0px 0px 4px #E0EDCF;
+      box-shadow: 0px 0px 0px 4px $green-200;
       border-radius: 3px;
     }
 
@@ -296,7 +356,6 @@
       box-shadow: inset 0px 4px 4px $dark-925;
       color: $dark-400;
     }
-
 
     @include media-w($xs) {
       padding: 16px 0px 14px 45px;
@@ -324,6 +383,10 @@
     @include media-w($xs) {
       margin-right: 2px;
     }
+  }
+
+  &__heart path {
+    fill: $silver-600;
   }
 
   &__heart:hover path {
@@ -426,7 +489,7 @@
       box-shadow 0.3s;
 
     &:focus {
-      box-shadow: 0px 0px 0px 4px #E0EDCF;
+      box-shadow: 0px 0px 0px 4px $green-200;
       border-radius: 3px;
     }
 
@@ -465,7 +528,6 @@
 }
 
 .product-tabs {
-
   &__top {
     max-width: 629px;
     margin: 0 auto;
@@ -512,7 +574,7 @@
       &::before {
         position: absolute;
         content: '';
-        top: -3px;
+        top: 0px;
         left: 0;
         right: 0;
         width: 100%;

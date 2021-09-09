@@ -81,7 +81,7 @@
     position: absolute;
     width: 30px;
     height: 2px;
-    background-color: #fff;
+    background-color: $white;
     left: 0;
     transition: transform 0.5s;
   }
@@ -185,7 +185,6 @@
     margin-bottom: 18px;
   }
 
-
   &__item {
     max-width: 101px;
   }
@@ -228,7 +227,7 @@
   }
 
   .mixitup-control-active {
-    border-bottom: 3px solid #e0edcf;
+    border-bottom: 3px solid $green-200;
   }
 }
 
@@ -802,8 +801,6 @@
       color: $dark-500;
     }
   }
-
-
 }
 
 /*:::::::::::::::::::::::элементы-плагина styler:::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -873,7 +870,6 @@
   border-bottom-color: transparent;
   border-radius: 0px;
   box-shadow: none;
-
 }
 
 .jq-number__field input {
@@ -924,8 +920,7 @@
   position: relative;
   max-width: 577px;
 
-
-  @include media-w($xs) {
+  @include media-w($smm) {
     display: none;
   }
 
@@ -958,7 +953,6 @@
 
   @include media-w($xs) {
     position: absolute;
-
   }
 
   &__label {
@@ -1018,9 +1012,10 @@
 
     @include media-w($sm) {
       padding: 13px 5px 13px 35px;
-      width: 130px;
+      max-width: 191px;
       letter-spacing: -0.8px;
       font-size: 12px;
+      width: 100%;
     }
 
     @include media-w($xs) {
@@ -1031,7 +1026,6 @@
       border: 1px solid $dark-800;
       font-size: 14px;
     }
-
   }
 
   &__search {
@@ -1096,7 +1090,7 @@
     border-radius: 6px 0px 0px 6px;
     background-color: $white;
     line-height: 1;
-    color: #4f4f4f;
+    color: $silver-150;
     position: relative;
     z-index: 1;
     margin-right: -3px;
@@ -1134,7 +1128,7 @@
 
     &:active {
       box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba($white, 0.5);
     }
 
     &::before {
@@ -1147,7 +1141,6 @@
     }
   }
 }
-
 
 .social {
   display: flex;
@@ -1172,7 +1165,7 @@
     transition: opasity 0.3s;
 
     &:hover svg {
-      fill: rgba(255, 255, 255, 0.7);
+      fill: rgba($white, 0.7);
     }
   }
 }
